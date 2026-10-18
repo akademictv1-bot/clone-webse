@@ -1673,6 +1673,139 @@
       .hdr-actions .btn-wa { padding: 9px 12px !important; }
       .hdr-actions .btn-wa span { display: none; }
     }
+
+    /* Banner de Consentimento de Cookies & Privacidade (Boutique & Compliance) */
+    .cookie-consent-card {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      max-width: 440px;
+      background: rgba(5, 28, 20, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1.5px solid rgba(212, 175, 55, 0.4);
+      border-radius: 18px;
+      padding: 22px 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      z-index: 1001;
+      transform: translateY(140%);
+      opacity: 0;
+      transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      color: #FFFFFF;
+    }
+    .cookie-consent-card.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .cookie-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .cookie-icon-box {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: none;
+    }
+    .cookie-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin: 0;
+      line-height: 1.2;
+    }
+    .cookie-subtitle {
+      font-size: 11px;
+      color: #A3B8B0;
+      display: block;
+      margin-top: 2px;
+    }
+    .cookie-desc {
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: #D3E4DC;
+      margin-bottom: 16px;
+    }
+    .cookie-desc a {
+      color: var(--gold-light);
+      text-decoration: underline;
+      font-weight: 600;
+    }
+    .cookie-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .cookie-btn-accept {
+      flex: 1;
+      padding: 11px 18px !important;
+      font-size: 13px !important;
+      font-weight: 700 !important;
+      border-radius: 999px !important;
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35) !important;
+      cursor: pointer;
+    }
+    .cookie-btn-more {
+      padding: 10px 16px !important;
+      font-size: 12.5px !important;
+      border-radius: 999px !important;
+      color: #D3E4DC !important;
+      border: 1px solid rgba(255, 255, 255, 0.25) !important;
+      text-decoration: none;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cookie-btn-more:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #FFF !important;
+    }
+
+    /* Indicador Inteligente de Região Detectada */
+    .geo-suggestion-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #F3F8F5;
+      border: 1px solid #D5E5DC;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--em-dark);
+      margin-bottom: 20px;
+    }
+    .geo-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--wa);
+      flex: none;
+    }
+
+    @media (max-width: 768px) {
+      .cookie-consent-card {
+        left: 12px;
+        right: 12px;
+        bottom: 84px; /* Posicionamento perfeito acima da barra flutuante mobile */
+        max-width: none;
+        padding: 16px 18px;
+        border-radius: 14px;
+      }
+      .cookie-desc { font-size: 11.5px; margin-bottom: 12px; }
+      .cookie-actions { flex-direction: column; width: 100%; gap: 8px; }
+      .cookie-btn-accept, .cookie-btn-more { width: 100%; justify-content: center; text-align: center; }
+      .geo-suggestion-bar { font-size: 11px; padding: 5px 12px; margin-bottom: 16px; }
+    }
+
   </style>
 </head>
 <body>
@@ -1891,6 +2024,13 @@
           <p class="lead" data-i18n="cat_lead">
             Refúgios sofisticados selecionados a dedo no coração de Moçambique e Zimbabwe.
           </p>
+        </div>
+
+        <div style="text-align:center;">
+          <div class="geo-suggestion-bar" id="geoSuggestionBar" style="display:none;">
+            <span class="geo-dot"></span>
+            <span id="geoSuggestionText" data-i18n="geo_detected_mz">📍 Acomodações sugeridas para a sua região</span>
+          </div>
         </div>
 
         <div class="filter-bar">
@@ -2604,6 +2744,13 @@
         verified_reviews: "avaliações verificadas",
         btn_book_now: "Reservar Já",
         scarcity_text: "Alta procura: reserve com antecedência para garantir as datas",
+        cookie_title: "Privacidade & Preferências",
+        cookie_subtitle: "Experiência personalizada em Moçambique e Zimbabwe",
+        cookie_desc: "Utilizamos cookies e deteção regional inteligente para lhe recomendar as acomodações mais próximas (Chimoio ou Zimbabwe) e guardar as suas preferências. Ao continuar, concorda com os nossos Termos de Uso e Política de Privacidade.",
+        cookie_btn_accept: "Aceitar & Continuar",
+        cookie_btn_more: "Ver Políticas",
+        geo_detected_mz: "📍 Sugestão automática: Acomodações em Moçambique (Chimoio)",
+        geo_detected_zw: "📍 Sugestão automática: Acomodações no Zimbabwe (Mutare & Nyanga)",
         nav_stays: "Acomodações",
         nav_exp: "Experiência",
         nav_presence: "Presença Regional",
@@ -2721,6 +2868,13 @@
         verified_reviews: "verified reviews",
         btn_book_now: "Book Now",
         scarcity_text: "High demand: book in advance to secure your dates",
+        cookie_title: "Privacy & Preferences",
+        cookie_subtitle: "Personalized experience across Mozambique & Zimbabwe",
+        cookie_desc: "We use essential cookies and smart regional detection to display stays closest to you (in Chimoio or Zimbabwe) and remember your booking preferences. By continuing, you agree to our Terms of Use and Privacy Policy.",
+        cookie_btn_accept: "Accept & Continue",
+        cookie_btn_more: "View Policies",
+        geo_detected_mz: "📍 Auto-suggested: Recommended stays in Mozambique (Chimoio)",
+        geo_detected_zw: "📍 Auto-suggested: Recommended stays in Zimbabwe (Mutare & Nyanga)",
         nav_stays: "Stays",
         nav_exp: "Experience",
         nav_presence: "Regional Presence",
@@ -2954,6 +3108,9 @@
     function filterAcc(city, btn) {
       document.querySelectorAll(".filter-btn").forEach(function(b){ b.classList.remove("active"); });
       btn.classList.add("active");
+      if (city && city !== "todos") {
+        setCookie("enclave_pref_city", city, 30);
+      }
       renderAccommodations(city);
     }
 
@@ -3703,9 +3860,141 @@
     }, 6000);
 
     
-    // Inicialização oficial estável com imagens locais sem oscilações
-    renderAccommodations();
+
+    // ============================================================
+    // ALGORITMO INTELIGENTE DE COOKIES & GEOLOCALIZAÇÃO
+    // Se o cliente estiver em Moçambique -> Chimoio aparece em 1º lugar
+    // Se estiver no Zimbabwe -> Mutare e Nyanga aparecem em 1º lugar
+    // Salva e lembra as preferências do cliente via Cookies
+    // ============================================================
+    function getCookie(name) {
+      try {
+        var match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
+        if (match) return decodeURIComponent(match[3]);
+        return localStorage.getItem(name);
+      } catch(e) { return null; }
+    }
+
+    function setCookie(name, val, days) {
+      days = days || 30;
+      try {
+        var d = new Date();
+        d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+        document.cookie = name + "=" + encodeURIComponent(val) + ";expires=" + d.toUTCString() + ";path=/;SameSite=Lax";
+        localStorage.setItem(name, val);
+      } catch(e){}
+    }
+
+    var detectedRegion = "MZ";
+
+    function detectUserRegion() {
+      // 1. Verificar cookie prévio ou preferência já salva
+      var savedRegion = getCookie("enclave_region");
+      var savedCity = getCookie("enclave_pref_city");
+
+      if (savedRegion === "ZW" || savedRegion === "MZ") {
+        detectedRegion = savedRegion;
+        applyRegionSorting(savedRegion, savedCity);
+        return;
+      }
+
+      // 2. Detecção inteligente imediata por Fuso Horário e Idioma do Dispositivo
+      try {
+        var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || "").toLowerCase();
+        var lang = (navigator.language || "").toLowerCase();
+
+        // Se o fuso ou idioma for do Zimbabwe (Harare / en-zw)
+        if (tz.indexOf("harare") !== -1 || lang.indexOf("en-zw") !== -1) {
+          detectedRegion = "ZW";
+        } else if (tz.indexOf("maputo") !== -1 || lang.indexOf("pt-mz") !== -1 || lang.indexOf("pt") !== -1) {
+          detectedRegion = "MZ";
+        }
+      } catch(e){}
+
+      applyRegionSorting(detectedRegion, savedCity);
+
+      // 3. Validação não-bloqueante por IP em segundo plano (GeoIP)
+      try {
+        fetch("https://ipapi.co/json/", { cache: "force-cache" })
+          .then(function(res){ return res.json(); })
+          .then(function(data){
+            if (data && data.country_code) {
+              var c = data.country_code.toUpperCase();
+              var newReg = (c === "ZW" ? "ZW" : "MZ");
+              if (newReg !== detectedRegion) {
+                detectedRegion = newReg;
+                setCookie("enclave_region", newReg, 30);
+                applyRegionSorting(newReg, savedCity);
+              }
+            }
+          })
+          .catch(function(){});
+      } catch(e){}
+    }
+
+    function applyRegionSorting(region, preferredCity) {
+      setCookie("enclave_region", region, 30);
+
+      // Ordenação das acomodações:
+      // Se ZW -> Zimbabwe (Mutare e Nyanga) no topo!
+      // Se MZ -> Moçambique (Chimoio) no topo!
+      FIREBASE_DATA.accommodations.sort(function(a, b) {
+        if (preferredCity) {
+          if (a.city.toLowerCase() === preferredCity.toLowerCase() && b.city.toLowerCase() !== preferredCity.toLowerCase()) return -1;
+          if (b.city.toLowerCase() === preferredCity.toLowerCase() && a.city.toLowerCase() !== preferredCity.toLowerCase()) return 1;
+        }
+        if (region === "ZW") {
+          var aIsZw = (a.country.toLowerCase() === "zimbabwe");
+          var bIsZw = (b.country.toLowerCase() === "zimbabwe");
+          if (aIsZw && !bIsZw) return -1;
+          if (!aIsZw && bIsZw) return 1;
+        } else {
+          var aIsMz = (a.city.toLowerCase() === "chimoio");
+          var bIsMz = (b.city.toLowerCase() === "chimoio");
+          if (aIsMz && !bIsMz) return -1;
+          if (!aIsMz && bIsMz) return 1;
+        }
+        return 0;
+      });
+
+      // No Zimbabwe, se ainda não houve escolha manual de idioma, sugere inglês
+      if (region === "ZW" && !getCookie("enclave_lang_manual") && currentLang !== "en") {
+        setLanguage("en");
+      }
+
+      // Atualizar badge indicador de região
+      var bar = document.getElementById("geoSuggestionBar");
+      var text = document.getElementById("geoSuggestionText");
+      if (bar && text) {
+        bar.style.display = "inline-flex";
+        var d = DICT[currentLang] || DICT.pt;
+        text.textContent = (region === "ZW" ? d.geo_detected_zw : d.geo_detected_mz);
+      }
+
+      renderAccommodations();
+    }
+
+    // Consentimento de Cookies & Privacidade
+    function checkCookieConsent() {
+      var consented = getCookie("enclave_consent");
+      if (!consented) {
+        setTimeout(function() {
+          var card = document.getElementById("cookieConsentCard");
+          if (card) card.classList.add("show");
+        }, 1200);
+      }
+    }
+
+    function acceptCookies() {
+      setCookie("enclave_consent", "1", 365);
+      var card = document.getElementById("cookieConsentCard");
+      if (card) card.classList.remove("show");
+    }
+
+    // Inicialização Oficial com Inteligência Regional & Cookies
+    detectUserRegion();
     renderFooterStays();
+    checkCookieConsent();
 
     // Barra Flutuante Mobile UX (Conversao em Celular)
     function handleMobileBottomBarClick() {
@@ -3757,5 +4046,29 @@
       <span id="mbbBtnText" data-i18n="btn_book_now">Reservar Já</span>
     </button>
   </div>
+  <!-- Pop-up de Consentimento de Cookies & Termos (LGPD / GDPR) -->
+  <div class="cookie-consent-card" id="cookieConsentCard" role="dialog" aria-label="Consentimento de Cookies">
+    <div class="cookie-header">
+      <div class="cookie-icon-box">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><circle cx="8.5" cy="8.5" r="1.5"/><circle cx="15.5" cy="12" r="1.5"/><circle cx="9" cy="15" r="1.5"/></svg>
+      </div>
+      <div>
+        <h4 class="cookie-title" data-i18n="cookie_title">Privacidade &amp; Preferências</h4>
+        <span class="cookie-subtitle" data-i18n="cookie_subtitle">Experiência personalizada em Moçambique e Zimbabwe</span>
+      </div>
+    </div>
+    <p class="cookie-desc" data-i18n="cookie_desc">
+      Utilizamos cookies essenciais e deteção regional inteligente para lhe sugerir as acomodações mais próximas (Chimoio ou Zimbabwe) e salvar as suas preferências de estadia. Ao continuar a navegar, concorda com os nossos <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> e <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a>.
+    </p>
+    <div class="cookie-actions">
+      <button type="button" class="btn btn-gold cookie-btn-accept" id="btnAcceptCookies" onclick="acceptCookies()">
+        <span data-i18n="cookie_btn_accept">Aceitar &amp; Continuar</span>
+      </button>
+      <a href="politica-de-privacidade.html" class="btn btn-ghost-dark cookie-btn-more" data-i18n="cookie_btn_more">
+        Ver Detalhes
+      </a>
+    </div>
+  </div>
+
 </body>
 </html>
