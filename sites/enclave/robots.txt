@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://enclave-accommodation.pages.dev/sitemap.xml
