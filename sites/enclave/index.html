@@ -739,6 +739,8 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      min-width: 0;
+      flex: 1 1 auto;
     }
     .room-opt-radio {
       accent-color: var(--em-base);
@@ -757,6 +759,11 @@
       color: var(--ink-muted);
       display: block;
       margin-top: 2px;
+    }
+    .room-opt-name, .room-opt-desc { overflow-wrap: break-word; }
+    @media (max-width: 480px) {
+      .room-opt-card { flex-direction: column; align-items: stretch; gap: 6px; }
+      .room-opt-price-box { text-align: left; padding-left: 27px; margin-top: -2px; }
     }
     .room-opt-price-box {
       text-align: right;
@@ -777,11 +784,14 @@
     }
 
     /* Vista Detalhada Completa */
-    #detailView { display: none; padding: 40px 0 90px; background: var(--linen); }
+    #detailView { display: none; padding: 40px 0 90px; background: var(--linen); overflow-x: clip; }
+    #detailTitle { overflow-wrap: break-word; }
     .detail-top-nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 8px 12px;
       margin-bottom: 24px;
     }
     .btn-back {
@@ -806,7 +816,11 @@
       gap: 36px;
       align-items: start;
     }
-    @media (max-width: 1040px) { .detail-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 1040px) {
+      .detail-grid { grid-template-columns: minmax(0, 1fr); }
+      .detail-grid > div { min-width: 0; }
+      .booking-card { position: static; }
+    }
 
     .detail-gallery {
       background: var(--paper);
@@ -861,11 +875,14 @@
       box-shadow: var(--shadow-md);
       position: sticky;
       top: 100px;
+      min-width: 0;
     }
     .booking-card-head {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
+      flex-wrap: wrap;
+      gap: 6px 12px;
       border-bottom: 1px solid var(--line);
       padding-bottom: 16px;
       margin-bottom: 20px;
@@ -1863,7 +1880,7 @@
 
             <form id="reservationForm" onsubmit="handleReservationSubmit(event)">
               <div class="form-group" style="margin-bottom:16px;">
-                <label class="form-label" style="display:flex;justify-content:space-between;align-items:center;">
+                <label class="form-label" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px 10px;">
                   <strong data-i18n="lbl_select_room">Opção de Quarto ou Casa Inteira</strong>
                   <span style="font-size:11px;color:var(--gold-dark);font-weight:700;" data-i18n="lbl_select_room_hint">Clique para selecionar</span>
                 </label>
@@ -2866,6 +2883,20 @@
 
       // Renderizar o Seletor de Quartos
       renderRoomOptions(acc, preselectedOptId);
+
+      // Reconstruir opções de hóspedes conforme a capacidade máxima desta acomodação
+      var gSel = document.getElementById("resGuests");
+      if (gSel && acc.max_guests) {
+        var gOpts = "";
+        for (var gi = 1; gi <= acc.max_guests; gi++) {
+          var gLabel;
+          if (currentLang === "en") { gLabel = gi + " " + (gi === 1 ? "Guest" : "Guests"); }
+          else { gLabel = gi + (gi === 1 ? " Hóspede" : " Hóspedes"); }
+          gOpts += '<option value="' + gi + '">' + gLabel + '</option>';
+        }
+        gSel.innerHTML = gOpts;
+        gSel.value = "1";
+      }
 
       // Atualizar lista de datas reservadas e disponibilidade
       updateBookedDatesDisplay(acc.id);
