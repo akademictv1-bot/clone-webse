@@ -1,0 +1,202 @@
+{
+  "base": "https://bba.edu.mz/",
+  "generated": "2026-10-15T11:44:39.749Z",
+  "files": [
+    {
+      "url": "https://bba.edu.mz/",
+      "file": "_old/index.html",
+      "bytes": 91588,
+      "sha256": "b8fc784d07c0ca8ccbff7d8caf6662f92891478528dfb91470c04b1d2e24760c",
+      "kind": "page"
+    },
+    {
+      "url": "https://bba.edu.mz/about.html",
+      "file": "_old/about.html",
+      "bytes": 27692,
+      "sha256": "6d0d99933c77ad6cee106fd4d500d42ce16c7a65de99a0b274edc46813e2056c",
+      "kind": "page"
+    },
+    {
+      "url": "https://bba.edu.mz/programmes.html",
+      "file": "_old/programmes.html",
+      "bytes": 27681,
+      "sha256": "1faf98f1ddbb27e51679b6b08d558673d31dcd8f4c437835a7ee9d758fa867b0",
+      "kind": "page"
+    },
+    {
+      "url": "https://bba.edu.mz/inscricao-2027.html",
+      "file": "_old/inscricao-2027.html",
+      "bytes": 29311,
+      "sha256": "af8d94661c351135a2f9433f3a4e14415e23bb21474d65a8697a1790d726d13f",
+      "kind": "page"
+    },
+    {
+      "url": "https://bba.edu.mz/missao.html",
+      "file": "_old/missao.html",
+      "bytes": 27309,
+      "sha256": "0a02c5c387c69672395bc1e1022dcb8511d9086445205e874bd93fafdc326a7d",
+      "kind": "page"
+    },
+    {
+      "url": "https://bba.edu.mz/contact.html",
+      "file": "_old/contact.html",
+      "bytes": 31819,
+      "sha256": "75c26f2334c2881fa6a6cecb43274b30619a355d372f4c3854ba21a37c8c0fde",
+      "kind": "page"
+    },
+    {
+      "url": "https://bba.edu.mz/gallery.html",
+      "file": "_old/gallery.html",
+      "bytes": 30354,
+      "sha256": "37f3281190cdf60d90931b63221abf8a6836b7e8b3c5ad7e369ec6cb765f618b",
+      "kind": "page"
+    },
+    {
+      "url": "https://bba.edu.mz/noticia.html",
+      "file": "_old/noticia.html",
+      "bytes": 20894,
+      "sha256": "d65c07632983bf05821d65e3cb7b24983c4ae74762913ad3f26075c3bd9c9d94",
+      "kind": "page"
+    },
+    {
+      "url": "https://bba.edu.mz/news.json",
+      "file": "_old/news.json",
+      "bytes": 6531,
+      "sha256": "2857f5867f9123f01c6d3e53f4afee019d75b08bf45ef40a2716e239e01472c2",
+      "kind": "extra"
+    },
+    {
+      "url": "https://bba.edu.mz/bba-config.js",
+      "file": "_old/bba-config.js",
+      "bytes": 1004,
+      "sha256": "ee4cf46cf96b111cba3c948bb5216d8385d3cd7631baaa06706163e3f8749bb9",
+      "kind": "extra"
+    },
+    {
+      "url": "https://bba.edu.mz/img/favicon.jpg",
+      "file": "assets/img/favicon.jpg",
+      "bytes": 4634,
+      "sha256": "522dcbcbb9e68707cfbe2b2a8824c9cab786ffa44a297e46611a9fbdbfdef7b1",
+      "kind": "asset"
+    },
+    {
+      "url": "https://bba.edu.mz/img/apple-touch-icon.jpg",
+      "file": "assets/img/apple-touch-icon.jpg",
+      "bytes": 24516,
+      "sha256": "4322ef8fe7a516bf0a3270ac1f9122f5733be8c41d8c5631ed06e15d613a9352",
+      "kind": "asset"
+    },
+    {
+      "url": "https://bba.edu.mz/img/hero-school.jpg",
+      "file": "assets/img/hero-school.jpg",
+      "bytes": 67788,
+      "sha256": "beebceebf3d026266aa2d239deaf7e978f2756da0f927abf7000829f86cc2655",
+      "kind": "asset"
+    },
+    {
+      "url": "https://bba.edu.mz/img/logo-header.jpg",
+      "file": "assets/img/logo-header.jpg",
+      "bytes": 55526,
+      "sha256": "fd387cdf61de47e092fe37317ea8afcb34600b03d8ea54f447d3805cc4d70600",
+      "kind": "asset"
+    },
+    {
+      "url": "https://bba.edu.mz/img/sala-aula.jpeg",
+      "file": "assets/img/sala-aula.jpeg",
+      "bytes": 104328,
+      "sha256": "e588746855948ebcb6b93148ef4d915e70bdfcdac09cedd7cf68d72f231e2ee3",
+      "kind": "asset"
+    },
+    {
+      "url": "https://bba.edu.mz/img/sala-aula-1.jpeg",
+      "file": "assets/img/sala-aula-1.jpeg",
+      "bytes": 110295,
+      "sha256": "6de83bedebb03879ca0060e01664bb445ab8e52549ef13f0ef543608df6a5289",
+      "kind": "asset"
+    },
+    {
+      "url": "https://bba.edu.mz/img/foto-real-escola.jpg",
+      "file": "assets/img/foto-real-escola.jpg",
+      "bytes": 521832,
+      "sha256": "8c4963d6a71810e487266fcd98a199ba204dd4776d369680cee3084dfd2db381",
+      "kind": "asset"
+    },
+    {
+      "url": "https://bba.edu.mz/img/sala-primario.jpg",
+      "file": "assets/img/sala-primario.jpg",
+      "bytes": 298439,
+      "sha256": "c05bdad408356c9d90ef8f29bc7424f4e3c220abe9108cbb2983833b04b0d0a2",
+      "kind": "asset"
+    },
+    {
+      "url": "https://bba.edu.mz/img/secondary.jpg",
+      "file": "assets/img/secondary.jpg",
+      "bytes": 51120,
+      "sha256": "3d3d7ee4ced746679cb8fa2cb0d15d414e618daadf56c6ec6745d9e042946c3f",
+      "kind": "asset"
+    },
+    {
+      "url": "https://bba.edu.mz/img/logooxforde.png",
+      "file": "assets/img/logooxforde.png",
+      "bytes": 75246,
+      "sha256": "a933ea1318746e450efecaa2173d09f3adf44b8ed09a045060bbf491418badbb",
+      "kind": "asset"
+    },
+    {
+      "url": "https://bba.edu.mz/img/early-years.jpg",
+      "file": "assets/img/early-years.jpg",
+      "bytes": 97563,
+      "sha256": "f559090b28da41818731754d1f0ccdb5e4d70064a9348971a4028152b939fd5f",
+      "kind": "asset"
+    },
+    {
+      "url": "https://bba.edu.mz/oxford_logo.png",
+      "file": "assets/oxford_logo.png",
+      "bytes": 4373,
+      "sha256": "0c8fc5696be06335f7356c0f21ee15338396a7af17420515e6ab3d7b84dd4812",
+      "kind": "asset"
+    },
+    {
+      "url": "https://bba.edu.mz/img/sports.jpg",
+      "file": "assets/img/sports.jpg",
+      "bytes": 44644,
+      "sha256": "28f16c4a48b3b608f75b25fbd27bed7352e68831d24a65c2339b44ea699a8d47",
+      "kind": "asset"
+    },
+    {
+      "url": "https://bba.edu.mz/img/atividade-pintura.jpeg",
+      "file": "assets/img/atividade-pintura.jpeg",
+      "bytes": 150327,
+      "sha256": "4880ab7c4cb51f602254f87d227c7d77439d0459cdfd53cc5aa30ae8ca2f44ff",
+      "kind": "asset"
+    },
+    {
+      "url": "https://bba.edu.mz/img/criatividade.jpeg",
+      "file": "assets/img/criatividade.jpeg",
+      "bytes": 226736,
+      "sha256": "c6ee00d4d356dca03bdd8113531b50d83d4173ae9768216475748a98172c0d9e",
+      "kind": "asset"
+    },
+    {
+      "url": "https://bba.edu.mz/img/laboratorio.jpg",
+      "file": "assets/img/laboratorio.jpg",
+      "bytes": 403868,
+      "sha256": "065e588b441d2e8824ac884c17c35c073ec114a1fdd58d612d8ea26cf204d9e4",
+      "kind": "asset"
+    },
+    {
+      "url": "https://bba.edu.mz/img/sala-informatica.jpg",
+      "file": "assets/img/sala-informatica.jpg",
+      "bytes": 234446,
+      "sha256": "ab8625e884ed1a5d757195d1c7e9a2e45b801cc3977903cd1615e57c66ebf555",
+      "kind": "asset"
+    },
+    {
+      "url": "https://bba.edu.mz/bba-config.js",
+      "file": "assets/bba-config.js",
+      "bytes": 1004,
+      "sha256": "ee4cf46cf96b111cba3c948bb5216d8385d3cd7631baaa06706163e3f8749bb9",
+      "kind": "asset"
+    }
+  ]
+}

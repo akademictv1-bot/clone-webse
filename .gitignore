@@ -1,0 +1,19 @@
+# Dependências instaladas (peso grande, não precisa no repo)
+node_modules/
+
+# Tooling REA instalado localmente (tem repositório Git próprio)
+rea/
+
+# Histórico interno do applet, guardado localmente durante a fusão
+enclave-accommodation/.git-backup/
+
+# Ficheiros do sistema / editor
+Thumbs.db
+.DS_Store
+*.swp
+~$*
+
+# Logs e temporários
+*.log
+*.tmp
+npm-debug.log*

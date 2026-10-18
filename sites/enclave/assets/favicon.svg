@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E7C4"/>
+      <stop offset="40%" stop-color="#D4AF37"/>
+      <stop offset="75%" stop-color="#AA7C11"/>
+      <stop offset="100%" stop-color="#E5C365"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E3D2C"/>
+      <stop offset="100%" stop-color="#051C14"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Fundo Hexagonal / Escudo de Luxo -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+  
+  <!-- Borda Interna Fina -->
+  <rect x="6" y="6" width="52" height="52" rx="12" fill="none" stroke="url(#goldGrad)" stroke-width="0.8" stroke-dasharray="3 2" opacity="0.6"/>
+
+  <!-- Portal Arquitetônico & Monograma "E" da Enclave -->
+  <g filter="url(#glow)">
+    <!-- Arco Superior / Frontão -->
+    <path d="M18 20 Q32 10 46 20" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Coluna Esquerda -->
+    <line x1="22" y1="20" x2="22" y2="48" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Barra Superior do E -->
+    <path d="M22 22 L42 22 C43 22 43.5 23 43 24 L41 27 L22 27" fill="url(#goldGrad)"/>
+    
+    <!-- Barra Central do E com Losango / Diamante de Santuário -->
+    <path d="M22 32 L36 32 L37.5 34 L36 36 L22 36" fill="url(#goldGrad)"/>
+    
+    <!-- Barra Inferior do E -->
+    <path d="M22 43 L42 43 C43.5 43 43.5 44.5 42.5 45.5 L40.5 48 L22 48" fill="url(#goldGrad)"/>
+    
+    <!-- Ponto Superior / Estrela da Hospitalidade -->
+    <circle cx="32" cy="14" r="1.8" fill="#F9E8B8"/>
+  </g>
+</svg>

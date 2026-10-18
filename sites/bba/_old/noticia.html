@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<link rel="icon" type="image/jpeg" href="img/favicon.jpg">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.jpg">
+<title>Notícia | Bright Beginnings Academy</title>
+<meta name="description" content="Notícias e artigos da Bright Beginnings Academy em Chimoio — acompanhe a vida da escola.">
+<link rel="canonical" href="https://bba.edu.mz/noticia.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bba.edu.mz/noticia.html">
+<meta property="og:title" content="Notícia | Bright Beginnings Academy">
+<meta property="og:description" content="Leia o artigo completo no site da escola em Chimoio.">
+<meta property="og:image" content="https://bba.edu.mz/img/hero-school.jpg">
+<meta property="og:locale" content="pt_MZ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+<script type="application/ld+json" id="art-ld" data-jsonld="1">
+{"@context":"https://schema.org","@type":"NewsArticle","headline":"Bright Beginnings Academy","author":{"@type":"Organization","name":"Bright Beginnings Academy"},"publisher":{"@type":"Organization","name":"Bright Beginnings Academy"}}
+</script>
+<style>
+:root{
+  /* BBA logo identity — matches bright-beginnings-academy.html tokens */
+  --brand-blue:#1E5AF0; --brand-blue-deep:#123FA9;
+  --brand-green:#17A13C; --brand-green-deep:#0E7A2A;
+  --brand-red:#F01213; --brand-red-deep:#C40E0F;
+  --brand-yellow:#FCAF10; --brand-orange:#FC6216; --brand-purple:#7E2FD0;
+  --bg-page:#FFFFFF; --surface:#FFFFFF; --surface-soft:#F1F5FF;
+  --border:#E2E8F5; --border-light:#EDF1FA; --border-dark:#C6D3EC;
+  --navy:#123FA9; --navy-dark:#0B2C77; --navy-light:#1E5AF0;
+  --gold:#F5A301; --gold-hover:#C77F02; --gold-soft:#FFF3D6;
+  --ink:#161616; --ink-secondary:#3A4356; --muted:#55617A; --white:#fff;
+  --wa:#1F9D55; --wa-hover:#157A41;
+  --serif:'Poppins',Arial,Helvetica,sans-serif; --sans:'Poppins',Arial,Helvetica,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg-page);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%}
+a:focus-visible,button:focus-visible{outline:3px solid var(--brand-blue);outline-offset:2px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.topbar{background:var(--navy-dark);color:#EDE8DC;font-size:.8rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:8px;padding-bottom:8px;gap:12px;flex-wrap:wrap}
+.topbar a{color:#F6EED8;text-decoration:none}
+.site-header{background:rgba(250,248,245,.96);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy);min-width:0}
+.brand img{width:46px;height:46px;object-fit:cover;flex-shrink:0}
+.brand .t{font-family:var(--serif);font-weight:800;font-size:1.25rem;line-height:1.1}
+.brand .s{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;gap:18px;align-items:center}
+.nav-links a{color:var(--navy);text-decoration:none;font-weight:600;font-size:.9rem}
+/* FIX botão invisível: .nav-links a (0,1,1) vencia .btn-navy (0,1,0) e pintava
+   a letra de navy sobre fundo navy. Regra mais específica garante letra branca. */
+.nav-links a.btn-navy{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;text-decoration:none;font-weight:600;border-radius:3px;padding:12px 22px;transition:transform .2s ease,background .2s ease}
+.btn-navy{background:var(--brand-red-deep);color:#fff}
+.btn-navy:hover{background:#9E0B0C;transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--border);color:var(--navy);background:#fff}
+.lang-toggle{display:flex;border:1px solid var(--border);border-radius:3px;overflow:hidden;flex-shrink:0}
+.lang-toggle button{border:0;background:#fff;padding:10px 14px;min-height:44px;font-weight:600;font-size:.85rem;cursor:pointer;color:var(--muted)}
+.lang-toggle button.active{background:var(--navy);color:#fff}
+/* ===== Artigo editorial — sem card, directo sobre o fundo ===== */
+.article-sec{padding:64px 0 88px}
+.crumb{margin-bottom:20px}
+.crumb a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.88rem;display:inline-block;padding:12px 0}
+.crumb a:hover{color:var(--navy)}
+.article-wrap{max-width:960px;margin:0 auto;padding:0 24px}
+.hero-figure{margin:0 0 28px}
+.hero-figure img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:14px;background:var(--surface-soft)}
+.article-prose{max-width:700px;margin:0 auto}
+.meta{display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-hover);margin-bottom:12px}
+.article-prose h1{font-family:var(--serif);font-weight:800;font-size:clamp(1.75rem,1.15rem + 3vw,2.6rem);line-height:1.18;color:var(--navy);margin-bottom:10px;text-wrap:balance}
+/* Accent words — deep tones for light backgrounds, bright tones for dark bands */
+.hl-b{color:var(--brand-blue-deep)} .hl-g{color:var(--brand-green-deep)} .hl-r{color:var(--brand-red-deep)}
+.hl-bl{color:#8FB4FF} .hl-gl{color:#3ED598} .hl-rl{color:#FF7070} .hl-yl{color:#FFD34D}
+.date{color:var(--muted);font-size:.88rem;margin-bottom:18px;display:block}
+.lede{font-size:clamp(1.02rem,.98rem + .5vw,1.15rem);line-height:1.7;color:var(--ink-secondary);border-left:3px solid var(--brand-yellow);padding-left:16px;margin:0 0 26px}
+#a-corpo p.pgraf{font-size:1.0625rem;line-height:1.8;margin-bottom:1.25em;color:#24344a}
+.share-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;padding-top:24px;border-top:1px solid var(--border-light)}
+.btn-wa-full{display:inline-flex;align-items:center;justify-content:center;min-height:44px;background:var(--wa);color:#fff;text-decoration:none;font-weight:600;border-radius:3px;padding:12px 22px}
+.btn-wa-full:hover{background:var(--wa-hover)}
+.more-sec{max-width:700px;margin:40px auto 0}
+.more-sec h2{font-family:var(--serif);font-weight:800;font-size:1.6rem;color:var(--navy);margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.more-card{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:block}
+.more-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.more-card div{padding:14px 16px}
+.more-card span{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-hover)}
+.more-card h3{font-size:1rem;color:var(--navy);line-height:1.4;margin-top:4px}
+.error-box{background:#fff;border:1px solid var(--border);border-radius:14px;padding:40px;text-align:center;max-width:640px;margin:0 auto}
+.site-footer{background:var(--navy-dark);color:#CBD5E1;margin-top:64px}
+.site-footer .wrap{padding-top:36px;padding-bottom:28px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.86rem}
+.site-footer a{color:#F6EED8}
+.wa-fab{position:fixed;right:20px;bottom:20px;width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:60}
+.wa-fab:hover{transform:scale(1.05)}
+.wa-fab svg{width:28px;height:28px;fill:currentColor}
+@media(max-width:960px){
+  .article-sec{padding:48px 0 72px}
+}
+@media(max-width:480px){
+  .wrap{padding:0 16px}
+  .topbar{font-size:.75rem}
+  .site-header{position:static}
+  .nav-wrap{flex-wrap:wrap;row-gap:10px;padding-top:12px;padding-bottom:12px}
+  .brand img{width:38px;height:38px}
+  .brand .t{font-size:1.05rem}
+  .brand .s{display:none}
+  .nav-links{width:100%;gap:10px}
+  .nav-links .lang-toggle{margin-left:auto}
+  #nav-cta{flex:1;text-align:center;white-space:nowrap;padding-left:10px;padding-right:10px;font-size:.85rem}
+  .article-sec{padding:24px 0 56px}
+  .article-wrap{padding:0}
+  .hero-figure{margin-bottom:22px}
+  .hero-figure img{border-radius:0;aspect-ratio:4/3}
+  .article-prose{padding:0 18px}
+  .more-grid{grid-template-columns:1fr}
+  .share-row .btn,.share-row .btn-wa-full{width:100%;text-align:center}
+  .error-box{padding:28px 20px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <span>Bright Beginnings Academy · Chimoio</span>
+  <a href="tel:+258844277021">+258 844 277 021</a>
+</div></div>
+<header class="site-header"><div class="wrap nav-wrap">
+  <a class="brand" href="bright-beginnings-academy.html" id="brand-home" aria-label="Voltar ao início">
+    <img src="img/logo-header.jpg" alt="Bright Beginnings Academy logo">
+    <span><span class="t">Bright Beginnings</span><br><span class="s">Academy · Chimoio</span></span>
+  </a>
+  <nav class="nav-links" aria-label="Navegação">
+    <a href="bright-beginnings-academy.html#news" id="nav-back">← Notícias</a>
+    <div class="lang-toggle" role="group" aria-label="Idioma">
+      <button id="btn-pt" class="active" type="button">PT</button>
+      <button id="btn-en" type="button">EN</button>
+    </div>
+    <a class="btn btn-navy" href="contact.html" id="nav-cta">Pedir Informações</a>
+  </nav>
+</div></header>
+
+<main class="article-sec"><div class="wrap">
+  <article id="article" hidden>
+    <div class="article-wrap">
+      <figure class="hero-figure">
+        <img id="a-img" src="img/hero-school.jpg" alt="">
+      </figure>
+      <div class="article-prose">
+        <p class="crumb"><a href="bright-beginnings-academy.html#news" id="crumb-link">← Voltar para Notícias</a></p>
+        <span class="meta" id="a-cat">—</span>
+        <h1 id="a-title">—</h1>
+        <span class="date" id="a-date">—</span>
+        <p class="lede" id="a-lede">—</p>
+        <div id="a-corpo"></div>
+        <div class="share-row">
+          <a class="btn-wa-full" id="a-wa" href="#" target="_blank" rel="noopener">Partilhar no WhatsApp →</a>
+          <a class="btn btn-ghost" id="a-visit" href="bright-beginnings-academy.html#contact">Agendar visita →</a>
+        </div>
+      </div>
+    </div>
+  </article>
+  <div class="error-box" id="art-error" hidden>
+    <h2 id="err-h2" style="font-family:var(--serif);font-weight:800;color:var(--navy);margin-bottom:8px">Artigo não encontrado</h2>
+    <p id="err-p" style="color:var(--ink-secondary)">O link pode estar incompleto. Volte às notícias e escolha um artigo.</p>
+    <p style="margin-top:16px"><a class="btn btn-navy" id="err-link" href="bright-beginnings-academy.html#news">Ver notícias →</a></p>
+  </div>
+  <section class="more-sec" id="more-sec" hidden>
+    <h2 id="more-title">Continuar a ler</h2>
+    <div class="more-grid" id="more-grid"></div>
+  </section>
+</div></main>
+
+<footer class="site-footer"><div class="wrap">
+  <span>© 2026 Bright Beginnings Academy · Chimoio, Moçambique</span>
+  <span><a href="https://www.facebook.com/profile.php?id=61594581886025" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/bright_bba_oficial" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@nussy25" target="_blank" rel="noopener">TikTok</a> · <a href="contact.html" id="foot-contact">Contacto</a> · <a href="privacy.html" id="foot-privacy">Privacidade</a> · <a href="terms.html" id="foot-terms">Termos</a></span>
+</div></footer>
+<a class="wa-fab" href="https://wa.me/258844277021?text=Ol%C3%A1%20Bright%20Beginnings%20Academy!" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.1-.2 3.6 1 1.7 2.4 3 4.3 3.7 1.9.7 1.9.4 2.3.4.4 0 1.2-.5 1.4-1 .2-.5.2-.9.1-1-.1-.1-.3-.2-.5-.3Z"/></svg></a>
+<div class="cookie-bar" id="cookie-bar" role="dialog" aria-label="Aviso de privacidade" style="position:fixed;left:50%;transform:translateX(-50%);width:calc(100% - 32px);max-width:880px;bottom:88px;z-index:70;display:none;background:#0B2C77;color:#EDE8DC;border-radius:12px;padding:12px 16px;box-shadow:0 12px 32px rgba(0,0,0,.3)">
+  <div style="display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+    <p id="cookie-p" style="font-size:.82rem;max-width:720px">Usamos só dados essenciais. Sem rastreadores de publicidade. Ver <a href="privacy.html" style="color:#F6EED8;font-weight:700">Política de Privacidade</a>.</p>
+    <button type="button" id="cookie-ok" style="border:0;background:var(--brand-red-deep);color:#fff;font-weight:600;font-size:.8rem;border-radius:6px;padding:10px 20px;min-height:44px;cursor:pointer;white-space:nowrap;flex-shrink:0">Aceitar</button>
+  </div>
+</div>
+
+<script src="bba-config.js"></script>
+<script>
+(function(){
+  var lang = 'pt';
+  try { lang = localStorage.getItem('bba_lang') || 'pt'; } catch(e) {}
+  if (lang !== 'pt' && lang !== 'en') lang = 'pt';
+  var slug = new URLSearchParams(location.search).get('slug') || '';
+  var data = [];
+
+  /* Todos os textos fixos da página por idioma — o seletor PT/EN pinta tudo,
+     mesmo antes do artigo carregar (ou se o link for inválido). */
+  var STR = {
+    pt: {
+      back: '← Notícias', cta: 'Pedir Informações', homeAria: 'Voltar ao início',
+      crumb: '← Voltar para Notícias', wa: 'Partilhar no WhatsApp →', visit: 'Agendar visita →',
+      errT: 'Artigo não encontrado', errP: 'O link pode estar incompleto. Volte às notícias e escolha um artigo.', errL: 'Ver notícias →',
+      more: 'Continuar a ler', footC: 'Contacto', footP: 'Privacidade', footT: 'Termos',
+      cookie: 'Usamos só dados essenciais. Sem rastreadores de publicidade. Ver <a href="privacy.html" style="color:#F6EED8;font-weight:700">Política de Privacidade</a>.',
+      cookieBtn: 'Aceitar'
+    },
+    en: {
+      back: '← News', cta: 'Enquire Now', homeAria: 'Back to home',
+      crumb: '← Back to News', wa: 'Share on WhatsApp →', visit: 'Book a visit →',
+      errT: 'Article not found', errP: 'The link may be incomplete. Go back to news and choose an article.', errL: 'See news →',
+      more: 'Keep reading', footC: 'Contact', footP: 'Privacy', footT: 'Terms',
+      cookie: 'We use only essential data. No advertising trackers. See <a href="privacy.html" style="color:#F6EED8;font-weight:700">Privacy Policy</a>.',
+      cookieBtn: 'Accept'
+    }
+  };
+
+  function setText(id, txt){ var el = document.getElementById(id); if (el) el.textContent = txt; }
+
+  function paintChrome(){
+    document.documentElement.lang = lang === 'pt' ? 'pt' : 'en';
+    var s = STR[lang] || STR.pt;
+    setText('nav-back', s.back);
+    setText('nav-cta', s.cta);
+    setText('crumb-link', s.crumb);
+    setText('a-wa', s.wa);
+    setText('a-visit', s.visit);
+    setText('err-h2', s.errT);
+    setText('err-p', s.errP);
+    setText('err-link', s.errL);
+    setText('more-title', s.more);
+    setText('foot-contact', s.footC);
+    setText('foot-privacy', s.footP);
+    setText('foot-terms', s.footT);
+    setText('cookie-ok', s.cookieBtn);
+    var cp = document.getElementById('cookie-p');
+    if (cp) cp.innerHTML = s.cookie;
+    var brand = document.getElementById('brand-home');
+    if (brand) brand.setAttribute('aria-label', s.homeAria);
+    var cta = document.getElementById('nav-cta');
+    if (cta && !cta.textContent.trim()) cta.textContent = s.cta; /* nunca vazio */
+  }
+
+  function t(field, item){ return lang === 'pt' ? (item[field+'_pt'] || item[field+'_en'] || '') : (item[field+'_en'] || item[field+'_pt'] || ''); }
+
+  function render(item){
+    paintChrome();
+    var title = t('titulo', item), cat = t('categoria', item), resumo = t('resumo', item);
+    var corpo = lang === 'pt' ? (item.corpo_pt||[]) : (item.corpo_en||item.corpo_pt||[]);
+    document.title = title + ' | Bright Beginnings Academy';
+    document.getElementById('a-img').src = item.imagem;
+    document.getElementById('a-img').alt = item.alt || title;
+    document.getElementById('a-cat').textContent = cat;
+    /* Presentational only: accent the final word of the h1 (same text, no logic change) */
+    (function(){
+      var h1 = document.getElementById('a-title');
+      var safe = String(title).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      var words = safe.split(' ');
+      if (words.length > 1) {
+        var last = words.pop();
+        h1.innerHTML = words.join(' ') + ' <span class="hl-b">' + last + '</span>';
+      } else { h1.textContent = title; }
+    })();
+    document.getElementById('a-date').textContent = item.data || '';
+    document.getElementById('a-lede').textContent = resumo;
+    document.getElementById('a-corpo').innerHTML = corpo.map(function(p){ return '<p class="pgraf"></p>'; }).join('');
+    Array.prototype.forEach.call(document.querySelectorAll('#a-corpo .pgraf'), function(el,i){ el.textContent = corpo[i]; });
+    var wa = (lang==='pt' ? 'Olá! Li a notícia "' : 'Hello! I read the article "') + title + '" no site da BBA e gostaria de saber mais.';
+    document.getElementById('a-wa').href = 'https://wa.me/' + ((window.BBA_CONFIG&&window.BBA_CONFIG.WHATSAPP)||'258844277021') + '?text=' + encodeURIComponent(wa);
+    try {
+      document.getElementById('art-ld').textContent = JSON.stringify({"@context":"https://schema.org","@type":"NewsArticle","headline":title,"image":[item.imagem],"datePublished":item.data,"author":{"@type":"Organization","name":"Bright Beginnings Academy"}});
+    } catch(e) {}
+    document.getElementById('article').hidden = false;
+    // continuar a ler: outros 2
+    var others = data.filter(function(n){ return n.slug !== item.slug; }).slice(0,2);
+    var mg = document.getElementById('more-grid'); mg.innerHTML = '';
+    others.forEach(function(n){
+      var a = document.createElement('a');
+      a.className = 'more-card'; a.href = 'noticia.html?slug=' + encodeURIComponent(n.slug);
+      a.innerHTML = '<img loading="lazy"><div><span></span><h3></h3></div>';
+      a.querySelector('img').src = n.imagem; a.querySelector('img').alt = n.alt || '';
+      a.querySelector('span').textContent = t('categoria', n);
+      a.querySelector('h3').textContent = t('titulo', n);
+      mg.appendChild(a);
+    });
+    document.getElementById('more-sec').hidden = !others.length;
+  }
+
+  function setLang(l){
+    lang = (l === 'en') ? 'en' : 'pt';
+    try { localStorage.setItem('bba_lang', lang); } catch(e) {}
+    document.getElementById('btn-pt').classList.toggle('active', lang==='pt');
+    document.getElementById('btn-en').classList.toggle('active', lang==='en');
+    paintChrome();
+    var item = data.find(function(n){ return n.slug === slug; });
+    if(item) render(item);
+  }
+  document.getElementById('btn-pt').addEventListener('click', function(){ setLang('pt'); });
+  document.getElementById('btn-en').addEventListener('click', function(){ setLang('en'); });
+  document.getElementById('btn-pt').classList.toggle('active', lang==='pt');
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+  paintChrome(); /* pinta o cabeçalho/rodapé de imediato, sem esperar o fetch */
+
+  fetch('news.json').then(function(r){ if(!r.ok) throw 0; return r.json(); }).then(function(j){
+    data = Array.isArray(j) ? j : [];
+    var item = data.find(function(n){ return n.slug === slug; });
+    if(item) render(item);
+    else document.getElementById('art-error').hidden = false;
+  }).catch(function(){
+    var box = document.getElementById('art-error');
+    box.hidden = false;
+    box.querySelector('p').textContent = (lang==='pt')
+      ? 'Abra esta página através do servidor do site (não com duplo clique) para carregar o artigo.'
+      : 'Open this page through the site server (not with a double click) to load the article.';
+  });
+  try {
+    var cbar = document.getElementById('cookie-bar');
+    var cok = document.getElementById('cookie-ok');
+    if (cbar && cok) {
+      var seen = null;
+      try { seen = localStorage.getItem('bba-cookie'); } catch(e) {}
+      if (!seen) cbar.style.display = 'block';
+      cok.addEventListener('click', function(){
+        try { localStorage.setItem('bba-cookie','1'); } catch(e) {}
+        cbar.style.display = 'none';
+      });
+    }
+  } catch(e) {}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+@import url('../vendor/fonts/fonts.css');
+
+/* Navigation Styling */
+.glass-nav {
+    background: rgba(0, 26, 53, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+/* Gradient Utilities */
+.gold-gradient-text {
+    background: linear-gradient(135deg, #FFE57F 0%, #FFC107 50%, #FF8F00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow {
+    box-shadow: 0 0 15px rgba(250, 204, 21, 0.2);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #001a35;
+}
+::-webkit-scrollbar-thumb {
+    background: #00529b;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ca8a04;
+}

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade — Enclave Accommodation</title>
+  <meta name="description" content="Política de Privacidade completa e oficial da Enclave Accommodation — como recolhemos, usamos, protegemos e eliminamos os dados dos hóspedes em Chimoio, Mutare e Nyanga.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --em-dark: #082A1E;
+      --em-base: #0E4331;
+      --gold-light: #F7EFCF;
+      --gold: #D4AF37;
+      --gold-dark: #9E7D1A;
+      --gold-deep: #664E0C;
+      --gold-soft: #FAF4E4;
+      --ink: #111816;
+      --ink-2: #34403B;
+      --ink-muted: #5F6F68;
+      --paper: #FFFFFF;
+      --linen: #FBFBF8;
+      --tint: #F3F1E9;
+      --line: #E5E1D5;
+      --r: 14px;
+      --shadow-sm: 0 2px 6px rgba(5, 28, 20, 0.04);
+      --shadow-md: 0 12px 32px -8px rgba(5, 28, 20, 0.10);
+      --shadow-lg: 0 24px 60px -12px rgba(5, 28, 20, 0.18);
+      --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--paper);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .topbar { background: var(--em-dark); color: #FFF; padding: 14px 0; }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .brand img { height: 42px; width: auto; display: block; }
+    .topbar a.btn-back { color: var(--gold-light); text-decoration: none; font-size: 12.5px; font-weight: 600; border: 1px solid rgba(255,255,255,0.25); padding: 9px 16px; border-radius: 999px; transition: all .2s; }
+    .topbar a.btn-back:hover { background: rgba(255,255,255,0.1); }
+    .legal-hero { background: var(--tint); padding: 56px 0 40px; border-bottom: 1px solid var(--line); }
+    .eyebrow { color: var(--gold-dark); font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 14px; }
+    h1 { font-size: 34px; line-height: 1.2; color: var(--em-dark); font-weight: 800; margin-bottom: 14px; letter-spacing: -0.01em; }
+    .legal-hero p.lead { color: var(--ink-2); font-size: 15px; line-height: 1.75; max-width: 780px; }
+    .legal-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+    .legal-chip { background: var(--gold-soft); border: 1px solid var(--line); color: var(--gold-deep); font-size: 11.5px; font-weight: 600; padding: 8px 14px; border-radius: 999px; }
+    .toc { background: var(--paper); border-bottom: 1px solid var(--line); }
+    .toc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px 26px; padding: 26px 0; }
+    .toc-grid a { color: var(--em-base); text-decoration: none; font-size: 13px; font-weight: 500; padding: 7px 0; border-bottom: 1px dashed transparent; display: block; }
+    .toc-grid a:hover { color: var(--gold-deep); border-bottom-color: var(--gold); }
+    .legal-body { padding: 30px 0 70px; }
+    .legal-card { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 34px 30px; margin-bottom: 22px; }
+    .legal-card h2 { font-size: 20px; color: var(--em-dark); font-weight: 700; margin-bottom: 16px; letter-spacing: -0.01em; display: flex; gap: 12px; align-items: baseline; }
+    .legal-card h2 .num { color: var(--gold-dark); font-weight: 800; font-size: 15px; }
+    .legal-card h3 { font-size: 15px; color: var(--em-dark); font-weight: 700; margin: 22px 0 8px; }
+    .legal-card p, .legal-card li { font-size: 14px; color: var(--ink-2); line-height: 1.85; margin-bottom: 12px; }
+    .legal-card ul, .legal-card ol { margin: 0 0 14px 22px; }
+    .legal-card li { margin-bottom: 8px; }
+    .legal-card strong { color: var(--em-dark); font-weight: 700; }
+    .legal-card a { color: var(--gold-deep); font-weight: 600; }
+    .highlight { background: var(--gold-soft); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin: 14px 0 16px; }
+    .highlight p { margin-bottom: 0; }
+    .note { background: #F7FAF8; border: 1px solid #DCE7E1; border-radius: 12px; padding: 16px 18px; margin: 14px 0 16px; }
+    .note p { margin-bottom: 0; }
+    .simple-table { width: 100%; border-collapse: collapse; margin: 10px 0 16px; font-size: 13px; }
+    .simple-table th { text-align: left; background: var(--tint); color: var(--em-dark); font-weight: 700; padding: 10px 12px; border: 1px solid var(--line); font-size: 12.5px; }
+    .simple-table td { padding: 10px 12px; border: 1px solid var(--line); color: var(--ink-2); vertical-align: top; line-height: 1.7; }
+    .ftr { background: var(--em-dark); color: #FFF; padding: 44px 0 30px; }
+    .ftr p { color: #BCD1C8; font-size: 13px; line-height: 1.7; max-width: 640px; margin-bottom: 10px; }
+    .ftr strong { color: var(--gold-light); }
+    .ftr a { color: var(--gold-light); text-decoration: none; font-weight: 600; }
+    .ftr a:hover { text-decoration: underline; }
+    .ftr-bottom { border-top: 1px solid rgba(255,255,255,0.12); margin-top: 28px; padding-top: 18px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 11.5px; color: #9DB7AB; }
+    .lang-note { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin-bottom: 22px; }
+    .lang-note p { font-size: 12.5px; color: var(--ink-2); line-height: 1.7; margin: 0; }
+    @media (max-width: 700px) { h1 { font-size: 26px; } .legal-card { padding: 26px 20px; } }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html" title="Voltar ao site Enclave Accommodation">
+        <img src="assets/logo.png" alt="Enclave Accommodation">
+      </a>
+      <a class="btn-back" href="index.html">← Voltar ao site</a>
+    </div>
+  </header>
+
+  <section class="legal-hero">
+    <div class="container">
+      <span class="eyebrow">Documento Legal Oficial</span>
+      <h1>Política de Privacidade — Enclave Accommodation</h1>
+      <p class="lead">Esta política explica, numa linguagem o mais simples possível, como a Enclave Accommodation recolhe, usa, guarda, protege e elimina a informação de quem usa o nosso website, conversa connosco por WhatsApp ou reserva estadia nas nossas casas em Chimoio (Moçambique), Mutare e Nyanga (Zimbabwe). A sua privacidade não é um detalhe administrativo para nós: é parte da confiança que sustenta cada reserva.</p>
+      <div class="legal-meta">
+        <span class="legal-chip">Data efetiva: 18 de outubro de 2026</span>
+        <span class="legal-chip">Última revisão: 18 de outubro de 2026</span>
+        <span class="legal-chip">Versão integral — este documento é a versão oficial completa</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="toc">
+    <div class="container">
+      <div class="toc-grid" id="tocGrid"></div>
+    </div>
+  </section>
+
+  <main class="legal-body">
+    <div class="container">
+
+      <div class="lang-note">
+        <p><strong>English note:</strong> this page contains the full and binding version of our Privacy Policy, written in Portuguese. If you would like a short English summary before booking, write to Enclaveccomodation@gmail.com or message us on WhatsApp — we will gladly send it to you.</p>
+      </div>
+
+      <!-- 01 -->
+      <article class="legal-card" id="s01">
+        <h2><span class="num">01.</span> Introdução e Nosso Compromisso</h2>
+        <p>A hospitalidade numa casa alheia funciona por confiança. Confiança no imóvel, na descrição honesta do site e na equipa que recebe. Confiança também nos dados que o hóspede partilha para viabilizar a reserva: um nome, um número de telemóvel, umas datas, um pedido especial. Esta política existe precisamente para que essa confiança seja merecida e documentada, por escrito, do primeiro ao último parágrafo.</p>
+        <p>Declaramos aqui o compromisso central do nosso tratamento. Recolhemos apenas os dados de que realmente necessitamos, para as finalidades específicas que constam nesta página. Não vendemos, não alugamos e não partilhamos dados pessoais com terceiros para fins de publicidade. O correto ao usar os nossos canais é simples: enviar o mínimo necessário, garantir a reserva, e passar por eliminação dos dados quando eles deixarem de ser necessários.</p>
+        <p>Uma nota honesta sobre a nossa escala: somos uma operação pequena e pessoal, conduzida pelo anfitrião Tandiwa Maswera e por uma equipa direta. Isso reflete-se na forma como tratamos os dados: poucas pessoas têm acesso, cada dado tem um motivo claro de existir, e nenhum dado alimenta um sistema de vendas ou de anúncios. Este documento é a repetição, por escrito, desse compromisso.</p>
+      </article>
+
+      <!-- 02 -->
+      <article class="legal-card" id="s02">
+        <h2><span class="num">02.</span> Âmbito e Responsável pelo Tratamento</h2>
+        <p>Esta política aplica-se a todo o uso do website da Enclave Accommodation, a todas as mensagens dirigidas aos nossos canais oficiais e a todas as estadias reservadas nas nossas casas em Chimoio (bairro Trangapasso), Mutare (bairro Greenside) e Nyanga. No Zimbabwe, aplica-se igualmente aos contactos no Zimbabwe, em Mutare e Nyanga, no respeito das normas locais aplicáveis.</p>
+        <p>O responsável pelo tratamento é a <strong>Enclave Accommodation</strong>, representada pelo anfitrião Tandiwa Maswera, com escritório geral na <strong>Avenida da Independência, Chimoio, Moçambique</strong>. Para qualquer questão de privacidade, estes são os nossos canais diretos:</p>
+        <ul>
+          <li><strong>Email central:</strong> Enclaveccomodation@gmail.com</li>
+          <li><strong>WhatsApp / Telefone:</strong> +263 777 735 000</li>
+          <li><strong>Escritório Moçambique:</strong> Avenida da Independência, Chimoio</li>
+          <li><strong>Presença Zimbabwe:</strong> Mutare &amp; Nyanga</li>
+        </ul>
+        <p>A Enclave não nomeia encarregado de proteção de dados separado, por ser uma operação de escala pequena; todas as questões de privacidade são respondidas diretamente pelo anfitrião e pela equipa central, por qualquer dos canais acima. Este documento é atualizado sempre que muda a nossa forma de operar e, em qualquer caso, ao menos uma vez por ano.</p>
+      </article>
+
+      <!-- 03 -->
+      <article class="legal-card" id="s03">
+        <h2><span class="num">03.</span> Definições do Documento</h2>
+        <p><strong>"Dados pessoais"</strong> são qualquer informação que permita identificar uma pessoa: nome, número de telemóvel, email, datas de estadia ou um pedido especial que revele um traço identificador (por exemplo, uma dieta específica). <strong>"Tratamento"</strong> é toda a operação feita com esses dados: recolha, leitura, uso, armazenamento, partilha, correção e eliminação.</p>
+        <p><strong>"Titular"</strong> é a pessoa a quem os dados pertencem — normalmente, você, o hóspede ou quem nos contacta. <strong>"Terceiros"</strong> são empresas e serviços fora da nossa operação, tal como o serviço de formulários Formspree, o WhatsApp (operado pela Meta) e a Google, que fornece mapas e fontes tipográficas. <strong>"Cookies"</strong> são códigos pequenos que um site pode guardar no seu navegador para lembrar preferências.</p>
+        <p>Neste documento usamos, ainda, o termo <strong>"canais oficiais"</strong> para designar o site, o WhatsApp +263 777 735 000 e o email Enclaveccomodation@gmail.com. Pedidos de privacidade feitos por canais não oficiais — redes sociais, por exemplo — podem não conseguir ser atendidos; escreva-nos pelo canal oficial e respondemos com certeza.</p>
+        <p>As definições valem igualmente para os Termos de Uso da mesma pasta. Havendo qualquer dúvida sobre o sentido de um conceito, prefere-se o uso comum da língua portuguesa. A nossa intenção é escrever sobre privacidade como falamos no WhatsApp: sem exceções escondidas nem parágrafos desnecessários.</p>
+      </article>
+
+      <!-- 04 -->
+      <article class="legal-card" id="s04">
+        <h2><span class="num">04.</span> Os Nossos Princípios de Tratamento</h2>
+        <p>Poucas regras, com sinceridade total. Elas orientam o que fazemos com os dados em todas as situações, mesmo naquelas que não são descritas individualmente nesta página:</p>
+        <ul>
+          <li><strong>Minimização:</strong> recolhemos o que a reserva precisa, e nada acima disso. Não pedimos documentos que não vamos usar, nem campos de formulário "por curiosidade".</li>
+          <li><strong>Finalidade limitada:</strong> cada dado tem finalidade declarada. Um telefone serve para organizar a chegada; não vira base de listas de envio.</li>
+          <li><strong>Clareza:</strong> o hóspede sempre sabe por que estamos perguntando. Cada campo de formulário diz o que precisa dizer.</li>
+          <li><strong>Segurança:</strong> acesso por poucas pessoas, partilha mínima, e dentro do possível através de ferramentas com criptografia (WhatsApp, email e serviços de formulários com HTTPS).</li>
+          <li><strong>Eliminação:</strong> quando a finalidade expira, apagamos. Se pedir a eliminação dos seus dados, executamos em prazo razoável, com confirmação de fecho do pedido.</li>
+          <li><strong>Sem venda de dados:</strong> este compromisso é absoluto. Nenhum dado pessoal entra em qualquer troca ou venda, ainda que alguém se apresente como "parceiro comercial" ou "módulo de marketing".</li>
+        </ul>
+        <p>Quando qualquer operação nova surgir — por exemplo, uma futura newsletter, um programa de fidelidade ou um sistema de reservas online — atualizamos esta política antes de iniciar, e só recolhemos o que for declarado lá. Os princípios acima, porém, permanecem inalterados: são o fundamento de tudo.</p>
+      </article>
+
+      <!-- 05 -->
+      <article class="legal-card" id="s05">
+        <h2><span class="num">05.</span> Dados que Recolhemos — Reservas via WhatsApp</h2>
+        <p>A maioria das reservas nasce no WhatsApp +263 777 735 000. Nesse canal, recolhemos o que a conversa naturalmente revela e o que a reserva exige: <strong>o nome (ou a forma pela qual prefere ser tratado), o número de telemóvel de contacto, as datas desejadas, o imóvel, o número de hóspedes e os pedidos especiais</strong> que nos indique — um check-in tardio, uma preferência de quarto, uma necessidade alimentar, um pedido de ajuda com transportes.</p>
+        <p>Dados técnicos do próprio WhatsApp — o número que você usa, o horário das mensagens, o tamanho das conversas — são geridos pela plataforma, nos termos da política da própria Meta. A criptografia de ponta a ponta do WhatsApp significa que as mensagens só são legíveis no seu aparelho e no nosso. Mantemos o WhatsApp como canal preferido justamente por esse motivo, e pelo seu uso universal na região.</p>
+        <p>O que normalmente <strong>não</strong> recolhemos via WhatsApp: o endereço completo da sua residência habitual, a idade dos acompanhantes, a profissão, o rendimento, a nacionalidade documentada ou qualquer elemento similar a esses. Se alguma reserva particular exigir informação extra — para validação em casos muito raros — pedimos por escrito e explicamos a necessidade caso a caso. Sempre com o mesmo princípio: o mínimo necessário.</p>
+      </article>
+
+      <!-- 06 -->
+      <article class="legal-card" id="s06">
+        <h2><span class="num">06.</span> Dados que Recolhemos — Formulário do Site e Email</h2>
+        <p>O formulário de contacto do site pede três campos: <strong>nome completo, email ou número de telemóvel, e mensagem</strong>. Essa mensagem é enviada através da plataforma <strong>Formspree</strong> e chega à nossa caixa de email central. Nela, tratamos as suas perguntas, pedidos de reserva e pedidos especiais como se fosse uma conversa do WhatsApp — com as mesmas finalidades e a mesma regra de minimização.</p>
+        <p>O email central (Enclaveccomodation@gmail.com) continua a ser um dos nossos canais principais. Emails enviados para ele incluem, naturalmente, o endereço de email de origem e o conteúdo da mensagem. O tratamento é simples: responder ao que foi pedido e guardar a conversa enquanto for útil à relação, conforme a secção de retenção (15).</p>
+        <p>Nota técnica e honesta sobre o formulário: o Formspree é o operador que transporta a mensagem até nós. O seu tráfego decorre com HTTPS. Os detalhes de como o serviço mantém e trata os dados em trânsito estão na política de privacidade da própria plataforma; nós não armazenamos cópias adicionais desse tráfego além da conversa que chega ao email.</p>
+      </article>
+
+      <!-- 07 -->
+      <article class="legal-card" id="s07">
+        <h2><span class="num">07.</span> Dados Técnicos do Website</h2>
+        <p>O nosso site é estático e leve. Não corre sistemas de rastreamento de visitantes, não instala cookies de publicidade e não cria perfis de navegação. Ainda assim, alguns componentes técnicos do site comunicam com serviços externos para funcionar, e é justo que saiba quais:</p>
+        <ul>
+          <li><strong>Mapas do Google:</strong> as fichas das casas incluem mapas embutidos para ajudar a localizar os imóveis. Ao abrir a página, o seu navegador comunica com os servidores do Google, que podem registar o endereço IP e as preferências do navegador, nos termos da política da própria Google.</li>
+          <li><strong>Fontes tipográficas do Google:</strong> o site usa a fonte Poppins carregada dos servidores do Google Fonts. O mesmo serviço pode registar pedidos técnicos de carregamento.</li>
+          <li><strong>Fotografias em serviços externos:</strong> parte das imagens das casas está alojada em serviços de hospedagem de imagens na internet. Esses serviços podem registar pedidos de carregamento das imagens, sem identificar pessoas.</li>
+          <li><strong>Formspree:</strong> atua apenas quando o utilizador submete o formulário de contacto, conforme a secção 6.</li>
+        </ul>
+        <p>O site não usa banners publicitários, pixels de redes sociais ou scripts de medição de audiência. Se esta realidade mudar no futuro, esta secção será atualizada antes de qualquer novo componente entrar no ar — e o utilizador será informado nesta página.</p>
+        <p>Uma nota sobre o navegador: o site guarda apenas voltas de preferência de idioma (PT ou EN) para apresentar a página na língua escolhida. Esse registo fica no seu próprio navegador e pode ser apagado a qualquer momento pelas definições do browser, sem qualquer efeito no funcionamento das restantes funções.</p>
+      </article>
+
+      <!-- 08 -->
+      <article class="legal-card" id="s08">
+        <h2><span class="num">08.</span> Pagamentos — O que Vemos e o que Não Vemos</h2>
+        <p>Os pagamentos das reservas fazem-se por M-Pesa, E-Mola, transferência bancária ou em moedas internacionais (USD, ZAR e EUR), conforme combinado na confirmação da reserva. Neste processo, os dados financeiros que efetivamente chegam a nós são os <strong>comprovativos de pagamento</strong>: o recibo da transferência, a mensagem do serviço de dinheiro móvel ou a referência da transação.</p>
+        <p>O que <strong>não</strong> vemos e <strong>não</strong> recolhemos: números de cartão de crédito ou débito (parciais ou completos), códigos de segurança, palavras-passe de aplicações bancárias ou saldos de contas. Não solicitamos esses elementos em nenhuma circunstância. Se alguém se apresentar como membro da Enclave e pedir dados de cartão, trate como fraude: não partilhe, e avise-nos imediatamente pelo WhatsApp oficial.</p>
+        <p>Os comprovativos de pagamento que recebemos servem a finalidade única de confirmar a reserva e de preparar recibo, quando pedido. Ficam arquivados com a conversa da reserva, conforme a política de retenção desta página, e não são usados para mais nada. Pedidos de fatura formal, em nome de empresa, são atendidos com os dados fiscais que o próprio hóspede fornecer para o efeito.</p>
+        <p>Se numa transferência bancária aparecerem dados que não pedimos — por exemplo, o nome completo da conta de origem —, tratamos essa informação com as mesmas regras de confidencialidade desta política, e não a usamos para qualquer fim adicional.</p>
+      </article>
+
+      <!-- 09 -->
+      <article class="legal-card" id="s09">
+        <h2><span class="num">09.</span> Base Legal do Tratamento</h2>
+        <p>Usamos os seus dados com fundamento em bases legais concretas, e vale a lista de cada uma:</p>
+        <ul>
+          <li><strong>Execução de contrato:</strong> é a base que sustenta quase tudo — organizar a reserva, a chegada, o pagamento, a estadia e a saída. Sem estes dados, a reserva simplesmente não pode ser cumprida.</li>
+          <li><strong>Consentimento:</strong> aplicado a casos como pedidos especiais que revelem preferências pessoais (dietas, celebrações). O consentimento é dado pela própria mensagem e pode ser retirado a qualquer momento, com efeito para o futuro.</li>
+          <li><strong>Legítimo interesse:</strong> usamos de forma mínima e ponderada para responder a perguntas, garantir a segurança das conversas e melhorar a operação das casas, sempre sem surpreender o titular.</li>
+          <li><strong>Obrigação legal:</strong> quando a lei moçambicana ou zimbabwana exigir registo, faturação ou comunicação a autoridade, cumprimos com o mínimo estritamente legal.</li>
+        </ul>
+        <p>Em resumo: o uso dos dados chega sempre a uma destas quatro bases, e nenhuma operação de tratamento acontece fora delas. Se quiser saber qual a base aplicada ao seu caso concreto, pergunte por WhatsApp: indicamos com clareza e sem vai-e-vem.</p>
+        <p>A Enclave trata dados segundo a legislação de proteção de dados aplicável em Moçambique, incluindo os princípios gerais consagrados na lei moçambicana de proteção de dados pessoais, e complementa os deveres com as melhores práticas de hospitalidade já descritas nesta política.</p>
+      </article>
+
+      <!-- 10 -->
+      <article class="legal-card" id="s10">
+        <h2><span class="num">10.</span> Finalidades Detalhadas do Uso dos Dados</h2>
+        <p>Com o mínimo de dados recolhido, atuamos em finalidades concretas e identificáveis. Cada finalidade usa exclusivamente aquilo de que precisa — nunca mais:</p>
+        <ul>
+          <li><strong>Responder a pedidos:</strong> perguntas sobre casas, disponibilidade, tarifas e logística da região respondem-se com os dados contidos na própria mensagem.</li>
+          <li><strong>Gerir a reserva:</strong> confirmar datas, registar valores, organizar o depósito e preparar a estadia com o imóvel pronto na hora acordada.</li>
+          <li><strong>Organizar a chegada e a partida:</strong> combinar check-in, check-out, entrega de chaves e instruções de acesso com clareza e pontualidade.</li>
+          <li><strong>Prestar apoio durante a estadia:</strong> resolver pedidos e imprevistos, ativar ajudas locais e manter o contacto entre a equipa e o hóspede.</li>
+          <li><strong>Documentar a relação:</strong> guardar a confirmação da reserva e os comprovativos acordados, para segurança de ambas as partes.</li>
+          <li><strong>Cumprir obrigações legais:</strong> faturação, recibos e qualquer comunicação exigida por autoridade competente.</li>
+        </ul>
+        <p>Ficam de fora, por princípio, qualquer finalidade de prospecção comercial em massa, venda de listas, sorteios de terceiros, perfilações automáticas de comportamento ou partilha não declarada nesta página. Se alguma dessas finalidades um dia fizer sentido para a operação, será detalhada aqui e pedida autorização prévia, conforme os princípios da secção 4.</p>
+        <p>Não tomamos decisões exclusivamente automatizadas sobre hóspedes, preços ou reservas. Toda a decisão que afeta a sua estadia é tomada por pessoas, com contexto humano de cada caso — é parte da nossa forma de hospitalidade e também uma proteção para o titular dos dados.</p>
+      </article>
+
+      <!-- 11 -->
+      <article class="legal-card" id="s11">
+        <h2><span class="num">11.</span> O que Não Recolhemos e Não Fazemos</h2>
+        <p>Para além da recolha minimalista já descrita, esta secção fixa os limites negativos — tudo aquilo que fica deliberadamente fora da nossa operação:</p>
+        <ul>
+          <li><strong>Não recolhemos dados sensíveis</strong> (religião, política, saúde detalhada, biometria), salvo o que o próprio hóspede indicar voluntariamente num pedido especial necessário à estadia — por exemplo, uma alergia alimentar que a equipa precisa conhecer para a cozinha.</li>
+          <li><strong>Não pedimos documentos de identificação digitalizados</strong> como rotina. Check-in baseia-se nas conversas e nas confirmações já acordadas.</li>
+          <li><strong>Não usamos câmaras de vigilância</strong> nas casas nem nas áreas comuns. A privacidade dentro do imóvel é total. Em emergência recorre-se à boa-fé da vizinhança e ao apoio da equipa.</li>
+          <li><strong>Não usamos dados para publicidade</strong> nem para campanhas automatizadas dirigidas em redes sociais.</li>
+          <li><strong>Não vendemos ou cedemos dados</strong> a plataformas de marketing, corretoras de reservas ou empresas de dados.</li>
+          <li><strong>Não recolhemos dados de menores</strong> diretamente. Ver secção 17.</li>
+        </ul>
+        <p>Estes limites têm o peso de regra da casa: aplicam-se a toda a equipa, ao anfitrião e a qualquer parceiro eventual. Constam aqui também para quem quiser verificar o nosso compromisso sem ler o documento inteiro, e servem de medida nas auditorias internas já realizadas e nas futuras.</p>
+      </article>
+
+      <!-- 12 -->
+      <article class="legal-card" id="s12">
+        <h2><span class="num">12.</span> Partilha com Terceiros</h2>
+        <p>Como operação pessoal de hospitalidade, não temos cadeia de fornecedores complexa. Os terceiros que, por natureza técnica, têm contacto com dados são apenas estes:</p>
+        <ul>
+          <li><strong>WhatsApp / Meta:</strong> canal de comunicação para reservas e apoio durante a estadia. As mensagens seguem criptografia de ponta a ponta; os metadados técnicos pertencem à plataforma e são regidos pela política da Meta.</li>
+          <li><strong>Formspree:</strong> transporta as mensagens do formulário do site até à nossa caixa de email. A plataforma atua apenas como intermediário técnico do tráfego HTTPS.</li>
+          <li><strong>Google:</strong> fornece os mapas embutidos e as fontes tipográficas do site. O contacto técnico acontece no carregamento da página, nos termos da política da Google.</li>
+          <li><strong>Serviços de hospedagem de imagens:</strong> guardam as fotografias públicas das casas. Não identificam visitantes nem usuários.</li>
+          <li><strong>Provedores de email e de telefone:</strong> suportam os canais de contacto oficiais. O conteúdo das conversas fica entre a equipa e o hóspede.</li>
+        </ul>
+        <p>Fora desta lista, não partilhamos dados com ninguém. Autoridades públicas só recebem informação nos casos de obrigação legal, ordem judicial ou emergência real — e sempre com o mínimo de dados necessário ao fim concreto. Nunca partilhámos uma lista de hóspedes no passado; não partilhamos hoje; e o compromisso fica aqui por escrito.</p>
+      </article>
+
+      <!-- 13 -->
+      <article class="legal-card" id="s13">
+        <h2><span class="num">13.</span> Transferências Internacionais de Dados</h2>
+        <p>Vários dos serviços técnicos usados na operação — Formspree, Google, Meta, serviços de imagens — operam em servidores fora de Moçambique e do Zimbabwe, em centros de dados distribuídos pelo mundo. Isso significa que, ao usar o site e os canais oficiais, a sua informação pode transitar por infraestrutura internacional, ainda que o conteúdo das conversas continue apenas entre nós.</p>
+        <p>Assumimos essas transferências com três proteções: primeiro, apenas serviços amplamente adotados, com política de privacidade própria publicada; segundo, o mínimo de dados possível em cada canal — o WhatsApp só entrega o que a conversa contém, o formulário só envia o que o utilizador escreveu; terceiro, obrigações contratuais e técnicas de cada fornecedor, que se obrigam a proteger os dados que transportam.</p>
+        <p>Se os planos de operação mudarem — por exemplo, no caso de migrar para um sistema de reservas com servidores próprios —, esta política é atualizada antes da transição e o hóspede é avisado nesta página. A regra permanece: nada de transferência nova sem transparência prévia.</p>
+        <p>Para os hóspedes de Zimbabwe e de Moçambique, a aplicação prática é a mesma já descrita: os dados ficam distribuídos apenas entre os serviços técnicos acima declarados, sem introdução de outros destinos, parceiros ou países.</p>
+      </article>
+
+      <!-- 14 -->
+      <article class="legal-card" id="s14">
+        <h2><span class="num">14.</span> Como Protegemos os Seus Dados</h2>
+        <p>A nossa infraestrutura de dados é deliberadamente simples, e a segurança deriva dessa simplicidade. Os dados das reservas vivem em três lugares: as conversas do WhatsApp, a caixa de email central e os registos operacionais da equipa. Cada um desses lugares tem medidas concretas de proteção:</p>
+        <ul>
+          <li><strong>Acesso reduzido:</strong> apenas o anfitrião e a equipa central consultam as conversas e os registos. Nenhum parceiro, agente de limpeza ou motorista tem acesso à base de conversas.</li>
+          <li><strong>Criptografia de ponta a ponta</strong> nas mensagens do WhatsApp: o conteúdo das conversas só é legível no aparelho do hóspede e no aparelho da equipa.</li>
+          <li><strong>HTTPS</strong> no site e no formulário: o tráfego entre o navegador e o nosso email viaja cifrado pelos serviços Formspree e do provedor de email.</li>
+          <li><strong>Aparelhos protegidos:</strong> os telemóveis da equipa bloqueiam com PIN/biometria. Não guardamos dados de reservas em computadores públicos ou redes abertas.</li>
+          <li><strong>Verificações periódicas:</strong> conversas antigas e registos sem utilidade operacional são apagados, conforme a política de retenção (secção 15). Menos dados guardados é menos risco.</li>
+        </ul>
+        <p>Com a honestidade que nos caracteriza: nenhum sistema é infalível, e não prometemos inviolabilidade absoluta — ninguém louável no mundo da tecnologia pode prometer isso. Prometemos, sim, responsabilidade em cada elemento controlável, resposta rápida e transparência total ao hóspede em caso de qualquer incidente que o afete, com comunicação direta e clara.</p>
+        <p>Se alguma situação suspeita surgir — uma conversa estranha, um pedido de pagamento fora do contexto da confirmação da reserva — a regra é imediata: pergunte-nos pelo canal oficial antes de partilhar qualquer coisa. Verificamos e respondemos no mesmo dia, sempre.</p>
+      </article>
+
+      <!-- 15 -->
+      <article class="legal-card" id="s15">
+        <h2><span class="num">15.</span> Retenção dos Dados e Prazos</h2>
+        <p>Guardamos os dados pelo tempo de utilidade real, e não mais. Os prazos abaixo são a nossa política formal de retenção:</p>
+        <ul>
+          <li><strong>Conversas do WhatsApp:</strong> mantidas enquanto forem úteis à relação — da pergunta inicial até ao fecho da estadia e, quando haja, das tratativas finais. Depois disso, arquivamos ou eliminamos conforme a secção 14.</li>
+          <li><strong>Confirmações de reserva:</strong> guardadas por, no mínimo, um ano após a estadia, para efeitos de comprovativo, recibo e esclarecimento de qualquer dúvida futura.</li>
+          <li><strong>Comprovativos de pagamento:</strong> guardados com a confirmação da reserva correspondente, pelo mesmo prazo mínimo de um ano.</li>
+          <li><strong>Emails trocados:</strong> eliminados ou arquivados quando deixarem de servir à relação ou à documentação mínima da reserva.</li>
+          <li><strong>Pedidos de eliminação:</strong> atendidos conforme a secção 16, com confirmação do pedido eliminado ao término.</li>
+        </ul>
+        <p>Duas exceções honestas: dados exigidos por obrigação legal em vigor — por exemplo, a faturação fiscal com prazo de arquivo reforçado — guardam-se o tempo que a lei determinar; e conversas ligadas a disputas em curso guardam-se até à resolução, para defesa justa de ambas as partes. Fora destas exceções, aplica-se o quadro acima sem burocracia desnecessária.</p>
+        <p>Quando eliminamos dados, apagamos as informações operacionais associadas; cópias de backups automáticos dos serviços de terceiros seguem os prazos próprios desses sistemas, e desaparecem naturalmente conforme a rotação dos mesmos.</p>
+      </article>
+
+      <!-- 16 -->
+      <article class="legal-card" id="s16">
+        <h2><span class="num">16.</span> Os Seus Direitos e Como Exercê-los</h2>
+        <p>Os direitos do titular dos dados não são um favor que a Enclave faz: são regras que respeitamos plenamente. O quadro dos seus direitos é este:</p>
+        <ul>
+          <li><strong>Acesso:</strong> saber quais dados seus tratamos atualmente, com descrição simples do uso.</li>
+          <li><strong>Correção:</strong> pedir a mudança de qualquer dado errado ou desatualizado — nome com grafia direita, número de telemóvel atualizado, datas corrigidas.</li>
+          <li><strong>Eliminação:</strong> pedir a eliminação dos dados pessoais, ressalvadas as exceções legais já descritas na secção 15.</li>
+          <li><strong>Limitação ou oposição:</strong> em casos específicos, pedir que o uso de determinado dado seja restringido ou interrompido.</li>
+          <li><strong>Portabilidade:</strong> receber em formato estruturado e legível os dados que nos forneceu diretamente, para levar a outro fornecedor, se desejar.</li>
+          <li><strong>Retirada de consentimento:</strong> para os usos baseados em consentimento, retirar o efeito a qualquer momento, sem retroatividade devidas.</li>
+        </ul>
+        <p>Como exercer: envie mensagem ao WhatsApp <strong>+263 777 735 000</strong> ou ao email <strong>Enclaveccomodation@gmail.com</strong>, com a palavra "Privacidade" e a descrição do pedido. Respondemos com a confirmação de receção e damos seguimento ao pedido em prazo razoável — em regra, dentro de 30 dias. Se o pedido precisar de um tratamento mais detalhado, comunicamos prazos e progresso de forma clara.</p>
+        <div class="highlight">
+          <p><strong>Nunca exercemos o seu direito com retaliação.</strong> Pedir acesso, correção ou eliminação de dados não altera o histórico de reservas, não cancela hospitalidade e não afeta recebimentos. Se algum problema surgir na execução, tratamos com prioridade e damos resposta por escrito.</p>
+        </div>
+      </article>
+
+      <!-- 17 -->
+      <article class="legal-card" id="s17">
+        <h2><span class="num">17.</span> Menores de Idade</h2>
+        <p>As reservas nas nossas casas firmam-se sempre com um hóspede adulto responsável. Esse adulto fornece os dados da reserva e assume, perante a Enclave, a responsabilidade pelo grupo que acompanha — incluindo os menores de idade.</p>
+        <p>A Enclave não recolhe deliberadamente dados de menores diretamente dos próprios, nem para marketing, nem para qualquer outra finalidade. Quando um menor aparece numa reserva, aparece apenas como acompanhante do adulto responsável, com as menores de informação possível: normalmente, o número de pessoas e o cumprimento das regras da casa.</p>
+        <p>Se soubermos que um menor nos enviou diretamente um pedido de reserva ou mensagem fora da supervisão de um adulto, tratamos a mensagem com cuidado, não iniciamos uma reserva com esses dados e procuramos dirigir a conversa a um adulto responsável. A regra da casa é simples: reservas são um assunto de adultos.</p>
+        <p>As famílias são sempre bem-vindas nas nossas casas — é justamente por isso que as regras de menor vestem aqui clareza e cuidado máximo. Se tiver qualquer dúvida sobre o tratamento de dados de acompanhantes menores, pergunte antes da reserva: respondemos com o detalhe que precisar.</p>
+      </article>
+
+      <!-- 18 -->
+      <article class="legal-card" id="s18">
+        <h2><span class="num">18.</span> Fotografias e Conteúdo do Site</h2>
+        <p>As fotografias publicadas no site são imagens das nossas casas, jardins e espaços, tiradas para mostrar com fidelidade aquilo que o hóspede encontrará. Nelas não aparece nenhum hóspede sem autorização prévia, por escrito, da pessoa fotografada. Esta regra inclui fotos de chegada, de estadia e de saída, em qualquer das quatro casas.</p>
+        <p>Quando algum hóspede partilha connosco, por vontade própria, uma fotografia da estadia e sugere a publicação, pedimos a confirmação por escrito antes de qualquer uso, e respeitamos sempre a recusa. A foto é publicado, quando autorizado, apenas nos canais da Enclave e nunca com indicações que exponham a residência habitual ou o paradeiro da pessoa.</p>
+        <p>Os vídeos e visitas guiadas do site mostram os espaços vazios de pessoas ou apenas elementos da equipa, com o consentimento formal de quem aparece. Não publicamos avaliações com nomes completos sem autorização; as citações usadas em páginas internas resultam de autorização dada pelo próprio autor.</p>
+        <p>Se alguma imagem ou citação publicada for sua e preferir removê-la, contacte-nos por qualquer canal oficial. Removemos com rapidez de boa-fé e confirmamos a decisão por escrito. O mesmo se aplica a qualquer outro conteúdo que se reconheça como próprio e não autorizado.</p>
+      </article>
+
+      <!-- 19 -->
+      <article class="legal-card" id="s19">
+        <h2><span class="num">19.</span> Alterações desta Política</h2>
+        <p>Esta política vive junto com a operação. Quando algo mudar — novos canais de contacto, serviços técnicos adicionais, regras de retenção renovadas — atualizamos o documento nesta página e registramos a data da revisão nos selos do topo. A versão aplicável a cada contacto é a versão publicada na data em que esse contacto acontece.</p>
+        <p>Quando a alteração for relevante para reservas já confirmadas — por exemplo, uma mudança de canal de comunicação ou de serviço de formulário — avisamos os hóspedes afetados diretamente por WhatsApp ou email antes que a mudança produza efeito. Avisamos também nas conversas correntes, para que ninguém descubra a meio da viagem.</p>
+        <p>Lições históricas de versões anteriores podem ser solicitadas por email, para consulta de quem quiser comparar textos. Mantemos um registro de cada versão publicada e da sua data, como boa prática de transparência e de responsabilidade clara.</p>
+        <p>Sugerimos igualmente uma leitura de reconfirmação antes de cada nova reserva, sobretudo se a última estadia tiver sido há mais de um ano — a leitura é curta e o conteúdo está organizado para navegar por títulos, como se vê na tabela do início.</p>
+      </article>
+
+      <!-- 20 -->
+      <article class="legal-card" id="s20">
+        <h2><span class="num">20.</span> Lei Aplicável, Reclamações e Contacto</h2>
+        <p>Esta política é regida pela legislação moçambicana aplicável, incluindo a lei de proteção de dados pessoais de Moçambique, e complementada pelas normas locais aplicáveis ao Zimbabwe nas estadias por lá realizadas. Questiona-se sobre a aplicação concreta: respondemos com base legal e em linguagem simples, como todo o documento também está escrito.</p>
+        <p>Se discordar de alguma forma de tratamento descrita, tem dois caminhos: o amigável, por WhatsApp ou email, com resposta garantida pela equipa; ou a reclamação formal junto da autoridade de proteção de dados competente, quando a lei lhe confira esse direito. Preferimos o primeiro caminho — e deixamos claro que o segundo nunca será bloqueado por nossa ação.</p>
+        <div class="note">
+          <p><strong>Canais para tudo o que diz respeito a privacidade:</strong><br>
+          WhatsApp <strong>+263 777 735 000</strong><br>
+          Email <strong>Enclaveccomodation@gmail.com</strong><br>
+          Endereço <strong>Avenida da Independência, Chimoio, Moçambique</strong><br>
+          Contactos Zimbabwe: Mutare &amp; Nyanga</p>
+        </div>
+        <p>Por fim, uma palavra sincera: a confiança de quem escolhe as nossas casas para descansar, trabalhar ou receber família é o recurso mais precioso desta operação. Tratamos essa confiança com o mesmo cuidado que tratamos a casa, a limpeza e a chegada. Obrigado por ler esta política até ao fim — é assim que se constrói hospitalidade de confiança.</p>
+      </article>
+
+      <!-- Anexo -->
+      <article class="legal-card" id="anexo">
+        <h2><span class="num">Anexo.</span> Resumo Tabelado do Tratamento</h2>
+        <p>Para leitura rápida, este anexo resume o tratamento por categoria de dados, as finalidades associadas e os prazos de retenção. O documento completo prevalece em caso de dúvida de interpretação:</p>
+        <table class="simple-table">
+          <tr>
+            <th>Categoria de dados</th>
+            <th>Exemplos</th>
+            <th>Finalidade</th>
+            <th>Retenção típica</th>
+          </tr>
+          <tr>
+            <td>Identificação e contacto</td>
+            <td>Nome, telemóvel, email</td>
+            <td>Reservar, confirmar, receber bem, comunicar</td>
+            <td>1 ano após a estadia</td>
+          </tr>
+          <tr>
+            <td>Dados da reserva</td>
+            <td>Datas, imóvel, número de hóspedes, configuração</td>
+            <td>Preparar casa, pagamento, check-in e check-out</td>
+            <td>1 ano após a estadia</td>
+          </tr>
+          <tr>
+            <td>Pedidos especiais</td>
+            <td>Check-in tardio, preferências, dietas, transportes</td>
+            <td>Prestar o serviço pedido durante a estadia</td>
+            <td>1 ano após a estadia</td>
+          </tr>
+          <tr>
+            <td>Comprovativos de pagamento</td>
+            <td>Recibo M-Pesa/E-Mola, transfência, referência bancária</td>
+            <td>Confirmar reserva e emitir recibo ou fatura</td>
+            <td>1 ano após a estadia</td>
+          </tr>
+          <tr>
+            <td>Conversas por WhatsApp e email</td>
+            <td>Mensagens trocadas nos canais oficiais</td>
+            <td>Responder e documentar a relação</td>
+            <td>Enquanto útil à relação, conforme secção 15</td>
+          </tr>
+          <tr>
+            <td>Dados técnicos do site</td>
+            <td>Preferência de idioma, carregamento de mapas e fontes</td>
+            <td>Funcionamento da página</td>
+            <td>No próprio navegador ou registo do fornecedor</td>
+          </tr>
+        </table>
+        <p>Qualquer dúvida sobre este quadro, ou sobre o conteúdo completo, esclarece-se por WhatsApp ou email — em português, sempre.</p>
+      </article>
+
+      <div class="legal-card" style="text-align:center;">
+        <p style="margin-bottom:6px;"><strong>Enclave Accommodation</strong> — Chimoio, Moçambique & Zimbabwe</p>
+        <p style="color:var(--ink-muted);font-size:12.5px;">Esta política é efetiva a partir de 18 de outubro de 2026 · Revisão completa publicada nesta data · Documento oficial integral</p>
+        <p style="margin-top:14px;"><a href="termos-de-uso.html">Ver também: Termos de Uso (versão completa) →</a></p>
+        <p style="margin-top:10px;"><a href="index.html">← Voltar ao site</a></p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="ftr">
+    <div class="container">
+      <p><strong>Enclave Accommodation</strong> · Hospitalidade independente em Chimoio (bairro Trangapasso), Mutare (Greenside) e Nyanga. Casas completas e privativas, sem piscina, com Wi-Fi em todas (Starlink nas casas do Zimbabwe) e atenção pessoal do anfitrião.</p>
+      <p>Contato direto: <a href="https://wa.me/263777735000" target="_blank" rel="noopener">WhatsApp +263 777 735 000</a> · Enclaveccomodation@gmail.com</p>
+      <div class="ftr-bottom">
+        <span>© 2026 Enclave Accommodation · Todos os direitos reservados.</span>
+        <span><a href="termos-de-uso.html">Termos de Uso</a> · <a href="politica-de-privacidade.html">Política de Privacidade</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var grid = document.getElementById("tocGrid");
+      document.querySelectorAll(".legal-card[id]").forEach(function (card) {
+        var h2 = card.querySelector("h2");
+        if (!h2) return;
+        var a = document.createElement("a");
+        a.href = "#" + card.id;
+        a.textContent = h2.textContent.trim();
+        grid.appendChild(a);
+      });
+    })();
+  </script>
+
+</body>
+</html>

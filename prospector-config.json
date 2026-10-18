@@ -1,0 +1,29 @@
+{
+  "assinatura": {
+    "nome": "",
+    "apresentacao": "",
+    "whatsapp": ""
+  },
+  "prospeccao": {
+    "nichos": [
+      "educacao",
+      "saude",
+      "agricultura",
+      "tecnologia",
+      "alimentacao"
+    ],
+    "cidade": "Chimoio, Manica, Moçambique",
+    "leadsPorBusca": 10
+  },
+  "envio": {
+    "modo": "rascunho"
+  },
+  "hostgator": {
+    "usuario": "",
+    "dominio": "",
+    "servidor": "",
+    "senha": "",
+    "pastaBase": "clientes"
+  },
+  "contratante": {}
+}
