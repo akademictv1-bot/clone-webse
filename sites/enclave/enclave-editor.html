@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#051C14">
-  <title id="pageTitle">Enclave Accommodation | Refúgios Exclusivos em Moçambique e Zimbabwe</title>
+  <title id="pageTitle">Enclave Accommodation | Retiros Exclusivos em Moçambique e Zimbabwe</title>
   
-  <meta name="description" content="Plataforma profissional de gestão de acomodações sofisticadas em Chimoio, Mutare e Nyanga com integração de reservas por WhatsApp e anfitrião Tandiwa Maswera.">
+  <meta name="description" content="Plataforma profissional de gestão de acomodações em Chimoio, Mutare e Nyanga com integração de reservas por WhatsApp e anfitrião Tadiwa Maswera.">
   <link rel="canonical" href="https://enclave-accommodation.pages.dev/">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-  <meta property="og:title" content="Enclave Accommodation | Refúgios Exclusivos em Moçambique e Zimbabwe">
-  <meta property="og:description" content="Acomodações sofisticadas em Chimoio, Mutare e Nyanga com conforto, privacidade e reserva direta.">
+  <meta property="og:title" content="Enclave Accommodation | Retiros Exclusivos em Moçambique e Zimbabwe">
+  <meta property="og:description" content="Acomodações em Chimoio, Mutare e Nyanga com conforto, privacidade e reserva direta.">
   <meta property="og:image" content="https://enclave-accommodation.pages.dev/assets/img/hero-1.jpg">
   <meta property="og:url" content="https://enclave-accommodation.pages.dev/">
   <meta property="og:type" content="website">
-  <meta name="keywords" content="Enclave Accommodation, Tandiwa Maswera, hotel chimoio, villa chimoio, greenside enclave cottage, nyanga peak lodge, mutare suite">
+  <meta name="keywords" content="Enclave Accommodation, Tadiwa Maswera, hotel chimoio, alojamento trangapasso chimoio, greenside enclave cottage, nyanga peak lodge, mutare suite">
   
   <!-- Favicon (logotipo oficial Enclave Lodge) -->
   <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -74,7 +74,7 @@
       --container: 1260px;
     }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: clip; }
     body {
       font-family: var(--font-body);
       font-weight: 400;
@@ -875,6 +875,47 @@
     }
     .detail-thumb img { width: 100%; height: 100%; object-fit: cover; }
 
+    /* Lightbox de fotos (ampliação) */
+    .detail-main-photo { cursor: zoom-in; }
+    .img-lightbox {
+      position: fixed; inset: 0; background: rgba(8, 18, 14, 0.93);
+      display: none; align-items: center; justify-content: center;
+      z-index: 10000; padding: 30px; cursor: zoom-out;
+    }
+    .img-lightbox.open { display: flex; }
+    .img-lightbox img {
+      max-width: 100%; max-height: 88vh; object-fit: contain;
+      border-radius: 10px; box-shadow: 0 18px 60px rgba(0, 0, 0, 0.5);
+    }
+    .img-lightbox .lb-x {
+      position: absolute; top: 12px; right: 16px; color: #FFFFFF;
+      background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%; width: 42px; height: 42px; font-size: 18px;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+    }
+    .img-lightbox .lb-cap {
+      position: absolute; bottom: 14px; left: 0; right: 0; text-align: center;
+      color: #EADFC9; font-size: 13.5px; font-weight: 500; padding: 0 44px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    }
+    .img-lightbox .lb-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      color: #FFFFFF; background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 50%; width: 44px; height: 44px; font-size: 20px;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s ease; z-index: 10001; user-select: none;
+    }
+    .img-lightbox .lb-nav:hover { background: rgba(0, 0, 0, 0.75); border-color: #FFFFFF; }
+    .img-lightbox .lb-prev { left: 20px; }
+    .img-lightbox .lb-next { right: 20px; }
+    @media (max-width: 768px) {
+      .img-lightbox { padding: 16px; }
+      .img-lightbox .lb-nav { width: 38px; height: 38px; font-size: 16px; }
+      .img-lightbox .lb-prev { left: 8px; }
+      .img-lightbox .lb-next { right: 8px; }
+    }
+
     .booking-card {
       background: var(--paper);
       border-radius: var(--r-lg);
@@ -908,6 +949,7 @@
     }
     .form-input, .form-select, .form-textarea {
       width: 100%;
+      min-width: 0;
       padding: 11px 14px;
       font-size: 13.5px;
       font-family: var(--font-body);
@@ -1049,6 +1091,28 @@
       opacity: 0.8 !important;
       transform: none !important;
       box-shadow: none !important;
+    }
+
+    /* ============================================================
+       CORREÇÃO MOBILE — Alinhamento & Espaçamento Horizontal
+       (A Nossa Essência + Contactos / Formulário)
+       Mesmo visual em desktop; em mobile as colunas colapsam
+       e as margens laterais ficam equilibradas.
+       ============================================================ */
+    .about-split {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .about-split > * { min-width: 0; }
+    .contact-split > * { min-width: 0; }
+    #contactEmail { overflow-wrap: anywhere; }
+    .contact-form-panel {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 30px;
+      border-radius: var(--r);
+      border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .contact-card-box {
@@ -1333,9 +1397,55 @@
       gap: 8px;
     }
 
-    /* Barra Flutuante Mobile (Mobile Bottom Bar) */
-    .mobile-bottom-bar {
-      display: none;
+    /* Horários de Check-in / Check-out */
+    .acc-times {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--em-dark);
+      background: var(--tint);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 6px 10px;
+      margin-bottom: 14px;
+    }
+    .acc-times svg { width: 13px; height: 13px; color: var(--gold-dark); flex: none; }
+    .detail-times {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--em-dark);
+      background: var(--em-soft);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 9px 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .detail-times svg { width: 15px; height: 15px; color: var(--gold-dark); flex: none; }
+    .detail-photo-caption {
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      background: rgba(5, 28, 20, 0.78);
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 7px 13px;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+      z-index: 2;
+      pointer-events: none;
+      max-width: calc(100% - 24px);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     /* Trust & Scarcity Badges */
@@ -1406,70 +1516,12 @@
       .top-bar .container { justify-content: space-between; padding: 6px 0; }
       .top-bar-phone { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; color: #B3CFC5; text-decoration: none; font-weight: 600; }
       .top-bar-phone svg { width: 13px; height: 13px; color: var(--gold); }
+      .top-bar-right { width: 100%; justify-content: space-between; }
+      .lang-toggle { padding: 3px; }
+      .lang-btn { padding: 10px 20px; font-size: 13px; line-height: 1; }
     }
 
     @media (max-width: 768px) {
-      body {
-        padding-bottom: 74px; /* Espaco para a barra flutuante inferior */
-      }
-      .mobile-bottom-bar {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 999;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border-top: 1px solid var(--line);
-        padding: 10px 16px;
-        padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
-        box-shadow: 0 -8px 24px rgba(5, 28, 20, 0.12);
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-      }
-      .mbb-price {
-        display: flex;
-        flex-direction: column;
-        min-width: 0;
-      }
-      .mbb-prefix {
-        font-size: 10px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: var(--gold-dark);
-        line-height: 1;
-      }
-      .mbb-val {
-        font-family: var(--font-head);
-        font-size: 19px;
-        font-weight: 800;
-        color: var(--em-dark);
-        line-height: 1.15;
-      }
-      .mbb-val small {
-        font-size: 12px;
-        font-weight: 600;
-        color: var(--ink-muted);
-      }
-      .mbb-rating {
-        font-size: 10.5px;
-        color: var(--wa-deep);
-        font-weight: 600;
-        white-space: nowrap;
-      }
-      .mbb-btn {
-        flex: none;
-        padding: 12px 18px !important;
-        font-size: 13.5px !important;
-        font-weight: 700 !important;
-        border-radius: 999px !important;
-        box-shadow: 0 4px 14px rgba(31, 175, 85, 0.35) !important;
-      }
-
       /* Hero no Celular */
       .hero .container { padding: 44px 0 60px; }
       .hero-content { max-width: 100%; }
@@ -1513,8 +1565,8 @@
         overflow-x: auto;
         justify-content: flex-start;
         gap: 8px;
-        padding: 4px 16px 12px;
-        margin: 0 -16px 24px;
+        padding: 4px 0 12px;
+        margin: 0 0 24px;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
       }
@@ -1662,6 +1714,11 @@
       .host-split { grid-template-columns: 1fr; gap: 24px; }
       .host-photo-box { height: 280px; }
       .contact-split { grid-template-columns: 1fr; gap: 24px; }
+      .about-split { grid-template-columns: 1fr; gap: 26px; }
+      /* Margens laterais equilibradas no texto "A Nossa Essência" (alinha com o ritmo dos cards) */
+      .about-split > div:last-child { padding-inline: 12px; }
+      .contact-card-box { padding: 28px 20px; }
+      .contact-form-panel { padding: 22px 18px; }
       .ftr-grid { grid-template-columns: 1fr; gap: 28px; }
     }
 
@@ -1795,7 +1852,7 @@
       .cookie-consent-card {
         left: 12px;
         right: 12px;
-        bottom: 84px; /* Posicionamento perfeito acima da barra flutuante mobile */
+        bottom: 24px;
         max-width: none;
         padding: 16px 18px;
         border-radius: 14px;
@@ -1820,10 +1877,10 @@
         </span>
         <span class="top-bar-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span id="topEmail">Enclaveccomodation@gmail.com</span>
+          <span id="topEmail">enclaveccommodation@gmail.com</span>
         </span>
       </div>
-      <div style="display:flex;align-items:center;gap:14px;">
+      <div class="top-bar-right" style="display:flex;align-items:center;gap:14px;">
         <a href="https://wa.me/263777735000" target="_blank" rel="noopener" class="top-bar-phone" title="WhatsApp Oficial Enclave">
           <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13" style="color:var(--wa);flex:none;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           <span style="font-size:11.5px;color:#9EBEB1;" data-i18n="top_concierge">Apoio / Reservas 24h</span>
@@ -1831,7 +1888,7 @@
         <!-- Seletor PT / EN -->
         <div class="lang-toggle" title="Alterar idioma / Switch language">
           <button class="lang-btn lang-btn-pt active" id="btnLangPt" onclick="setLanguage('pt')">PT</button>
-          <button class="lang-btn lang-btn-en" id="btnLangEn" onclick="setLanguage('en')">EN</button>
+          <button class="lang-btn lang-btn-en" id="btnLangEn" onclick="setLanguage('en')">ING</button>
         </div>
       </div>
     </div>
@@ -1856,7 +1913,7 @@
         <!-- Seletor PT / EN no Header Sticky (sempre visível ao rolar a página) -->
         <div class="lang-toggle lang-toggle-hdr" title="Alterar idioma / Switch language">
           <button class="lang-btn lang-btn-pt active" onclick="setLanguage('pt')">PT</button>
-          <button class="lang-btn lang-btn-en" onclick="setLanguage('en')">EN</button>
+          <button class="lang-btn lang-btn-en" onclick="setLanguage('en')">ING</button>
         </div>
         <a id="hdrWaBtn" href="javascript:handleHeaderBookClick()" class="btn btn-wa" style="padding:10px 20px;font-size:13px;">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1923,7 +1980,7 @@
       </a>
       <div class="mnav-lang">
         <button type="button" class="lang-btn lang-btn-pt active" onclick="setLanguage('pt');return true;">PT</button>
-        <button type="button" class="lang-btn lang-btn-en" onclick="setLanguage('en');return true;">EN</button>
+        <button type="button" class="lang-btn lang-btn-en" onclick="setLanguage('en');return true;">ING</button>
       </div>
     </div>
   </aside>
@@ -1950,7 +2007,7 @@
             <span class="gold" data-i18n="hero_title_gold">Chimoio, Mutare &amp; Nyanga</span>.
           </h1>
           <p class="lead-hero" data-i18n="hero_sub">
-            Acomodações sofisticadas e meticulosamente preparadas para famílias, diplomatas, turistas e profissionais exigentes em Moçambique e Zimbabwe.
+            Acomodações meticulosamente preparadas para famílias, diplomatas, turistas e profissionais exigentes em Moçambique e Zimbabwe.
           </p>
           <div class="hero-ctas">
             <a href="#refugios" class="btn btn-gold">
@@ -2022,7 +2079,7 @@
           <span class="eyebrow" data-i18n="cat_eyebrow">Destinos de Prestígio</span>
           <h2 class="h2" data-i18n="cat_title">Nossas Acomodações</h2>
           <p class="lead" data-i18n="cat_lead">
-            Refúgios sofisticados selecionados a dedo no coração de Moçambique e Zimbabwe.
+            Retiros selecionados a dedo no coração de Moçambique e Zimbabwe.
           </p>
         </div>
 
@@ -2034,7 +2091,7 @@
         </div>
 
         <div class="filter-bar">
-          <button class="filter-btn active" onclick="filterAcc('todos', this)" data-i18n="filter_all">Todos os Refúgios</button>
+          <button class="filter-btn active" onclick="filterAcc('todos', this)" data-i18n="filter_all">Todos os Retiros</button>
           <button class="filter-btn" onclick="filterAcc('Chimoio', this)" data-i18n="filter_chimoio">Chimoio — Moçambique</button>
           <button class="filter-btn" onclick="filterAcc('Mutare', this)" data-i18n="filter_mutare">Mutare — Zimbabwe</button>
           <button class="filter-btn" onclick="filterAcc('Nyanga', this)" data-i18n="filter_nyanga">Nyanga — Zimbabwe</button>
@@ -2055,7 +2112,7 @@
           </p>
         </div>
 
-        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:26px;">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(260px, 100%), 1fr));gap:26px;">
           <div style="background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:28px;">
             <div style="width:48px;height:48px;background:var(--em-soft);color:var(--em-base);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
               <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -2072,7 +2129,7 @@
             </div>
             <h4 style="font-size:18px;margin-bottom:10px;" data-i18n="pillar2_title">Energia &amp; Internet Estáveis</h4>
             <p style="font-size:13.5px;color:var(--ink-2);line-height:1.6;" data-i18n="pillar2_desc">
-              Energia solar e conexão Starlink nas casas do Zimbabwe; Wi-Fi disponível também em Chimoio.
+              Energia solar e conexão de internet de alta velocidade Starlink nas nossas casas no Zimbabwe.
             </p>
           </div>
 
@@ -2080,9 +2137,9 @@
             <div style="width:48px;height:48px;background:var(--em-soft);color:var(--em-base);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
               <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
-            <h4 style="font-size:18px;margin-bottom:10px;" data-i18n="pillar3_title">Corredor Transfronteiriço</h4>
+            <h4 style="font-size:18px;margin-bottom:10px;" data-i18n="pillar3_title">Destinos Estratégicos</h4>
             <p style="font-size:13.5px;color:var(--ink-2);line-height:1.6;" data-i18n="pillar3_desc">
-              Apoio fluido no deslocamento entre a Beira, Chimoio, fronteira de Machipanda e as montanhas de Nyanga.
+              Estadias acolhedoras em Chimoio, Mutare e Nyanga, em Moçambique e no Zimbabwe.
             </p>
           </div>
 
@@ -2115,7 +2172,7 @@
             <div style="display:flex;justify-content:space-between;align-items:center;">
               <div>
                 <strong style="color:var(--em-dark);font-size:16px;">🇲🇿 Enclave Moçambique</strong>
-                <span style="display:block;font-size:12px;color:var(--ink-muted);" data-i18n="map_mz_sub">Sede Administrativa Central</span>
+                <span style="display:block;font-size:12px;color:var(--ink-muted);" data-i18n="map_mz_sub">Chimoio — Perto do Aeroporto</span>
               </div>
               <a href="https://maps.app.goo.gl/G4P9WKWyxnkLBM5E6" target="_blank" rel="noopener" class="btn btn-outline" style="padding:6px 14px;font-size:11px;" data-i18n="btn_directions">Rotas Maps ↗</a>
             </div>
@@ -2123,7 +2180,7 @@
               <iframe title="Mapa Chimoio" src="https://maps.google.com/maps?q=-19.137941,33.411250&z=15&output=embed" loading="lazy"></iframe>
             </div>
             <p style="font-size:12.5px;color:var(--ink-2);">
-              <strong>Endereço Oficial:</strong> Avenida da Independência, Chimoio, Moçambique
+              <strong>Endereço:</strong> Bairro Trangapasso, Chimoio, Moçambique — perto do aeroporto
             </p>
           </div>
 
@@ -2150,15 +2207,15 @@
       </div>
     </section>
 
-    <!-- Sobre Nós & Anfitrião Oficial (Tandiwa Maswera) -->
+    <!-- Sobre Nós & Anfitrião Oficial (Tadiwa Maswera) -->
     <section class="sec" id="sobre">
       <div class="container">
-        <div style="display:grid;grid-template-columns:5fr 7fr;gap:48px;align-items:center;">
+        <div class="about-split">
           <div>
             <div style="border-radius:var(--r-xl);overflow:hidden;border:6px solid #FFF;box-shadow:var(--shadow-lg);aspect-ratio:4/5;background:linear-gradient(135deg, #0E4331 0%, #082A1E 100%);position:relative;">
-              <img id="hostPhoto" src="assets/img/host-tandiwa.jpg" alt="Tandiwa Maswera — Fundador e Anfitrião da Enclave" style="width:100%;height:100%;object-fit:cover;" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=90';">
+              <img id="hostPhoto" src="assets/img/host-tadiwa.jpg" alt="Tadiwa Maswera — Fundador e Anfitrião da Enclave" style="width:100%;height:100%;object-fit:cover;" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=90';">
               <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(0deg, rgba(5,28,20,0.85), transparent);">
-                <span style="color:var(--gold-light);font-family:var(--font-head);font-size:18px;font-weight:700;">Tandiwa Maswera</span>
+                <span style="color:var(--gold-light);font-family:var(--font-head);font-size:18px;font-weight:700;">Tadiwa Maswera</span>
                 <span style="display:block;color:#BCD1C8;font-size:11px;text-transform:uppercase;letter-spacing:0.12em;margin-top:2px;" data-i18n="host_role">Fundador e Anfitrião</span>
               </div>
             </div>
@@ -2167,14 +2224,14 @@
             <span class="eyebrow" data-i18n="about_eyebrow">A Nossa Essência</span>
             <h2 class="h2" style="margin-bottom:16px;" data-i18n="about_title">Comprometidos com o Alto Padrão de Acomodação</h2>
             <p class="lead" style="margin-bottom:20px;" data-i18n="about_history">
-              A Enclave Accommodation nasceu da paixão por transformar estadias em experiências memoráveis. Com sede estratégica em Chimoio e expansão para Mutare e Nyanga, oferecemos mais do que um quarto; entregamos um santuário curado, pautado na sofisticação, no minimalismo estético e no profissionalismo absoluto.
+              Estrategicamente localizada em Chimoio, Mutare e Nyanga, a Enclave Accommodation oferece estadias acolhedoras em destinos cuidadosamente selecionados em Moçambique e Zimbabwe. Mais do que um quarto, entregamos um santuário curado, pautado no minimalismo estético e no profissionalismo absoluto.
             </p>
 
             <div style="background:var(--tint);padding:20px;border-radius:var(--r);border:1px solid var(--line);margin-bottom:24px;">
               <p style="font-style:italic;font-size:14px;color:var(--em-dark);margin-bottom:8px;">
                 "Seja muito bem vindo à Enclave Accommodation. Com mais de 10 anos de experiência no sector de hospitalidade em Moçambique e Zimbabwe, garanto que sua estadia nas acomodações da Enclave será sempre sinônimo de conforto, tranquilidade e acolhimento verdadeiro."
               </p>
-              <strong style="font-size:13.5px;color:var(--em-dark);">— <span id="hostName">Tandiwa Maswera</span> (<span data-i18n="host_role">Fundador e Anfitrião</span>)</strong>
+              <strong style="font-size:13.5px;color:var(--em-dark);">— <span id="hostName">Tadiwa Maswera</span> (<span data-i18n="host_role">Fundador e Anfitrião</span>)</strong>
             </div>
 
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
@@ -2201,7 +2258,7 @@
               <span class="eyebrow" style="color:var(--gold);" data-i18n="contact_eyebrow">Fale Conosco</span>
               <h2 class="h2" style="color:#FFF;margin-bottom:16px;" data-i18n="contact_title">Estamos Prontos Para Lhe Receber</h2>
               <p style="color:#BCD1C8;font-size:14.5px;line-height:1.65;margin-bottom:28px;" data-i18n="contact_lead">
-                Seja para reservas individuais, estadias corporativas ou dúvidas de transporte, fale diretamente com a equipe central de suporte.
+                Seja para reservas individuais, estadias corporativas ou dúvidas de transporte, fale diretamente com a nossa equipa.
               </p>
 
               <div style="display:flex;flex-direction:column;gap:18px;">
@@ -2221,24 +2278,56 @@
                   </div>
                   <div>
                     <span style="font-size:11px;text-transform:uppercase;color:rgba(255,255,255,0.6);" data-i18n="contact_email_lbl">Email Central</span>
-                    <strong style="display:block;font-size:15px;color:#FFF;" id="contactEmail">Enclaveccomodation@gmail.com</strong>
+                    <strong style="display:block;font-size:15px;color:#FFF;" id="contactEmail">enclaveccommodation@gmail.com</strong>
                   </div>
                 </div>
 
-                <div style="display:flex;align-items:center;gap:14px;">
-                  <div style="width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--gold);">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>
+                  <span style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--gold);" data-i18n="contact_groups_lbl">Contactos por País</span>
+                  <div style="margin-top:10px;padding:14px 16px;border:1px solid rgba(255,255,255,0.14);border-radius:12px;background:rgba(255,255,255,0.04);">
+                    <span style="font-size:11.5px;font-weight:700;color:#FFF;text-transform:uppercase;letter-spacing:0.06em;" data-i18n="ctry_mz">Moçambique</span>
+                    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:10px;">
+                      <div style="min-width:0;">
+                        <span style="font-size:10.5px;text-transform:uppercase;color:rgba(255,255,255,0.55);" data-i18n="lbl_owner">Proprietário</span>
+                        <strong style="display:block;font-size:14px;color:#FFF;">Tadiwa Maswera</strong>
+                      </div>
+                    </div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:10px;">
+                      <div style="min-width:0;">
+                        <span style="font-size:10.5px;text-transform:uppercase;color:rgba(255,255,255,0.55);" data-i18n="lbl_owner_mother">Mãe do Proprietário</span>
+                        <strong style="display:block;font-size:14px;color:#FFF;"><a href="tel:+258866662381" style="color:#FFF;">+258 86 666 2381</a></strong>
+                      </div>
+                      <div style="display:flex;gap:6px;flex:none;">
+                        <a href="tel:+258866662381" style="display:inline-flex;align-items:center;padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.35);color:#FFF;font-size:11px;font-weight:700;" data-i18n="lbl_call">Chamar</a>
+                        <a href="https://wa.me/258866662381" target="_blank" rel="noopener" class="btn btn-wa" style="padding:8px 14px;font-size:11px;">WhatsApp</a>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <span style="font-size:11px;text-transform:uppercase;color:rgba(255,255,255,0.6);" data-i18n="contact_addr_lbl">Escritório Central</span>
-                    <strong style="display:block;font-size:15px;color:#FFF;" id="contactAddr">Avenida da Independência, Chimoio</strong>
+                  <div style="margin-top:10px;padding:14px 16px;border:1px solid rgba(255,255,255,0.14);border-radius:12px;background:rgba(255,255,255,0.04);">
+                    <span style="font-size:11.5px;font-weight:700;color:#FFF;text-transform:uppercase;letter-spacing:0.06em;" data-i18n="ctry_zw">Zimbabwe</span>
+                    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:10px;">
+                      <div style="min-width:0;">
+                        <span style="font-size:10.5px;text-transform:uppercase;color:rgba(255,255,255,0.55);" data-i18n="lbl_owner">Proprietário</span>
+                        <strong style="display:block;font-size:14px;color:#FFF;">Tadiwa Maswera</strong>
+                      </div>
+                    </div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:10px;">
+                      <div style="min-width:0;">
+                        <span style="font-size:10.5px;text-transform:uppercase;color:rgba(255,255,255,0.55);" data-i18n="lbl_contact">Contacto</span>
+                        <strong style="display:block;font-size:14px;color:#FFF;"><a href="tel:+263777735000" style="color:#FFF;">+263 777 735 000</a></strong>
+                      </div>
+                      <div style="display:flex;gap:6px;flex:none;">
+                        <a href="tel:+263777735000" style="display:inline-flex;align-items:center;padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.35);color:#FFF;font-size:11px;font-weight:700;" data-i18n="lbl_call">Chamar</a>
+                        <a href="https://wa.me/263777735000" target="_blank" rel="noopener" class="btn btn-wa" style="padding:8px 14px;font-size:11px;">WhatsApp</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Formspree Form -->
-            <div style="background:rgba(255,255,255,0.06);padding:30px;border-radius:var(--r);border:1px solid rgba(255,255,255,0.12);">
+            <div class="contact-form-panel">
               <h3 style="color:#FFF;font-size:20px;margin-bottom:14px;" data-i18n="form_msg_title">Envie uma Mensagem Direta</h3>
               
               <form action="https://formspree.io/f/xeedylwp" method="POST" id="contactForm" onsubmit="handleContactSubmit(event)">
@@ -2295,6 +2384,7 @@
           <div class="detail-gallery">
             <div class="detail-main-photo">
               <img id="detailMainImg" src="" alt="Foto Principal">
+              <div class="detail-photo-caption" id="detailPhotoCaption" style="display:none;"></div>
             </div>
             <div class="detail-thumbs-strip" id="detailThumbsStrip"></div>
           </div>
@@ -2333,7 +2423,7 @@
             <h3 style="font-size:19px;color:var(--em-dark);margin-bottom:10px;" data-i18n="about_sanctuary_title">Sobre este Santuário</h3>
             <p id="detailDesc" style="font-size:14.5px;color:var(--ink-2);line-height:1.75;margin-bottom:24px;white-space:pre-line;"></p>
 
-            <h3 style="font-size:19px;color:var(--em-dark);margin-bottom:12px;" data-i18n="amenities_title">O que este refúgio oferece</h3>
+            <h3 style="font-size:19px;color:var(--em-dark);margin-bottom:12px;" data-i18n="amenities_title">O que este retiro oferece</h3>
             <div id="detailAmenitiesList" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(210px, 1fr));gap:10px;margin-bottom:26px;"></div>
 
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;margin-top:20px;">
@@ -2370,6 +2460,11 @@
               <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span>Reserva Direta</span></div>
               <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span>Sem Taxas Extras</span></div>
               <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span>Apoio 24h</span></div>
+            </div>
+
+            <div class="detail-times">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg>
+              <span id="detailTimesText">Check-in: 14:00 · Check-out: 10:30</span>
             </div>
 
             <form id="reservationForm" onsubmit="handleReservationSubmit(event)">
@@ -2470,12 +2565,12 @@
             <img src="assets/logo.png" alt="Enclave Lodge" style="height:48px;width:auto;" />
           </div>
           <p style="font-size:13.5px;color:#BCD1C8;line-height:1.6;margin-bottom:18px;max-width:320px;" data-i18n="ftr_desc">
-            Hospitalidade exclusiva e refúgios com curadoria premium em Chimoio (Moçambique) e nas terras altas de Mutare e Nyanga (Zimbabwe).
+            Hospitalidade exclusiva e retiros com curadoria premium em Chimoio (Moçambique) e nas terras altas de Mutare e Nyanga (Zimbabwe).
           </p>
         </div>
 
         <div>
-          <h4 data-i18n="ftr_stays_title">Refúgios</h4>
+          <h4 data-i18n="ftr_stays_title">Retiros</h4>
           <ul style="list-style:none;" id="ftrStaysList"></ul>
         </div>
 
@@ -2493,9 +2588,9 @@
         <div>
           <h4 data-i18n="ftr_contact_title">Contatos Diretos</h4>
           <ul style="list-style:none;">
-            <li id="ftrPhone">+263 777 735 000</li>
-            <li id="ftrEmail">Enclaveccomodation@gmail.com</li>
-            <li>Avenida da Independência, Chimoio</li>
+            <li><a href="tel:+263777735000">+263 777 735 000</a></li>
+            <li><a href="mailto:enclaveccommodation@gmail.com">enclaveccommodation@gmail.com</a></li>
+            <li>Chimoio (Trangapasso), Moçambique</li>
             <li>Mutare &amp; Nyanga, Zimbabwe</li>
           </ul>
         </div>
@@ -2533,24 +2628,24 @@
     // ============================================================
     var FIREBASE_DATA = {
       host: {
-        name: "Tandiwa Maswera",
+        name: "Tadiwa Maswera",
         role: "Fundador e Anfitrião",
-        photo_url: "assets/img/host-tandiwa.jpg",
+        photo_url: "assets/img/host-tadiwa.jpg",
         welcome_message: "Seja muito bem vindo à Enclave Accommodation. O seu bem-estar é o nosso compromisso.",
         bio: "Com mais de 10 anos de experiência no sector de hospitalidade em Moçambique e Zimbabwe, garanto que sua estadia nas acomodações da Enclave será sempre sinônimo de conforto, tranquilidade e acolhimento verdadeiro."
       },
       contacts: {
         whatsapp_number: "+263777735000",
         phone: "+263777735000",
-        email: "Enclaveccomodation@gmail.com",
-        address: "Avenida da Independência, Chimoio, Moçambique",
+        email: "enclaveccommodation@gmail.com",
+        address: "Bairro Trangapasso, Chimoio, Moçambique",
         address_zw: "Mutare (Greenside) & Nyanga, Zimbabwe",
         formspree_id: "xeedylwp"
       },
       accommodations: [
         {
           id: "acc-2",
-          name: "Enclave Chimoio (Villa Central)",
+          name: "Enclave Chimoio",
           city: "Chimoio",
           country: "Moçambique",
           currency: "USD",
@@ -2562,29 +2657,41 @@
           beds: 5,
           bathrooms: 4,
           max_guests: 10,
+          check_in: "14:00–19:30",
+          check_out: "10:30",
           whatsapp_number: "+263777735000",
           google_maps_link: "https://maps.app.goo.gl/G4P9WKWyxnkLBM5E6",
           coordinates: "-19.137941, 33.411250",
           desc: {
-            pt: "Villa completa no bairro Trangapasso, numa zona calma e tranquila de Chimoio, com pouco trânsito e muito sossego. A casa oferece 2 quartos standard, 2 quartos superiores com banheiro privativo (ensuite) e 1 suíte master principal, além de jardim exuberante e espaços ao ar livre. Nenhuma das nossas casas tem piscina: o nosso foco é o conforto, o descanso e a atenção pessoal. Tem Wi-Fi na casa — em Chimoio a conexão é modesta; para internet turbo, veja as nossas casas com Starlink em Mutare e Nyanga. Reserve quartos individuais a partir de $27 USD ou a casa inteira com exclusividade total.",
-            en: "A complete villa in Trangapasso, a calm and quiet zone of Chimoio with little traffic and plenty of peace. The house offers 2 standard rooms, 2 superior ensuite bedrooms and 1 grand master ensuite, plus a lush garden and outdoor space. None of our homes has a pool — our focus is comfort, rest and personal attention. Home Wi-Fi is available — in Chimoio the connection is modest; for turbo internet, see our Starlink homes in Mutare and Nyanga. Reserve individual rooms from $27 USD or the whole house exclusively."
+            pt: "Um refúgio acolhedor situado no bairro Trangapasso, numa zona residencial calma e serena de Chimoio, perto do aeroporto. A propriedade dispõe de quartos confortáveis, suítes com banheiro privativo (ensuite) e suíte master com dossel, ampla sala de estar e jantar, armários embutidos e agradáveis espaços ao ar livre. Reserve quartos individuais a partir de $27 USD ou a casa inteira com exclusividade total.",
+            en: "A welcoming residence situated in the peaceful Trangapasso neighborhood of Chimoio, close to the airport. The property features comfortable rooms, private ensuite bedrooms, and a master suite with canopy bed, plus an expansive living and dining lounge, built-in wardrobes, and pleasant outdoor areas. Reserve individual rooms from $27 USD or the whole house exclusively."
           },
           room_options: [
-            { id: "opt-ch-std", name: { pt: "2x Quarto Standard", en: "2x Standard Room" }, count: 2, price: 27, currency: "USD", price_mt: 1750, desc: { pt: "Cama confortável, Wi-Fi na casa, A/C", en: "Comfortable bed, home Wi-Fi, A/C" } },
-            { id: "opt-ch-sup", name: { pt: "2x Superior Ensuite", en: "2x Superior Ensuite" }, count: 2, price: 33, currency: "USD", price_mt: 2100, desc: { pt: "Banheiro privativo completo, espaço ampliado", en: "Full private ensuite bathroom, more space" } },
-            { id: "opt-ch-main", name: { pt: "1x Main Ensuite", en: "1x Main Ensuite (Master)" }, count: 1, price: 47, currency: "USD", price_mt: 3000, desc: { pt: "Suíte master com acabamentos nobres e máximo conforto", en: "Master suite with luxury finishes and supreme comfort" } },
-            { id: "opt-ch-whole", name: { pt: "Casa Inteira (Whole House)", en: "Whole House (Exclusive)" }, count: 1, price: 150, currency: "USD", price_mt: 9600, is_whole: true, desc: { pt: "Acesso privativo total à Villa e aos jardins", en: "Exclusive private access to villa & gardens" } }
+            { id: "opt-ch-std", name: { pt: "2x Quarto Standard", en: "2x Standard Room" }, count: 2, price: 27, currency: "USD", price_mt: 1750, desc: { pt: "Cama confortável em ambiente sereno e tranquilo", en: "Comfortable bed in a calm and peaceful setting" } },
+            { id: "opt-ch-sup", name: { pt: "2x Superior Ensuite", en: "2x Superior Ensuite" }, count: 2, price: 33, currency: "USD", price_mt: 2100, desc: { pt: "Banheiro privativo completo, espaço ampliado", en: "Full private ensuite bathroom, spacious layout" } },
+            { id: "opt-ch-main", name: { pt: "1x Main Ensuite", en: "1x Main Ensuite (Master)" }, count: 1, price: 47, currency: "USD", price_mt: 3000, desc: { pt: "Suíte master com dossel, acabamentos nobres e máximo conforto", en: "Master suite with canopy bed, luxury finishes and supreme comfort" } },
+            { id: "opt-ch-whole", name: { pt: "Casa Inteira (Whole House)", en: "Whole House (Exclusive)" }, count: 1, price: 150, currency: "USD", price_mt: 9600, is_whole: true, desc: { pt: "Acesso privativo total à casa, salão e espaços exteriores", en: "Exclusive private access to the entire house, lounge and grounds" } }
           ],
           images: [
-            "assets/img/acc-chimoio-1.jpg",
-            "assets/img/acc-chimoio-2.avif",
-            "assets/img/acc-chimoio-3.avif",
-            "assets/img/acc-chimoio-4.avif",
-            "assets/img/acc-chimoio-5.avif"
+            "https://i.ibb.co/Y7ywqxRm/Whats-App-Image-2026-06-08-at-20-26-56.jpg",
+            "assets/img/properties/chimoio/chimoio-hero.jpg",
+            "assets/img/properties/chimoio/chimoio-3.jpg",
+            "assets/img/properties/chimoio/chimoio-4.jpg",
+            "assets/img/properties/chimoio/chimoio-5.jpg",
+            "assets/img/properties/chimoio/chimoio-2.jpg",
+            "assets/img/properties/chimoio/chimoio-1.jpg"
+          ],
+          image_labels: [
+            { pt: "Fachada da Casa e Jardim Tropical", en: "House Facade & Tropical Garden" },
+            { pt: "Suíte Master com Cama de Dossel", en: "Master Suite with Canopy Bed" },
+            { pt: "Sala de Jantar e Estar", en: "Living & Dining Room" },
+            { pt: "Salão de Convivência Confortável", en: "Spacious Lounge Area" },
+            { pt: "Armários Embutidos e Roupeiro", en: "Built-in Wardrobes" },
+            { pt: "Casa de Banho Privativa Ensuite", en: "Ensuite Private Bathroom" }
           ],
           amenities: {
-            pt: ["Wi-Fi na Casa", "Ar Condicionado", "Jardim & Áreas Externas", "Zona Calma & Tranquila", "Netflix & Smart TV", "Estacionamento Privado"],
-            en: ["Home Wi-Fi", "Air Conditioning", "Garden & Outdoor Areas", "Calm & Quiet Zone", "Netflix & Smart TV", "Private Parking"]
+            pt: ["Zona Calma & Tranquila", "Estacionamento Privado", "Cozinha Comum Totalmente Equipada", "Áreas Externas", "Casa de Banho Privativa", "Salão de Estar & Jantar"],
+            en: ["Calm & Quiet Zone", "Private Parking", "Fully Equipped Shared Kitchen", "Outdoor Areas", "Private Ensuite Bathrooms", "Living & Dining Lounge"]
           }
         },
         {
@@ -2601,12 +2708,14 @@
           beds: 3,
           bathrooms: 2,
           max_guests: 6,
+          check_in: "14:00–19:30",
+          check_out: "10:30",
           whatsapp_number: "+263777735000",
           google_maps_link: "https://maps.app.goo.gl/he8ov61kw6DJKbz37",
           coordinates: "-18.975775, 32.692291",
           desc: {
-            pt: "Residência contemporânea de prestígio no bairro de Greenside em Mutare. Dispõe de 2 quartos standard e 1 suíte elegante, ampla sala de estar e cozinha completa, com energia solar e rede ZESA, internet Starlink de alta velocidade e atendimento personalizado.",
-            en: "Prestigious contemporary residence in the prime Greenside neighborhood of Mutare. Featuring 2 standard bedrooms and 1 master suite, expansive living room, and equipped kitchen. Supported by solar and ZESA backup power, high-speed Starlink Wi-Fi, and personalized concierge."
+            pt: "Residência contemporânea de prestígio no bairro de Greenside em Mutare. Dispõe de 2 quartos standard e 1 suíte elegante, ampla sala de estar com lareira e TV, sala de jantar e estar integradas, cozinha completa, energia solar e rede ZESA, internet Starlink de alta velocidade e atendimento personalizado.",
+            en: "Prestigious contemporary residence in the prime Greenside neighborhood of Mutare. Featuring 2 standard bedrooms and 1 master suite, expansive living room with fireplace and TV, integrated dining and lounge area, and equipped kitchen. Supported by solar and ZESA backup power, high-speed Starlink Wi-Fi, and personalized concierge."
           },
           room_options: [
             { id: "opt-gs-std", name: { pt: "2x Quarto Standard", en: "2x Standard Room" }, count: 2, price: 35, currency: "USD", desc: { pt: "Quarto aconchegante, Wi-Fi Starlink, energia solar", en: "Cozy bedroom, Starlink Wi-Fi, solar power" } },
@@ -2614,15 +2723,29 @@
             { id: "opt-gs-whole", name: { pt: "Casa Inteira (Whole House)", en: "Whole House (Exclusive)" }, count: 1, price: 120, currency: "USD", is_whole: true, desc: { pt: "Residência de 3 quartos completa com cozinha e sala", en: "Full 3-bedroom residence with kitchen and lounge" } }
           ],
           images: [
-            "assets/img/acc-mutare-1.jpg",
-            "assets/img/acc-mutare-2.jpg",
-            "assets/img/acc-mutare-3.jpg",
-            "assets/img/acc-mutare-4.jpg",
-            "assets/img/acc-mutare-5.jpg"
+            "https://i.ibb.co/8gFh6kyt/Whats-App-Image-2026-06-08-at-20-09-11-1.jpg",
+            "assets/img/properties/mutare/mutare-hero.jpg",
+            "assets/img/properties/mutare/mutare-5.jpg",
+            "assets/img/properties/mutare/mutare-2.jpg",
+            "assets/img/properties/mutare/mutare-1.jpg",
+            "assets/img/properties/mutare/mutare-4.jpg",
+            "assets/img/properties/mutare/mutare-3.jpg",
+            "assets/img/properties/mutare/mutare-7.jpg",
+            "assets/img/properties/mutare/mutare-6.jpg"
+          ],
+          image_labels: [
+            { pt: "Suíte Principal com Cama Queen", en: "Main Queen Bedroom" },
+            { pt: "Entrada da Residência ao Anoitecer", en: "Main Residence at Twilight" },
+            { pt: "Sala de Jantar e Estar Integradas", en: "Dining & Living Lounge" },
+            { pt: "Lareira e Televisão na Sala de Estar", en: "Living Room with Fireplace & TV" },
+            { pt: "Jardim com Árvore Frondosa e Varanda", en: "Garden Courtyard & Porch" },
+            { pt: "Residência com Sistema de Energia Solar", en: "Exterior with Solar Power System" },
+            { pt: "Jardins da Propriedade e Garagem Coberta", en: "Property Grounds & Covered Carport" },
+            { pt: "Corredor Interno Acolhedor", en: "Interior Hallway" }
           ],
           amenities: {
-            pt: ["Conexão Starlink & Wi-Fi", "Energia Solar & ZESA", "Cozinha Equipada", "Netflix & Smart TV", "Estacionamento Grátis", "Espaços Externos Amplos"],
-            en: ["Starlink & Wi-Fi Connection", "Solar & ZESA Power", "Equipped Kitchen", "Netflix & Smart TV", "Free Parking", "Large Outdoor Space"]
+            pt: ["Wi-Fi Starlink", "Energia Solar & ZESA", "Cozinha Equipada", "Smart TV", "Estacionamento Grátis", "Espaços Externos Amplos"],
+            en: ["Starlink Wi-Fi", "Solar & ZESA Power", "Equipped Kitchen", "Smart TV", "Free Parking", "Large Outdoor Space"]
           }
         },
         {
@@ -2639,28 +2762,40 @@
           beds: 2,
           bathrooms: 2,
           max_guests: 4,
+          check_in: "14:00–19:30",
+          check_out: "10:30",
           whatsapp_number: "+263777735000",
           google_maps_link: "https://maps.app.goo.gl/he8ov61kw6DJKbz37",
           coordinates: "-18.975775, 32.692291",
           desc: {
-            pt: "Numa zona residencial segura, tranquila e bem protegida em Greenside, este cottage aconchegante compartilha o terreno com a casa principal de 3 quartos e oferece sala e cozinha americana, quarto com suíte privativa, fogão a gás, conexão Starlink de alta velocidade, energia solar e rede ZESA. Reserve quartos individuais a partir de $35 USD ou o cottage inteiro por $75 USD.",
-            en: "Set in a safe, quiet and well-secured residential zone of Greenside, this cozy cottage shares the property with the 3-bedroom main house and offers a dining-cum-kitchen, ensuite bedroom, gas cooker, Starlink connection, and Solar & ZESA power. Available as individual rooms from $35 USD or whole cottage buyout for $75 USD."
+            pt: "Numa zona residencial segura, tranquila e bem protegida em Greenside, este cottage acolhedor compartilha o terreno com a casa principal e oferece quartos confortáveis, suíte com banheiro privativo, pátio externo aprazível com bancos em alvenaria de pedra, conexão Starlink de alta velocidade, energia solar e rede ZESA. Reserve quartos individuais a partir de $35 USD ou o cottage inteiro por $75 USD.",
+            en: "Set in a safe, quiet, and well-secured residential zone of Greenside, this cozy cottage shares the property with the main house and offers comfortable bedrooms, private ensuite bathroom, a charming outdoor patio with built-in stone seating, high-speed Starlink Wi-Fi, and Solar & ZESA power. Available as individual rooms from $35 USD or whole cottage buyout for $75 USD."
           },
           room_options: [
             { id: "opt-cot-std", name: { pt: "1x Quarto Standard", en: "1x Standard Room" }, count: 1, price: 35, currency: "USD", desc: { pt: "Cama confortável, Wi-Fi Starlink, ambiente sereno", en: "Comfortable bed, Starlink Wi-Fi, calm setting" } },
             { id: "opt-cot-suite", name: { pt: "1x Suíte", en: "1x Private Suite" }, count: 1, price: 45, currency: "USD", desc: { pt: "Suíte privativa ensuite com banheiro exclusivo", en: "Private ensuite bedroom with dedicated bathroom" } },
-            { id: "opt-cot-whole", name: { pt: "Cottage Inteiro (Whole House)", en: "Whole Cottage (Exclusive)" }, count: 1, price: 75, currency: "USD", is_whole: true, desc: { pt: "Cottage privativo completo com sala e cozinha americana", en: "Full private cottage with lounge & kitchenette" } }
+            { id: "opt-cot-whole", name: { pt: "Cottage Inteiro (Whole House)", en: "Whole Cottage (Exclusive)" }, count: 1, price: 75, currency: "USD", is_whole: true, desc: { pt: "Cottage privativo completo com pátio e suíte", en: "Full private cottage with patio & ensuite" } }
           ],
           images: [
-            "assets/img/acc-cottage-1.jpg",
-            "assets/img/acc-cottage-2.jpg",
-            "assets/img/acc-cottage-3.jpg",
-            "assets/img/acc-cottage-4.jpg",
-            "assets/img/acc-cottage-5.jpg"
+            "https://i.ibb.co/r2ZjJ7kW/Whats-App-Image-2026-06-08-at-20-46-33-1.jpg",
+            "assets/img/properties/cottage/cottage-hero.jpg",
+            "assets/img/properties/cottage/cottage-2.jpg",
+            "assets/img/properties/cottage/cottage-5.jpg",
+            "assets/img/properties/cottage/cottage-3.jpg",
+            "assets/img/properties/cottage/cottage-1.jpg",
+            "assets/img/properties/cottage/cottage-4.jpg"
+          ],
+          image_labels: [
+            { pt: "Quarto Acolhedor com Cama de Casal", en: "Cozy Double Bedroom" },
+            { pt: "Quarto Principal Aconchegante", en: "Cozy Master Bedroom" },
+            { pt: "Quarto Ensuite com Banheiro Privativo", en: "Ensuite Bedroom with Private Bathroom" },
+            { pt: "Quarto com Vista para o Jardim", en: "Bedroom with Garden View" },
+            { pt: "Entrada do Pátio e Acesso Privativo", en: "Patio Entrance & Private Access" },
+            { pt: "Pátio Exterior com Bancos de Pedra", en: "Outdoor Patio with Stone Benches" }
           ],
           amenities: {
-            pt: ["Conexão Starlink & Wi-Fi", "Energia Solar & ZESA", "Estacionamento Grátis", "Netflix & Smart TV", "Água Quente", "Cozinha com Fogão a Gás"],
-            en: ["Starlink & Wi-Fi Connection", "Solar & ZESA Backup Power", "Free Parking", "Netflix & Smart TV", "Hot Water", "Kitchen with Gas Cooker"]
+            pt: ["Wi-Fi Starlink", "Energia Solar & ZESA", "Estacionamento Grátis", "Água Quente", "Pátio Exterior & Jardim"],
+            en: ["Starlink Wi-Fi", "Solar & ZESA Backup Power", "Free Parking", "Hot Water", "Outdoor Patio & Garden"]
           }
         },
         {
@@ -2674,29 +2809,57 @@
           price_per_night: 45,
           price_formatted_pt: "45 USD",
           bedrooms: 4,
-          beds: 6,
+          beds: 4,
           bathrooms: 4,
-          max_guests: 10,
+          max_guests: 8,
+          check_in: "14:00–19:30",
+          check_out: "10:30",
           whatsapp_number: "+263777735000",
           google_maps_link: "https://maps.app.goo.gl/HknKKNuLKGmJuVgi8",
           coordinates: "-18.224208, 32.745346",
           desc: {
-            pt: "Este atrativo lodge está aninhado num parque privado nas terras altas de Nyanga, com vistas deslumbrantes para o vale dos pinheiros e lareira central aconchegante. Oferece 3 quartos standard ($45), 1 suíte master ($55) ou a Casa Inteira ($230 USD) para grupos e famílias, com Wi-Fi Starlink.",
-            en: "This attractive lodge is nestled in a private park in the highlands of Nyanga, with sweeping views of the pine valleys and a warm central fireplace. Features 3 standard bedrooms ($45), 1 master suite ($55), or the Whole House exclusive buyout ($230 USD), with Starlink Wi-Fi."
+            pt: "Este atrativo lodge está aninhado no Parque Bepe, em Nyanga, nas terras altas do Zimbabwe. Oferece vistas deslumbrantes para as cordilheiras de montanhas circundantes, uma sala de estar acolhedora e mobiliário de jantar em madeira nobre. A propriedade oferece 4 quartos standard a $45 cada, 1 suíte master a $55 ou a Casa Inteira por $230 USD, sendo ideal para grupos e famílias. Wi-Fi Starlink ilimitado disponível. A propriedade tem abastecimento de água por furo (borehole) e é movida a energia solar.",
+            en: "This attractive lodge is nestled in Bepe Park, Nyanga, in the Zimbabwean Highlands. It offers stunning views of the surrounding mountain ranges, a cozy seating area, and hardwood dining furniture. The property offers 4 standard rooms at $45 each, 1 master suite at $55, or the entire house for $230 USD, making it suitable for groups and families. Unlimited Starlink Wi-Fi is available. The property has a borehole water supply and is solar-powered."
           },
           room_options: [
-            { id: "opt-ny-std", name: { pt: "3x Quarto Standard", en: "3x Standard Room" }, count: 3, price: 45, currency: "USD", desc: { pt: "Cama queen, vista montanha, Wi-Fi e água quente", en: "Queen bed, mountain view, Wi-Fi and hot water" } },
-            { id: "opt-ny-ste", name: { pt: "1x Suíte", en: "1x Luxury Suite" }, count: 1, price: 55, currency: "USD", desc: { pt: "Suíte com banheiro privativo e acabamentos nobres", en: "Master suite with private bathroom and luxury finishes" } },
-            { id: "opt-ny-whole", name: { pt: "Casa Inteira (Whole House)", en: "Whole House (Exclusive)" }, count: 1, price: 230, currency: "USD", is_whole: true, desc: { pt: "Acesso privativo total a todos os quartos, lareira e áreas sociais", en: "Full private access to all rooms, fireplace and grounds" } }
+            { id: "opt-ny-std", name: { pt: "4x Quarto Standard", en: "4x Standard Room" }, count: 4, price: 45, currency: "USD", desc: { pt: "Vista para as montanhas, Wi-Fi e água quente", en: "Mountain view, Wi-Fi and hot water" } },
+            { id: "opt-ny-ste", name: { pt: "1x Suíte Master", en: "1x Master Suite" }, count: 1, price: 55, currency: "USD", desc: { pt: "Suíte master com casa de banho privativa e acabamentos nobres", en: "Master suite with private bathroom and quality finishes" } },
+            { id: "opt-ny-whole", name: { pt: "Casa Inteira (Whole House)", en: "Whole House (Exclusive)" }, count: 1, price: 230, currency: "USD", is_whole: true, desc: { pt: "Acesso privativo total a todos os quartos e áreas sociais", en: "Full private access to all rooms and grounds" } }
           ],
           images: [
-            "assets/img/acc-nyanga-1.jpg",
-            "assets/img/acc-nyanga-2.jpg",
-            "assets/img/acc-nyanga-3.jpg"
+            "https://i.ibb.co/LzxTNq0z/Whats-App-Image-2026-06-08-at-20-34-43-2.jpg",
+            "assets/img/properties/nyanga/nyanga-hero.jpg",
+            "assets/img/properties/nyanga/nyanga-3.jpg",
+            "assets/img/properties/nyanga/nyanga-12.jpg",
+            "assets/img/properties/nyanga/nyanga-10.jpg",
+            "assets/img/properties/nyanga/nyanga-9.jpg",
+            "assets/img/properties/nyanga/nyanga-4.jpg",
+            "assets/img/properties/nyanga/nyanga-8.jpg",
+            "assets/img/properties/nyanga/nyanga-5.jpg",
+            "assets/img/properties/nyanga/nyanga-7.jpg",
+            "assets/img/properties/nyanga/nyanga-11.jpg",
+            "assets/img/properties/nyanga/nyanga-2.jpg",
+            "assets/img/properties/nyanga/nyanga-6.jpg",
+            "assets/img/properties/nyanga/nyanga-1.jpg"
+          ],
+          image_labels: [
+            { pt: "Fachada do Lodge com Energia Solar e Montanhas", en: "Lodge Facade with Solar Power & Mountains" },
+            { pt: "Fachada do Lodge nas Montanhas", en: "Mountain Lodge Facade" },
+            { pt: "Suíte Master com Cama King", en: "Master Suite with King Bed" },
+            { pt: "Quarto Duplo Elegante", en: "Elegant Double Bedroom" },
+            { pt: "Quarto com Roupeiro Completo", en: "Bedroom with Full Wardrobe" },
+            { pt: "Sala de Estar com TV e Sofá Reclinável", en: "Living Room with Recliner Sofa & TV" },
+            { pt: "Varanda de Entrada e Área Braai", en: "Entrance Porch & Braai Area" },
+            { pt: "Jardins Gramados e Muros de Pedra", en: "Lawn Grounds & Stone Walls" },
+            { pt: "Vista dos Terraços de Pedra do Lodge", en: "Stone Terraced Lodge View" },
+            { pt: "Acesso Principal e Escadaria", en: "Main Entrance & Steps" },
+            { pt: "Jardim de Pedras e Suculentas", en: "Rockery Succulent Garden" },
+            { pt: "Canteiro Floral Ornamental", en: "Ornamental Garden Bed" },
+            { pt: "Vista Panorâmica das Montanhas de Nyanga", en: "Panoramic Nyanga Mountain View" }
           ],
           amenities: {
-            pt: ["Lareira a Lenha Central", "Vista de Montanha & Picos", "Água Quente com Pressão", "Estacionamento Privado", "Wi-Fi Starlink"],
-            en: ["Wood Burning Fireplace", "Mountain Valley View", "High Pressure Hot Water", "Private Parking", "Starlink Wi-Fi"]
+            pt: ["Wi-Fi Starlink Ilimitado", "Abastecimento de Água por Furo (Borehole)", "Energia Solar", "Braai Stand e Espaço para Churrasco Disponíveis", "Cozinha Equipada", "Sala de Estar Acolhedora", "Mobiliário de Jantar em Madeira Nobre", "Vistas para as Cordilheiras de Montanhas", "Água Quente com Pressão", "Estacionamento Privado"],
+            en: ["Unlimited Starlink Wi-Fi", "Borehole Water Supply", "Solar-Powered Electricity", "Braai Stand and Braaiing Space Available", "Fully Equipped Kitchen", "Cozy Seating Area", "Hardwood Dining Furniture", "Mountain-Range Views", "High Pressure Hot Water", "Private Parking"]
           }
         }
       ]
@@ -2708,41 +2871,55 @@
     // ============================================================
         var FALLBACK_IMAGES = {
       'acc-2': [
-        'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85',
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85',
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85',
-        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85',
-        'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1200&q=85'
+        'https://i.ibb.co/HLFjPXhJ/IMG-20261019-WA0036.jpg',
+        'https://i.ibb.co/ymN2zbgp/IMG-20261019-WA0035.jpg',
+        'https://i.ibb.co/zV9cdwwZ/IMG-20261019-WA0034.jpg',
+        'https://i.ibb.co/wZHJY5yB/IMG-20261019-WA0037.jpg',
+        'https://i.ibb.co/qLfn1hFc/IMG-20261019-WA0038.jpg'
       ],
       'acc-gb3ewzgus': [
-        'https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?auto=format&fit=crop&w=1200&q=85',
-        'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=85',
-        'https://images.unsplash.com/photo-1587381420270-3e1a5b9e6904?auto=format&fit=crop&w=1200&q=85',
-        'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85',
-        'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=85'
-      ],
-      'acc-3': [
-        'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=85',
-        'https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=85',
-        'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=85'
+        'https://i.ibb.co/7d6375mW/IMG-20261019-WA0012.jpg',
+        'https://i.ibb.co/23dmPM2L/IMG-20261019-WA0007.jpg',
+        'https://i.ibb.co/rGrb7r4d/IMG-20261019-WA0013.jpg',
+        'https://i.ibb.co/YFBMQJPb/IMG-20261019-WA0010.jpg',
+        'https://i.ibb.co/20QFMkR0/IMG-20261019-WA0009.jpg'
       ],
       'acc-4': [
-        'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=85',
-        'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=85',
-        'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=85',
-        'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85',
-        'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=1200&q=85'
+        'https://i.ibb.co/ks7Jqz0z/IMG-20261019-WA0028.jpg',
+        'https://i.ibb.co/XrddjtBh/IMG-20261019-WA0032.jpg',
+        'https://i.ibb.co/ymchDpqZ/IMG-20261019-WA0033.jpg',
+        'https://i.ibb.co/gXr09L4/IMG-20261019-WA0029.jpg',
+        'https://i.ibb.co/G35NzGhn/IMG-20261019-WA0031.jpg',
+        'https://i.ibb.co/zTpQFS98/IMG-20261019-WA0027.jpg',
+        'https://i.ibb.co/ywykPrr/IMG-20261019-WA0030.jpg'
+      ],
+      'acc-3': [
+        'https://i.ibb.co/sdxYM8Rp/IMG-20261019-WA0024.jpg',
+        'https://i.ibb.co/F4NrXnCr/IMG-20261019-WA0023.jpg',
+        'https://i.ibb.co/x4vnCpV/IMG-20261019-WA0016.jpg',
+        'https://i.ibb.co/pjvhRfHN/IMG-20261019-WA0018.jpg',
+        'https://i.ibb.co/Rkd5h5xC/IMG-20261019-WA0026.jpg'
       ]
     };
+
+    // ------------------------------------------------------------
+    // GALERIAS — FOTOS PENDENTES (categorias a enviar pelo proprietário)
+    //   Enclave Chimoio: quartos, cozinha e casas de banho
+    //     (imagens .avif existentes ainda sem rótulo confirmado).
+    //   Greenside Enclave (Main House): casa de banho.
+    //   Greenside Enclave Cottage: casa de banho
+    //     (a foto do nicho com espelho não é inequivocamente um WC).
+    //   Nyanga Enclave: quartos, cozinha e casas de banho.
+    // Ao receber as fotos: adicionar ao array "images" e preencher
+    // o array "image_labels" na mesma ordem.
+    // ------------------------------------------------------------
 
     // DICIONÁRIO BILÍNGUE
     var DICT = {
       pt: {
-        page_title: "Enclave Accommodation | Refúgios Exclusivos em Moçambique e Zimbabwe",
+        page_title: "Enclave Accommodation | Retiros Exclusivos em Moçambique e Zimbabwe",
         top_presence: "Chimoio (Moçambique) · Mutare & Nyanga (Zimbabwe)",
         top_concierge: "Apoio / Reservas 24h",
-        verified_reviews: "avaliações verificadas",
-        btn_book_now: "Reservar Já",
         scarcity_text: "Alta procura: reserve com antecedência para garantir as datas",
         cookie_title: "Privacidade & Preferências",
         cookie_subtitle: "Experiência personalizada em Moçambique e Zimbabwe",
@@ -2764,7 +2941,7 @@
         hero_badge: "Santuários sob medida · Hospitalidade Classe Mundial",
         hero_title_part1: "Descubra o Conforto Perfeito em",
         hero_title_gold: "Chimoio, Mutare & Nyanga",
-        hero_sub: "Acomodações sofisticadas e meticulosamente preparadas para famílias, diplomatas, turistas e profissionais exigentes em Moçambique e Zimbabwe.",
+        hero_sub: "Acomodações meticulosamente preparadas para famílias, diplomatas, turistas e profissionais exigentes em Moçambique e Zimbabwe.",
         btn_explore: "Ver Acomodações",
         btn_concierge: "Falar no WhatsApp",
         stat_reviews_title: "Avaliação Média",
@@ -2777,8 +2954,8 @@
         stat_booking_sub: "Sem taxas intermediárias",
         cat_eyebrow: "Destinos de Prestígio",
         cat_title: "Nossas Acomodações",
-        cat_lead: "Refúgios exclusivos com curadoria de luxo, privacidade e conforto em Moçambique e Zimbabwe.",
-        filter_all: "Todos os Refúgios",
+        cat_lead: "Retiros exclusivos com curadoria de luxo, privacidade e conforto em Moçambique e Zimbabwe.",
+        filter_all: "Todos os Retiros",
         from_price: "A partir de",
         options_up_to: "Opções até",
         lbl_select_room: "Opção de Quarto ou Casa Inteira",
@@ -2796,20 +2973,20 @@
         pillar1_title: "Privacidade & Tranquilidade",
         pillar1_desc: "Casas completas e privativas em bairros residenciais calmos e de pouco trânsito, pensadas para descansar.",
         pillar2_title: "Energia & Internet Estáveis",
-        pillar2_desc: "Energia solar e conexão Starlink nas casas do Zimbabwe; Wi-Fi disponível também em Chimoio.",
-        pillar3_title: "Corredor Transfronteiriço",
-        pillar3_desc: "Apoio fluido no deslocamento entre a Beira, Chimoio, fronteira de Machipanda e as montanhas de Nyanga.",
+        pillar2_desc: "Energia solar e conexão de internet de alta velocidade Starlink nas nossas casas no Zimbabwe.",
+        pillar3_title: "Destinos Estratégicos",
+        pillar3_desc: "Estadias acolhedoras em Chimoio, Mutare e Nyanga, em Moçambique e no Zimbabwe.",
         pillar4_title: "Apoio Concierge",
         pillar4_desc: "Atendimento atencioso via WhatsApp para check-in flexível, dicas gastronômicas e suporte no destino.",
         map_eyebrow: "Presença Internacional",
         map_title: "Presença Regional Transfronteiriça",
         map_lead: "Operamos com excelência e conforto no corredor da Beira, assegurando estadias inigualáveis tanto em território moçambicano como no Zimbabwe.",
-        map_mz_sub: "Sede Administrativa Central",
+        map_mz_sub: "Chimoio — Perto do Aeroporto",
         map_zw_sub: "Expansão Regional & Turismo",
         btn_directions: "Rotas Maps",
         about_eyebrow: "A Nossa Essência",
         about_title: "Comprometidos com o Alto Padrão de Acomodação",
-        about_history: "A Enclave Accommodation nasceu da paixão por transformar estadias em experiências memoráveis. Com sede estratégica em Chimoio e expansão para Mutare e Nyanga, oferecemos mais do que um quarto; entregamos um santuário curado, pautado na sofisticação, no minimalismo estético e no profissionalismo absoluto.",
+        about_history: "Estrategicamente localizada em Chimoio, Mutare e Nyanga, a Enclave Accommodation oferece estadias acolhedoras em destinos cuidadosamente selecionados em Moçambique e Zimbabwe. Mais do que um quarto, entregamos um santuário curado, pautado no minimalismo estético e no profissionalismo absoluto.",
         host_role: "Fundador e Anfitrião",
         mission_title: "Nossa Missão",
         mission_desc: "Garantir conforto impecável, tranquilidade e atenção honesta aos detalhes para hóspedes que exigem um serviço de qualidade.",
@@ -2817,10 +2994,17 @@
         values_desc: "Hospitalidade Sob Medida · Privacidade Absoluta · Excelência Operacional · Minimalismo e Elegância.",
         contact_eyebrow: "Fale Conosco",
         contact_title: "Estamos Prontos Para Lhe Receber",
-        contact_lead: "Seja para reservas individuais, estadias corporativas ou dúvidas de transporte, fale diretamente com a equipe central de suporte.",
+        contact_lead: "Seja para reservas individuais, estadias corporativas ou dúvidas de transporte, fale diretamente com a nossa equipa.",
         contact_phone_lbl: "Telefone / WhatsApp",
+        contact_groups_lbl: "Contactos por País",
+        ctry_mz: "Moçambique",
+        ctry_zw: "Zimbabwe",
+        lbl_owner: "Proprietário",
+        lbl_owner_mother: "Mãe do Proprietário",
+        lbl_contact: "Contacto",
+        tbd_number: "A confirmar",
+        lbl_call: "Chamar",
         contact_email_lbl: "Email Central",
-        contact_addr_lbl: "Escritório Central",
         form_msg_title: "Envie uma Mensagem Direta",
         lbl_name: "Nome Completo",
         lbl_phone: "WhatsApp / Telefone",
@@ -2833,7 +3017,7 @@
         spec_baths: "Banheiros",
         spec_guests: "Hóspedes Máx",
         about_sanctuary_title: "Sobre este Santuário",
-        amenities_title: "O que este refúgio oferece",
+        amenities_title: "O que este retiro oferece",
         loc_title: "Localização Exclusiva",
         open_in_maps: "Abrir no Google Maps ↗",
         per_night_word: "por noite",
@@ -2846,6 +3030,12 @@
         no_charge_notice: "Você será direcionado diretamente ao WhatsApp para confirmação imediata.",
         closed_dates_title: "Períodos Já Reservados / Fechados nesta Casa:",
         no_closed_dates: "Todas as datas próximas estão disponíveis.",
+        btn_submitting: "A registar pedido...",
+        booking_reference_lbl: "Referência",
+        crm_dates_busy: "As datas que escolheu já foram reservadas entretanto. Por favor escolha outras datas no formulário.",
+        crm_dates_invalid: "Datas inválidas: confirme que o check-out é depois do check-in e que o check-in não é no passado.",
+        crm_dados_invalidos: "Verifique os campos do formulário: nome, telefone e datas são obrigatórios.",
+        crm_falha: "Não foi possível registar o seu pedido neste momento. Tente novamente dentro de momentos ou fale connosco pelo WhatsApp.",
         date_conflict_title: "Período Indisponível (Dia Fechado)",
         date_conflict_desc: "Esta casa já possui reserva confirmada de {in} a {out}. Por favor, escolha datas livres.",
         date_ok_msg: "Datas livres e disponíveis para reserva imediata!",
@@ -2854,8 +3044,8 @@
         err_dates_past: "A data de check-in não pode ser no passado.",
         err_dates_order: "A data de check-out deve ser pelo menos 1 dia após o check-in.",
         booking_success_redirect: "Reserva registada no sistema! A abrir o WhatsApp oficial com todos os dados preenchidos...",
-        ftr_desc: "Hospitalidade exclusiva e refúgios com curadoria premium em Chimoio (Moçambique) e nas terras altas de Mutare e Nyanga (Zimbabwe).",
-        ftr_stays_title: "Refúgios",
+        ftr_desc: "Hospitalidade exclusiva e retiros com curadoria premium em Chimoio (Moçambique) e nas terras altas de Mutare e Nyanga (Zimbabwe).",
+        ftr_stays_title: "Retiros",
         ftr_nav_title: "Institucional",
         ftr_contact_title: "Contatos Diretos",
         rights_reserved: "Todos os direitos reservados.",
@@ -2865,8 +3055,6 @@
         page_title: "Enclave Accommodation | Exclusive Sanctuaries in Mozambique & Zimbabwe",
         top_presence: "Chimoio (Mozambique) · Mutare & Nyanga (Zimbabwe)",
         top_concierge: "24/7 Support & Bookings",
-        verified_reviews: "verified reviews",
-        btn_book_now: "Book Now",
         scarcity_text: "High demand: book in advance to secure your dates",
         cookie_title: "Privacy & Preferences",
         cookie_subtitle: "Personalized experience across Mozambique & Zimbabwe",
@@ -2888,7 +3076,7 @@
         hero_badge: "Tailored Sanctuaries · World Class Hospitality",
         hero_title_part1: "Discover Refined Comfort in",
         hero_title_gold: "Chimoio, Mutare & Nyanga",
-        hero_sub: "Sophisticated accommodation meticulously prepared for families, diplomats, tourists, and demanding professionals across Mozambique and Zimbabwe.",
+        hero_sub: "Accommodation meticulously prepared for families, diplomats, tourists, and demanding professionals across Mozambique and Zimbabwe.",
         btn_explore: "View Stays",
         btn_concierge: "Chat on WhatsApp",
         stat_reviews_title: "Average Rating",
@@ -2902,7 +3090,7 @@
         cat_eyebrow: "Prestige Destinations",
         cat_title: "Our Accommodations",
         cat_lead: "Exclusive sanctuaries with luxury curation, absolute privacy, and comfort in Mozambique and Zimbabwe.",
-        filter_all: "All Stays",
+        filter_all: "All Retreats",
         btn_view_details: "View Details",
         btn_quick_book: "Book Now",
         per_night: "per night",
@@ -2912,20 +3100,20 @@
         pillar1_title: "Privacy & Calm",
         pillar1_desc: "Complete private homes in calm, low-traffic residential neighborhoods, made for real rest.",
         pillar2_title: "Stable Power & Internet",
-        pillar2_desc: "Solar power and Starlink connectivity in our Zimbabwe homes; Wi-Fi also available in Chimoio.",
-        pillar3_title: "Cross-Border Corridor",
-        pillar3_desc: "Smooth mobility connecting Beira port, Chimoio, Machipanda border, and the Nyanga highlands.",
+        pillar2_desc: "Solar backup power and high-speed Starlink internet connectivity in our Zimbabwe properties.",
+        pillar3_title: "Strategic Destinations",
+        pillar3_desc: "Welcoming stays across Chimoio, Mutare and Nyanga, in Mozambique and Zimbabwe.",
         pillar4_title: "Concierge Support",
         pillar4_desc: "Attentive WhatsApp assistance for flexible check-in, dining recommendations, and local travel.",
         map_eyebrow: "International Footprint",
         map_title: "Cross-Border Regional Presence",
         map_lead: "We operate with excellence throughout the Beira corridor, providing unmatched comfort in both Mozambique and Zimbabwe.",
-        map_mz_sub: "Central Administrative Headquarters",
+        map_mz_sub: "Chimoio — Close to the Airport",
         map_zw_sub: "Regional Expansion & Tourism",
         btn_directions: "Get Directions",
         about_eyebrow: "Our Essence",
         about_title: "Committed to High-Standard Hospitality",
-        about_history: "Enclave Accommodation was born out of a passion to turn travel into memorable experiences. Strategically headquartered in Chimoio and expanding into Mutare and Nyanga, we offer more than a room: we deliver a curated sanctuary rooted in aesthetic minimalism and uncompromising professionalism.",
+        about_history: "Strategically located across Chimoio, Mutare, and Nyanga, Enclave Accommodation offers welcoming stays in carefully selected destinations across Mozambique and Zimbabwe. More than a room, we deliver a curated sanctuary rooted in aesthetic minimalism and uncompromising professionalism.",
         host_role: "Founder & Host",
         mission_title: "Our Mission",
         mission_desc: "To provide world-class comfort, calm and honest, detail-driven hospitality for every traveler.",
@@ -2933,10 +3121,17 @@
         values_desc: "Tailored Hospitality · Absolute Privacy · Operational Excellence · Minimalist Elegance.",
         contact_eyebrow: "Contact Us",
         contact_title: "We Are Ready to Welcome You",
-        contact_lead: "Whether for individual bookings, corporate retreats, or cross-border logistics, reach our central concierge team directly.",
+        contact_lead: "Whether for individual bookings, corporate retreats, or cross-border logistics, reach our team directly.",
         contact_phone_lbl: "Phone / WhatsApp",
+        contact_groups_lbl: "Contacts by Country",
+        ctry_mz: "Mozambique",
+        ctry_zw: "Zimbabwe",
+        lbl_owner: "Owner",
+        lbl_owner_mother: "Owner's Mother",
+        lbl_contact: "Contact",
+        tbd_number: "To be confirmed",
+        lbl_call: "Call",
         contact_email_lbl: "Central Email",
-        contact_addr_lbl: "Central Office",
         form_msg_title: "Send a Direct Message",
         lbl_name: "Full Name",
         lbl_phone: "WhatsApp / Phone Number",
@@ -2949,7 +3144,7 @@
         spec_baths: "Bathrooms",
         spec_guests: "Max Guests",
         about_sanctuary_title: "About this Sanctuary",
-        amenities_title: "What this stay offers",
+        amenities_title: "What this retreat offers",
         loc_title: "Exclusive Location",
         open_in_maps: "Open in Google Maps ↗",
         per_night_word: "per night",
@@ -2962,6 +3157,12 @@
         no_charge_notice: "You will be redirected straight to WhatsApp for immediate confirmation.",
         closed_dates_title: "Already Booked / Closed Periods for this House:",
         no_closed_dates: "All upcoming dates are currently available.",
+        btn_submitting: "Registering request...",
+        booking_reference_lbl: "Reference",
+        crm_dates_busy: "The dates you chose have just been booked. Please pick different dates on the form.",
+        crm_dates_invalid: "Invalid dates: make sure check-out is after check-in and check-in is not in the past.",
+        crm_dados_invalidos: "Please review the form: name, phone and dates are required.",
+        crm_falha: "We could not register your request right now. Please try again in a moment or reach us on WhatsApp.",
         date_conflict_title: "Period Unavailable (Closed Date)",
         date_conflict_desc: "This house already has a confirmed reservation from {in} to {out}. Please select available dates.",
         date_ok_msg: "Dates are free and available for immediate booking!",
@@ -2971,13 +3172,102 @@
         err_dates_order: "Check-out date must be at least 1 day after check-in.",
         booking_success_redirect: "Reservation saved in system! Opening official WhatsApp with your booking details...",
         ftr_desc: "Exclusive hospitality and curated sanctuaries in Chimoio (Mozambique) and the Eastern Highlands of Mutare & Nyanga (Zimbabwe).",
-        ftr_stays_title: "Stays",
+        ftr_stays_title: "Retreats",
         ftr_nav_title: "Corporate",
         ftr_contact_title: "Direct Contacts",
         rights_reserved: "All rights reserved.",
         boutique_standard: "Boutique hospitality and luxury standard."
       }
     };
+
+    // ============================================================
+    // CRM ENCLAVE (Google Sheets) — URL /exec do Apps Script
+    // Implantação v2: calendário de disponibilidade + e-mail ao
+    // administrador com links CONFIRMAR / CANCELAR (ao cancelar, as
+    // datas voltam a ficar livres no calendário do site).
+    // ============================================================
+    var CRM_ENDPOINT = "https://script.google.com/macros/s/AKfycbzw7lw6hYXiiWSz0wAJ3k6oyGrEssAjnLTIraJxl8HTdZ98vmAAg2be4-LXSzUVYG2iUw/exec";
+
+    function sendToCRM(payload) {
+      if (!CRM_ENDPOINT) return false;
+      try {
+        var body = new URLSearchParams();
+        for (var k in payload) {
+          body.append(k, payload[k] == null ? "" : String(payload[k]));
+        }
+        fetch(CRM_ENDPOINT, { method: "POST", mode: "no-cors", body: body }).catch(function() {});
+        return true;
+      } catch (err) { return false; }
+    }
+
+    // ============================================================
+    // DISPONIBILIDADE EM TEMPO REAL (CRM v2)
+    // O CRM devolve intervalos ocupados { de, ate } — o dia "ate"
+    // (saída) permanece livre para novo check-in. Quando o
+    // administrador CANCELA pelo link do e-mail, as datas deixam de
+    // estar bloqueadas automaticamente no calendário do site.
+    // ============================================================
+    var CRM_PROPRIEDADES = {
+      "acc-2": "chimoio",                  // Enclave Chimoio (Trangapasso)
+      "acc-3": "nyanga",                   // Nyanga Enclave
+      "acc-4": "greenside-mutare",         // Greenside Enclave (Main House)
+      "acc-gb3ewzgus": "greenside-mutare"  // Greenside Enclave Cottage
+    };
+    var CRM_DISP_CACHE = {};   // propriedade -> { t: epoch, ocupadas: [{de, ate}] }
+    var CRM_DISP_TTL = 60000;  // cache de 60 s
+
+    function pedirDisponibilidadeCRM(propriedade, cb, forcar) {
+      if (!propriedade || !CRM_ENDPOINT) { cb(null); return; }
+      var cache = CRM_DISP_CACHE[propriedade];
+      if (!forcar && cache && (Date.now() - cache.t) < CRM_DISP_TTL) { cb(cache.ocupadas); return; }
+      try {
+        fetch(CRM_ENDPOINT + "?acao=disponibilidade&propriedade=" + encodeURIComponent(propriedade), { method: "GET" })
+          .then(function (r) { return r.json(); })
+          .then(function (dados) {
+            var ocupadas = (dados && dados.ok === true && Array.isArray(dados.ocupadas))
+              ? dados.ocupadas.filter(function (x) {
+                  return x && /^\d{4}-\d{2}-\d{2}$/.test(x.de || "") && /^\d{4}-\d{2}-\d{2}$/.test(x.ate || "");
+                })
+              : [];
+            CRM_DISP_CACHE[propriedade] = { t: Date.now(), ocupadas: ocupadas };
+            cb(ocupadas);
+          })
+          .catch(function () { cb(null); }); // falha silenciosa: segue com reservas locais
+      } catch (err) { cb(null); }
+    }
+
+    /** Primeiro intervalo do CRM em conflito (o dia de saída não conta). */
+    function crmConflito(ocupadas, inStr, outStr) {
+      if (!ocupadas) return null;
+      for (var i = 0; i < ocupadas.length; i++) {
+        var oi = ocupadas[i];
+        if (inStr < oi.ate && outStr > oi.de) return oi;
+      }
+      return null;
+    }
+
+    /** Envia a reserva ao CRM (v2) e lê a resposta JSON ({ok, id, erro}). */
+    function enviarReservaCRM(campos) {
+      return new Promise(function (resolve) {
+        if (!CRM_ENDPOINT) { resolve({ ok: false, erro: "falha_interna" }); return; }
+        try {
+          fetch(CRM_ENDPOINT, {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+            body: new URLSearchParams(campos).toString()
+          })
+            .then(function (r) { return r.json(); })
+            .then(function (dados) {
+              if (dados && dados.ok === true) {
+                resolve({ ok: true, id: String(dados.id || "") });
+              } else {
+                resolve({ ok: false, erro: (dados && dados.erro) || "falha_interna" });
+              }
+            })
+            .catch(function () { resolve({ ok: false, erro: "falha_interna" }); });
+        } catch (err) { resolve({ ok: false, erro: "falha_interna" }); }
+      });
+    }
 
     var currentLang = "pt";
     var selectedAcc = null;
@@ -3050,6 +3340,11 @@
           pillsHtml += '</div>';
         }
 
+        var ci = acc.check_in || "14:00–19:30";
+        var co = acc.check_out || "10:30";
+        var timesHtml = '<div class="acc-times"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg> Check-in: ' + ci + ' · Check-out: ' + co + '</div>';
+        var imgLabels = acc.image_labels || [];
+        var firstLabel = imgLabels[0] ? (imgLabels[0][currentLang] || imgLabels[0].pt || "") : "";
         var cleanWa = (acc.whatsapp_number || FIREBASE_DATA.contacts.whatsapp_number).replace(/\D/g, "");
         var waMsg = currentLang === "en" 
           ? ("Hello! I would like to book " + acc.name + " (" + acc.city + ").")
@@ -3059,7 +3354,7 @@
 
         card.innerHTML = 
           '<div class="acc-media" onclick="openDetailView(\'' + acc.id + '\')">' +
-            '<img src="' + cover + '" alt="' + acc.name + '" loading="lazy" onerror="this.onerror=null;this.src=\'' + fallbackFirst + '\';">' +
+            '<img src="' + cover + '" alt="' + acc.name + (firstLabel ? " — " + firstLabel : "") + '" loading="lazy" onerror="this.onerror=null;this.src=\'' + fallbackFirst + '\';">' +
             '<div class="acc-badge-city">' +
               '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>' +
               acc.city + ', ' + acc.country +
@@ -3073,6 +3368,7 @@
             '<h3 class="acc-title" onclick="openDetailView(\'' + acc.id + '\')">' + acc.name + '</h3>' +
             '<p class="acc-desc">' + descText + '</p>' +
             pillsHtml +
+            timesHtml +
             '<div class="acc-specs">' +
               '<span class="spec-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16M2 8h18a2 2 0 012 2v10M2 17h20M6 8v9"/></svg> ' + acc.bedrooms + ' ' + d.spec_rooms + '</span>' +
               '<span class="spec-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6h6M9 10h6M7 14h10M7 18h10"/></svg> ' + acc.beds + ' ' + d.spec_beds + '</span>' +
@@ -3114,61 +3410,21 @@
       renderAccommodations(city);
     }
 
-    // Base inicial de reservas e períodos fechados
-    var INITIAL_BOOKINGS = [
-      {
-        id: "bk-init-1",
-        acc_id: "acc-4", // Greenside Enclave Main House
-        acc_name: "Greenside Enclave (Main House)",
-        room_opt_id: "opt-gs-whole",
-        room_opt_name: "Casa Inteira (Whole House)",
-        guest_name: "Dr. Farai Moyo",
-        check_in: "2026-10-23",
-        check_out: "2026-10-26",
-        status: "confirmed"
-      },
-      {
-        id: "bk-init-2",
-        acc_id: "acc-3", // Nyanga Enclave
-        room_opt_id: "opt-ny-whole",
-        room_opt_name: "Casa Inteira (Whole House)",
-        guest_name: "Sra. Chengetai Dube",
-        check_in: "2026-10-27",
-        check_out: "2026-10-31",
-        status: "confirmed"
-      },
-      {
-        id: "bk-init-3",
-        acc_id: "acc-2", // Enclave Chimoio
-        room_opt_id: "opt-ch-whole",
-        room_opt_name: "Casa Inteira (Whole House)",
-        guest_name: "Eng. Rui Cossa",
-        check_in: "2026-11-04",
-        check_out: "2026-11-07",
-        status: "confirmed"
-      },
-      {
-        id: "bk-init-4",
-        acc_id: "acc-gb3ewzgus", // Greenside Cottage
-        room_opt_id: "opt-cot-whole",
-        room_opt_name: "Cottage Inteiro (Whole House)",
-        guest_name: "Sr. Tendai Mutasa",
-        check_in: "2026-10-24",
-        check_out: "2026-10-27",
-        status: "confirmed"
-      }
-    ];
+    // Reservas locais do navegador: apenas as que o próprio visitante
+    // registou neste dispositivo. A verdade do calendário vem do CRM
+    // (Google Sheets), inclusive os cancelamentos que libertam datas.
+    var INITIAL_BOOKINGS = [];
 
     function getStoredBookings() {
       try {
-        var raw = localStorage.getItem('enclave_bookings_v2');
+        var raw = localStorage.getItem('enclave_bookings_v3');
         if (raw) {
           var parsed = JSON.parse(raw);
           if (Array.isArray(parsed) && parsed.length > 0) return parsed;
         }
       } catch(e) {}
       try {
-        localStorage.setItem('enclave_bookings_v2', JSON.stringify(INITIAL_BOOKINGS));
+        localStorage.setItem('enclave_bookings_v3', JSON.stringify(INITIAL_BOOKINGS));
       } catch(e) {}
       return INITIAL_BOOKINGS.slice();
     }
@@ -3177,7 +3433,7 @@
       var list = getStoredBookings();
       list.push(booking);
       try {
-        localStorage.setItem('enclave_bookings_v2', JSON.stringify(list));
+        localStorage.setItem('enclave_bookings_v3', JSON.stringify(list));
       } catch(e) {}
       return list;
     }
@@ -3208,6 +3464,15 @@
           return { available: false, conflict: b };
         }
       }
+
+      // Verificar também as noites registadas no CRM (calendário partilhado)
+      var propriedade = CRM_PROPRIEDADES[accId];
+      if (propriedade && CRM_DISP_CACHE[propriedade]) {
+        var conflitoCrm = crmConflito(CRM_DISP_CACHE[propriedade].ocupadas, inStr, outStr);
+        if (conflitoCrm) {
+          return { available: false, conflict: { check_in: conflitoCrm.de, check_out: conflitoCrm.ate, room_opt_name: "" } };
+        }
+      }
       return { available: true };
     }
 
@@ -3220,6 +3485,17 @@
       var bookings = getStoredBookings().filter(function(b){
         return b.acc_id === accId && b.check_out >= todayStr;
       });
+
+      // Juntar os intervalos bloqueados no CRM (o cancelamento os liberta)
+      var propriedade = CRM_PROPRIEDADES[accId];
+      if (propriedade && CRM_DISP_CACHE[propriedade]) {
+        CRM_DISP_CACHE[propriedade].ocupadas.forEach(function (oi) {
+          if (oi.ate >= todayStr) {
+            var jaExiste = bookings.some(function (b) { return b.check_in === oi.de && b.check_out === oi.ate; });
+            if (!jaExiste) bookings.push({ check_in: oi.de, check_out: oi.ate, room_opt_name: "" });
+          }
+        });
+      }
 
       var d = DICT[currentLang];
       if (bookings.length === 0) {
@@ -3334,6 +3610,80 @@
       }
     }
 
+    // Lightbox de fotos com navegacao sequencial
+    var lbEl = null;
+    var currentLbIndex = 0;
+    var currentLbItems = [];
+
+    function ensureLightbox() {
+      if (lbEl) return lbEl;
+      lbEl = document.createElement("div");
+      lbEl.className = "img-lightbox";
+      lbEl.innerHTML = 
+        '<button type="button" class="lb-x" aria-label="Fechar">&#10005;</button>' +
+        '<button type="button" class="lb-nav lb-prev" aria-label="Anterior">&#10094;</button>' +
+        '<button type="button" class="lb-nav lb-next" aria-label="Seguinte">&#10095;</button>' +
+        '<img alt="Foto ampliada"><div class="lb-cap"></div>';
+
+      lbEl.addEventListener("click", function (e) {
+        if (e.target.closest(".lb-x") || e.target === lbEl) {
+          lbEl.classList.remove("open");
+        }
+      });
+
+      lbEl.querySelector(".lb-prev").addEventListener("click", function(e) {
+        e.stopPropagation();
+        stepLightbox(-1);
+      });
+      lbEl.querySelector(".lb-next").addEventListener("click", function(e) {
+        e.stopPropagation();
+        stepLightbox(1);
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (!lbEl || !lbEl.classList.contains("open")) return;
+        if (e.key === "Escape") {
+          lbEl.classList.remove("open");
+        } else if (e.key === "ArrowLeft") {
+          stepLightbox(-1);
+        } else if (e.key === "ArrowRight") {
+          stepLightbox(1);
+        }
+      });
+
+      document.body.appendChild(lbEl);
+      return lbEl;
+    }
+
+    function updateLightboxDisplay() {
+      if (!lbEl || !currentLbItems.length) return;
+      var item = currentLbItems[currentLbIndex];
+      var im = lbEl.querySelector("img");
+      im.src = item.src;
+      im.alt = item.alt || "";
+      var cap = (item.caption ? item.caption + " · " : "") + (currentLbIndex + 1) + " / " + currentLbItems.length;
+      lbEl.querySelector(".lb-cap").textContent = cap;
+    }
+
+    function stepLightbox(delta) {
+      if (!currentLbItems.length) return;
+      currentLbIndex = (currentLbIndex + delta + currentLbItems.length) % currentLbItems.length;
+      updateLightboxDisplay();
+    }
+
+    function openPhotoLightbox(src, alt, caption, items, initialIdx) {
+      var lb = ensureLightbox();
+      if (items && items.length) {
+        currentLbItems = items;
+        currentLbIndex = (typeof initialIdx === "number") ? initialIdx : 0;
+      } else {
+        currentLbItems = [{ src: src, alt: alt, caption: caption }];
+        currentLbIndex = 0;
+      }
+      updateLightboxDisplay();
+      lb.classList.add("open");
+    }
+
     function openDetailView(accId, preselectedOptId) {
       var acc = FIREBASE_DATA.accommodations.find(function(a){ return a.id === accId; });
       if (!acc) return;
@@ -3349,18 +3699,61 @@
       document.getElementById("detailBeds").textContent = acc.beds;
       document.getElementById("detailBaths").textContent = acc.bathrooms;
       document.getElementById("detailGuests").textContent = acc.max_guests;
+      var timesVal = document.getElementById("detailTimesText");
+      if (timesVal) timesVal.textContent = "Check-in: " + (acc.check_in || "14:00–19:30") + " · Check-out: " + (acc.check_out || "10:30");
 
-      document.getElementById("detailMainImg").src = acc.images[0];
+      var imgLabels = acc.image_labels || [];
+      function labelFor(i) {
+        var m = imgLabels[i];
+        if (!m) return "";
+        return m[currentLang] || m.pt || "";
+      }
+      var firstLabel = labelFor(0);
+      var mainImgEl = document.getElementById("detailMainImg");
+      mainImgEl.src = acc.images[0];
+      mainImgEl.alt = acc.name + (firstLabel ? " — " + firstLabel : "");
+      mainImgEl.onerror = function () {
+        this.onerror = null;
+        var fb = (FALLBACK_IMAGES[acc.id] || [])[0];
+        if (fb) this.src = fb;
+      };
+      mainImgEl.style.cursor = "zoom-in";
+      var activePhotoIdx = 0;
+      function buildGalleryList() {
+        return acc.images.map(function(s, i) {
+          var l = labelFor(i);
+          return { src: s, alt: acc.name + " — " + (l || "Foto " + (i + 1)), caption: l };
+        });
+      }
+
+      mainImgEl.style.cursor = "zoom-in";
+      mainImgEl.onclick = function () {
+        openPhotoLightbox(mainImgEl.src, mainImgEl.alt, capEl && capEl.style.display !== "none" ? capEl.textContent : "", buildGalleryList(), activePhotoIdx);
+      };
+      var capEl = document.getElementById("detailPhotoCaption");
+      if (capEl) {
+        capEl.textContent = firstLabel;
+        capEl.style.display = firstLabel ? "inline-block" : "none";
+      }
       var thumbsStrip = document.getElementById("detailThumbsStrip");
       thumbsStrip.innerHTML = "";
       acc.images.forEach(function(src, idx) {
+        var lbl = labelFor(idx);
+        var altText = acc.name + " — " + (lbl || "Foto " + (idx + 1));
         var thumb = document.createElement("div");
         thumb.className = "detail-thumb" + (idx === 0 ? " active" : "");
-        thumb.innerHTML = '<img src="' + src + '" alt="Miniatura ' + (idx + 1) + '" loading="lazy">';
+        if (lbl) thumb.setAttribute("data-label", lbl);
+        thumb.innerHTML = '<img src="' + src + '" alt="' + altText + '" title="' + (lbl || "Foto " + (idx + 1)) + '" loading="lazy" onerror="this.parentElement.style.display=\'none\';">';
         thumb.onclick = function() {
+          activePhotoIdx = idx;
           document.querySelectorAll(".detail-thumb").forEach(function(t){ t.classList.remove("active"); });
           thumb.classList.add("active");
-          document.getElementById("detailMainImg").src = src;
+          mainImgEl.src = src;
+          mainImgEl.alt = altText;
+          if (capEl) {
+            capEl.textContent = lbl;
+            capEl.style.display = lbl ? "inline-block" : "none";
+          }
         };
         thumbsStrip.appendChild(thumb);
       });
@@ -3419,9 +3812,21 @@
       updateBookedDatesDisplay(acc.id);
       checkAvailabilityAndSyncUi();
 
+      // Disponibilidade em tempo real do CRM: dias reservados noutra
+      // origem (ex.: WhatsApp) aparecem nas datas fechadas;
+      // cancelamentos anteriores pelo CRM deixam de bloquear.
+      var propriedadeDetalhe = CRM_PROPRIEDADES[accId];
+      if (propriedadeDetalhe) {
+        pedirDisponibilidadeCRM(propriedadeDetalhe, function (ocupadas) {
+          if (ocupadas) {
+            updateBookedDatesDisplay(accId);
+            checkAvailabilityAndSyncUi();
+          }
+        }, false);
+      }
+
       document.getElementById("mainView").style.display = "none";
       document.getElementById("detailView").style.display = "block";
-      if (typeof syncMobileBottomBar === "function") syncMobileBottomBar(acc, selectedRoomOpt);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
@@ -3516,7 +3921,6 @@
       selectedAcc = null;
       document.getElementById("detailView").style.display = "none";
       document.getElementById("mainView").style.display = "block";
-      if (typeof syncMobileBottomBar === "function") syncMobileBottomBar(null, null);
       document.getElementById("refugios").scrollIntoView({ behavior: "smooth" });
     }
 
@@ -3699,78 +4103,161 @@
         totalDisplay += ' (~' + totalMt.toLocaleString("pt-MZ") + ' MT)';
       }
 
-      // Salvar a nova reserva no sistema (bloqueando estas datas)
-      var newBooking = {
-        id: "bk-" + Date.now(),
-        acc_id: selectedAcc.id,
-        acc_name: selectedAcc.name,
-        room_opt_id: opt.id,
-        room_opt_name: optName,
-        guest_name: nome,
-        phone: tel,
-        check_in: inDate,
-        check_out: outDate,
-        guests: guests,
-        notes: notes,
-        total: totalDisplay,
-        created_at: new Date().toISOString()
-      };
-      saveNewBooking(newBooking);
+      // Estado "a registar" no botão enquanto fala com o CRM
+      var btnEl = document.getElementById("btnSubmitBooking");
+      var btnTextEl = document.getElementById("btnSubmitBookingText");
+      if (btnEl) { btnEl.disabled = true; btnEl.classList.add("btn-disabled-conflict"); }
+      if (btnTextEl) btnTextEl.textContent = (d.btn_submitting || "A registar pedido...");
 
-      // Atualizar tags visuais de datas fechadas desta casa
-      updateBookedDatesDisplay(selectedAcc.id);
-      checkAvailabilityAndSyncUi();
-
-      // Exibir aviso de sucesso antes de abrir o WhatsApp
-      var notice = document.getElementById("formValidationNotice");
-      if (notice) {
-        notice.className = "form-validation-notice success";
-        notice.style.display = "flex";
-        notice.innerHTML = 
-          '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>' +
-          '<div><strong>' + (d.booking_success_redirect || "Reserva registada no sistema!") + '</strong></div>';
+      function restaurarBotao() {
+        if (btnEl) {
+          btnEl.disabled = false;
+          btnEl.classList.remove("btn-disabled-conflict");
+        }
+        if (btnTextEl) btnTextEl.textContent = (d.btn_submit_booking || "Confirmar Reserva via WhatsApp");
       }
 
-      // Construção da mensagem estruturada para o WhatsApp
-      var msg = currentLang === "en" ? (
-        "Hello Tandiwa!\n\n" +
-        "I would like to request a reservation at Enclave Accommodation:\n" +
-        "• Accommodation: " + selectedAcc.name + " (" + selectedAcc.city + ", " + selectedAcc.country + ")\n" +
-        "• Selected Option: " + optName + " (" + rateDisplay + ")\n" +
-        "• Rate: " + rateDisplay + "\n\n" +
-        "• Guest Name: " + nome + "\n" +
-        "• Phone / WhatsApp: " + tel + "\n" +
-        "• Check-in: " + inFmt + "\n" +
-        "• Check-out: " + outFmt + " (" + nights + (nights === 1 ? " night" : " nights") + ")\n" +
-        "• Estimated Total: " + totalDisplay + "\n" +
-        "• Guests: " + guests + "\n" +
-        "• Notes: " + (notes || "No special requests.") + "\n\n" +
-        "Looking forward to confirmation of availability. Thank you!"
-      ) : (
-        "Olá Tandiwa!\n\n" +
-        "Gostaria de solicitar reserva na Enclave Accommodation:\n" +
-        "• Acomodação: " + selectedAcc.name + " (" + selectedAcc.city + ", " + selectedAcc.country + ")\n" +
-        "• Opção Escolhida: " + optName + " (" + rateDisplay + ")\n" +
-        "• Tarifa: " + rateDisplay + "\n\n" +
-        "• Nome do Hóspede: " + nome + "\n" +
-        "• Telefone: " + tel + "\n" +
-        "• Check-in: " + inFmt + "\n" +
-        "• Check-out: " + outFmt + " (" + nights + " noites)\n" +
-        "• Total Estimado: " + totalDisplay + "\n" +
-        "• Hóspedes: " + guests + "\n" +
-        "• Observações: " + (notes || "Nenhuma observação especial.") + "\n\n" +
-        "Aguardo confirmação de disponibilidade. Obrigado!"
-      );
+      function mostrarFalhaCrm(erro) {
+        var msgMap = {
+          datas_indisponiveis: d.crm_dates_busy,
+          datas_invalidas: d.crm_dates_invalid,
+          dados_invalidos: d.crm_dados_invalidos,
+          falha_interna: d.crm_falha
+        };
+        showFormError(msgMap[erro] || d.crm_falha, erro === "datas_indisponiveis" ? inEl : null);
+        if (erro === "datas_indisponiveis") {
+          // Recarregar a verdade do CRM e refletir no calendário this browser
+          var propriedadeFalha = CRM_PROPRIEDADES[selectedAcc.id];
+          if (propriedadeFalha) {
+            pedirDisponibilidadeCRM(propriedadeFalha, function (ocupadas) {
+              if (ocupadas) {
+                updateBookedDatesDisplay(selectedAcc.id);
+                checkAvailabilityAndSyncUi();
+              }
+            }, true);
+          }
+        }
+        restaurarBotao();
+      }
 
-      var numLimpo = (selectedAcc.whatsapp_number && selectedAcc.whatsapp_number.length > 5 ? selectedAcc.whatsapp_number : FIREBASE_DATA.contacts.whatsapp_number).replace(/\D/g, "");
-      var waUrl = "https://wa.me/" + numLimpo + "?text=" + encodeURIComponent(msg);
+      // 1) Confirma a disponibilidade com o CRM (dados frescos) →
+      // 2) Registra a reserva no CRM (o administrador confirma/cancela pelo e-mail) →
+      // 3) Abre o WhatsApp com todos os dados + referência.
+      var propriedadeReserva = CRM_PROPRIEDADES[selectedAcc.id] || "";
+      pedirDisponibilidadeCRM(propriedadeReserva, function (ocupadasFrescas) {
+        var conflitoCrm = crmConflito(ocupadasFrescas, inDate, outDate);
+        if (conflitoCrm) {
+          var inFmtC = formatDateDisplay(conflitoCrm.de);
+          var outFmtC = formatDateDisplay(conflitoCrm.ate);
+          var msgC = (d.date_conflict_desc || "Esta casa já está reservada de {in} a {out}.").replace("{in}", inFmtC).replace("{out}", outFmtC);
+          showFormError(msgC, inEl);
+          restaurarBotao();
+          return;
+        }
 
-      // Redirecionamento seguro para o WhatsApp apenas após dados completos
-      setTimeout(function() {
-        window.open(waUrl, "_blank");
-      }, 400);
+        enviarReservaCRM({
+          tipo: "reserva",
+          propriedade: propriedadeReserva,
+          nome: nome,
+          telefone: tel,
+          acomodacao: selectedAcc.name,
+          cidade: selectedAcc.city,
+          pais: selectedAcc.country,
+          opcao: optName,
+          tarifa: rateDisplay,
+          checkin: inDate,
+          checkout: outDate,
+          noites: nights,
+          hospedes: guests,
+          total: totalDisplay,
+          observacoes: notes,
+          idioma: currentLang,
+          origem: window.location.href.split("#")[0].split("?")[0]
+        }).then(function (resposta) {
+          if (!resposta.ok) { mostrarFalhaCrm(resposta.erro); return; }
 
-      return true;
+          // Guardar também no navegador para o calendário this device
+          saveNewBooking({
+            id: resposta.id || ("bk-" + Date.now()),
+            acc_id: selectedAcc.id,
+            acc_name: selectedAcc.name,
+            room_opt_id: opt.id,
+            room_opt_name: optName,
+            guest_name: nome,
+            phone: tel,
+            check_in: inDate,
+            check_out: outDate,
+            guests: guests,
+            notes: notes,
+            total: totalDisplay,
+            created_at: new Date().toISOString()
+          });
+
+          // Atualizar tags visuais de datas fechadas desta casa (truth do CRM)
+          var propriedadeSucesso = CRM_PROPRIEDADES[selectedAcc.id];
+          if (propriedadeSucesso) {
+            pedirDisponibilidadeCRM(propriedadeSucesso, function (ocupadasNovas) {
+              if (ocupadasNovas) updateBookedDatesDisplay(selectedAcc.id);
+            }, true);
+          } else {
+            updateBookedDatesDisplay(selectedAcc.id);
+          }
+          checkAvailabilityAndSyncUi();
+
+          // Exibir aviso de sucesso com a referência antes de abrir o WhatsApp
+          var notice = document.getElementById("formValidationNotice");
+          if (notice) {
+            notice.className = "form-validation-notice success";
+            notice.style.display = "flex";
+            notice.innerHTML =
+              '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>' +
+              '<div><strong>' + (d.booking_success_redirect || "Reserva registada no sistema!") + '</strong>' +
+              (resposta.id ? '<div style="margin-top:2px;">' + (d.booking_reference_lbl || "Referência") + ': ' + resposta.id + '</div>' : "") + '</div>';
+          }
+
+          // Construção da mensagem estruturada para o WhatsApp
+          var linhaRef = resposta.id ? ("\n• " + (currentLang === "en" ? "Reference" : "Referência") + ": " + resposta.id) : "";
+          var msg = currentLang === "en" ? (
+            "Hello Tadiwa!\n\n" +
+            "I would like to request a reservation at Enclave Accommodation:\n" +
+            "• Accommodation: " + selectedAcc.name + " (" + selectedAcc.city + ", " + selectedAcc.country + ")\n" +
+            "• Selected Option: " + optName + " (" + rateDisplay + ")\n" +
+            "• Rate: " + rateDisplay + "\n\n" +
+            "• Guest Name: " + nome + "\n" +
+            "• Phone / WhatsApp: " + tel + "\n" +
+            "• Check-in: " + inFmt + "\n" +
+            "• Check-out: " + outFmt + " (" + nights + (nights === 1 ? " night" : " nights") + ")\n" +
+            "• Estimated Total: " + totalDisplay + "\n" +
+            "• Guests: " + guests + "\n" +
+            "• Notes: " + (notes || "No special requests.") + linhaRef + "\n\n" +
+            "Looking forward to confirmation of availability. Thank you!"
+          ) : (
+            "Olá Tadiwa!\n\n" +
+            "Gostaria de solicitar reserva na Enclave Accommodation:\n" +
+            "• Acomodação: " + selectedAcc.name + " (" + selectedAcc.city + ", " + selectedAcc.country + ")\n" +
+            "• Opção Escolhida: " + optName + " (" + rateDisplay + ")\n" +
+            "• Tarifa: " + rateDisplay + "\n\n" +
+            "• Nome do Hóspede: " + nome + "\n" +
+            "• Telefone: " + tel + "\n" +
+            "• Check-in: " + inFmt + "\n" +
+            "• Check-out: " + outFmt + " (" + nights + " noites)\n" +
+            "• Total Estimado: " + totalDisplay + "\n" +
+            "• Hóspedes: " + guests + "\n" +
+            "• Observações: " + (notes || "Nenhuma observação especial.") + linhaRef + "\n\n" +
+            "Aguardo confirmação de disponibilidade. Obrigado!"
+          );
+
+          var numLimpo = (selectedAcc.whatsapp_number && selectedAcc.whatsapp_number.length > 5 ? selectedAcc.whatsapp_number : FIREBASE_DATA.contacts.whatsapp_number).replace(/\D/g, "");
+          var waUrl = "https://wa.me/" + numLimpo + "?text=" + encodeURIComponent(msg);
+
+          // Redirecionamento seguro para o WhatsApp apenas após dados completos
+          setTimeout(function() {
+            window.open(waUrl, "_blank");
+          }, 400);
+        });
+      });
+
+      return false;
     }
 
     function handleContactSubmit(e) {
@@ -3781,30 +4268,83 @@
       btn.disabled = true;
       btn.textContent = "Enviando...";
 
-      fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { "Accept": "application/json" }
-      }).then(function(res) {
+      var fd = new FormData(form);
+      var dados = {
+        tipo: "lead",
+        nome: (fd.get("name") || "").toString().trim(),
+        email: (fd.get("email") || "").toString().trim(),
+        telefone: (fd.get("phone") || "").toString().trim(),
+        mensagem: (fd.get("message") || "").toString().trim(),
+        idioma: currentLang,
+        origem: window.location.href.split("#")[0]
+      };
+
+      var waNum = String(FIREBASE_DATA.contacts.whatsapp_number || "").replace(/\D/g, "");
+      var waMsg = (currentLang === "en" ? "Hello! I just sent a message through the website.\n" : "Olá! Acabei de enviar uma mensagem pelo site.\n") +
+        "Nome: " + dados.nome + "\nEmail: " + dados.email + "\nTelefone: " + dados.telefone + "\nMensagem: " + dados.mensagem;
+      var waUrl = "https://wa.me/" + waNum + "?text=" + encodeURIComponent(waMsg);
+
+      function finalizarComSucesso() {
         btn.disabled = false;
         btn.textContent = DICT[currentLang].btn_send_msg;
-        if (res.ok) {
-          fb.style.display = "block";
-          fb.style.color = "#72E394";
-          fb.textContent = "Mensagem enviada com sucesso! Tandiwa Maswera e a equipe Enclave entrarão em contato em breve.";
-          form.reset();
-        } else {
-          fb.style.display = "block";
-          fb.style.color = "#F7C6C6";
-          fb.textContent = "Ocorreu um erro no envio. Por favor, envie diretamente pelo WhatsApp.";
-        }
-      }).catch(function() {
+        fb.style.display = "block";
+        fb.style.color = "#72E394";
+        var okTxt = currentLang === "en"
+          ? "Message sent successfully! Tadiwa Maswera and the Enclave team will contact you soon."
+          : "Mensagem enviada com sucesso! Tadiwa Maswera e a equipe Enclave entrarão em contato em breve.";
+        var cta = currentLang === "en" ? "Continue on WhatsApp" : "Continuar no WhatsApp";
+        fb.innerHTML = okTxt +
+          '<br><a href="' + waUrl + '" target="_blank" rel="noopener" ' +
+          'style="display:inline-block;margin-top:8px;padding:8px 16px;border-radius:8px;background:#25D366;color:#FFFFFF;font-weight:700;text-decoration:none;">' +
+          cta + "</a>";
+        form.reset();
+
+        // Enclave CRM: no final, levar a pessoa diretamente para o WhatsApp
+        // (se o navegador bloquear o pop-up, fica o botão "Continuar no WhatsApp" acima)
+        setTimeout(function() {
+          try { window.open(waUrl, "_blank"); } catch (err) {}
+        }, 900);
+      }
+
+      function finalizarComErro(msg) {
         btn.disabled = false;
         btn.textContent = DICT[currentLang].btn_send_msg;
         fb.style.display = "block";
         fb.style.color = "#F7C6C6";
-        fb.textContent = "Erro de rede. Por favor, utilize o nosso WhatsApp direto.";
-      });
+        fb.textContent = msg;
+      }
+
+      if (CRM_ENDPOINT) {
+        // CRM ativo: grava no Google Sheets e o Apps Script avisa por e-mail
+        var body = new URLSearchParams();
+        for (var k in dados) body.append(k, dados[k] == null ? "" : String(dados[k]));
+        fetch(CRM_ENDPOINT, { method: "POST", mode: "no-cors", body: body })
+          .then(finalizarComSucesso)
+          .catch(function() {
+            finalizarComErro(currentLang === "en"
+              ? "Network error. Please use our direct WhatsApp."
+              : "Erro de rede. Por favor, utilize o nosso WhatsApp direto.");
+          });
+      } else {
+        // Sem CRM configurado: envia pelo Formspree (comportamento atual)
+        fetch(form.action, {
+          method: "POST",
+          body: fd,
+          headers: { "Accept": "application/json" }
+        }).then(function(res) {
+          if (res.ok) {
+            finalizarComSucesso();
+          } else {
+            finalizarComErro(currentLang === "en"
+              ? "An error occurred while sending. Please contact us directly via WhatsApp."
+              : "Ocorreu um erro no envio. Por favor, envie diretamente pelo WhatsApp.");
+          }
+        }).catch(function() {
+          finalizarComErro(currentLang === "en"
+            ? "Network error. Please use our direct WhatsApp."
+            : "Erro de rede. Por favor, utilize o nosso WhatsApp direto.");
+        });
+      }
     }
 
     function handleLogoClick() {
@@ -3828,10 +4368,10 @@
       var b = document.getElementById("legalModalBody");
       if (tipo === "privacidade") {
         t.textContent = "Política de Privacidade — Enclave Accommodation";
-        b.innerHTML = "<p>A Enclave Accommodation respeita a sua privacidade. Recolhemos apenas os dados necessários para organizar a sua estadia: nome, contacto, datas e pedidos enviados pelos nossos formulários ou pelo WhatsApp. Não vendemos nem partilhamos os seus dados com terceiros, salvo exigência legal.</p><p style=\"margin-top:12px;\">Os dados da reserva são utilizados exclusivamente para confirmação da reserva, preparação do check-in e apoio concierge no destino. As comunicações via WhatsApp seguem protocolo de criptografia de ponta a ponta.</p><p style=\"margin-top:12px;\">Pode pedir a correção ou eliminação dos seus dados a qualquer momento, escrevendo para Enclaveccomodation@gmail.com ou via WhatsApp +263 777 735 000. Esta política pode ser atualizada periodicamente; a versão publicada nesta página é sempre a vigente. Última atualização: outubro de 2026.</p><p style=\"margin-top:14px;\"><a href=\"politica-de-privacidade.html\" style=\"color:#664E0C;font-weight:700;text-decoration:underline;\">Abrir a versão completa e oficial da Política de Privacidade (documento integral, 4.600+ palavras) →</a></p>";
+        b.innerHTML = "<p>A Enclave Accommodation respeita a sua privacidade. Recolhemos apenas os dados necessários para organizar a sua estadia: nome, contacto, datas e pedidos enviados pelos nossos formulários ou pelo WhatsApp. Não vendemos nem partilhamos os seus dados com terceiros, salvo exigência legal.</p><p style=\"margin-top:12px;\">Os dados da reserva são utilizados exclusivamente para confirmação da reserva, preparação do check-in e apoio concierge no destino. As comunicações via WhatsApp seguem protocolo de criptografia de ponta a ponta.</p><p style=\"margin-top:12px;\">Pode pedir a correção ou eliminação dos seus dados a qualquer momento, escrevendo para enclaveccommodation@gmail.com ou via WhatsApp +263 777 735 000. Esta política pode ser atualizada periodicamente; a versão publicada nesta página é sempre a vigente. Última atualização: outubro de 2026.</p><p style=\"margin-top:14px;\"><a href=\"politica-de-privacidade.html\" style=\"color:#664E0C;font-weight:700;text-decoration:underline;\">Abrir a versão completa e oficial da Política de Privacidade (documento integral, 4.600+ palavras) →</a></p>";
       } else {
         t.textContent = "Termos de Uso — Enclave Accommodation";
-        b.innerHTML = "<p><strong>1. Reservas e preços.</strong> A reserva é feita via WhatsApp ou formulário e fica sujeita à confirmação da Enclave. O pagamento pode ser feito em Meticais (M-Pesa, E-Mola, transferência) ou moedas internacionais (USD/ZAR/EUR).</p><p style=\"margin-top:8px;\"><strong>2. Check-in e check-out.</strong> Entrada a partir das 14h e saída até às 11h, podendo ser flexibilizada sob consulta antecipada, conforme disponibilidade.</p><p style=\"margin-top:8px;\"><strong>3. Regras da casa.</strong> As nossas casas estão em zonas residenciais calmas: festas com som alto não são permitidas e o número de hóspedes não pode exceder o indicado na reserva. Pede-se o mesmo respeito ao descanso da vizinhança.</p><p style=\"margin-top:8px;\"><strong>4. O que a casa inclui.</strong> As descrições no site refletem de forma honesta o que cada casa realmente oferece. Nenhuma das nossas casas tem piscina; a internet existe em todas as casas, sendo mais rápida (Starlink) em Mutare e Nyanga e mais modesta em Chimoio.</p><p style=\"margin-top:8px;\"><strong>5. Danos e responsabilidade.</strong> O hóspede responde por eventuais danos causados ao imóvel, mobiliário ou equipamentos durante a estadia.</p><p style=\"margin-top:8px;\"><strong>6. Uso do site.</strong> Os conteúdos deste site são protegidos e não podem ser copiados ou reutilizados sem autorização. Estes termos aplicam a lei moçambicana e podem ser atualizados; a versão publicada nesta página é sempre a vigente. Última atualização: outubro de 2026.</p><p style=\"margin-top:14px;\"><a href=\"termos-de-uso.html\" style=\"color:#664E0C;font-weight:700;text-decoration:underline;\">Abrir a versão completa e oficial dos Termos de Uso (documento integral, 5.400+ palavras) →</a></p>";
+        b.innerHTML = "<p><strong>1. Reservas e preços.</strong> A reserva é feita via WhatsApp ou formulário e fica sujeita à confirmação da Enclave. O pagamento pode ser feito em Meticais (M-Pesa, E-Mola, transferência) ou moedas internacionais (USD/ZAR/EUR).</p><p style=\"margin-top:8px;\"><strong>2. Check-in e check-out.</strong> Entrada a partir das 14h e saída até às 10h30, podendo ser flexibilizada sob consulta antecipada, conforme disponibilidade.</p><p style=\"margin-top:8px;\"><strong>3. Regras da casa.</strong> As nossas casas estão em zonas residenciais calmas: festas com som alto não são permitidas e o número de hóspedes não pode exceder o indicado na reserva. Pede-se o mesmo respeito ao descanso da vizinhança.</p><p style=\"margin-top:8px;\"><strong>4. O que a casa inclui.</strong> As descrições no site refletem de forma honesta o que cada casa realmente oferece. A internet existe em todas as casas, sendo mais rápida (Starlink) em Mutare e Nyanga e mais modesta em Chimoio.</p><p style=\"margin-top:8px;\"><strong>5. Danos e responsabilidade.</strong> O hóspede responde por eventuais danos causados ao imóvel, mobiliário ou equipamentos durante a estadia.</p><p style=\"margin-top:8px;\"><strong>6. Uso do site.</strong> Os conteúdos deste site são protegidos e não podem ser copiados ou reutilizados sem autorização. Estes termos aplicam a lei moçambicana e podem ser atualizados; a versão publicada nesta página é sempre a vigente. Última atualização: outubro de 2026.</p><p style=\"margin-top:14px;\"><a href=\"termos-de-uso.html\" style=\"color:#664E0C;font-weight:700;text-decoration:underline;\">Abrir a versão completa e oficial dos Termos de Uso (documento integral, 5.400+ palavras) →</a></p>";
       }
       m.classList.add("open");
     }
@@ -3996,56 +4536,12 @@
     renderFooterStays();
     checkCookieConsent();
 
-    // Barra Flutuante Mobile UX (Conversao em Celular)
-    function handleMobileBottomBarClick() {
-      var detailView = document.getElementById("detailView");
-      if (detailView && detailView.style.display !== "none") {
-        var form = document.getElementById("reservationForm");
-        if (form) {
-          form.scrollIntoView({ behavior: "smooth" });
-          var nameInput = document.getElementById("resName");
-          if (nameInput) nameInput.focus();
-        }
-      } else {
-        showMainView("refugios");
-        var grid = document.getElementById("accGrid");
-        if (grid) grid.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-
-    function syncMobileBottomBar(acc, opt) {
-      var mbbVal = document.getElementById("mbbPriceVal");
-      var mbbBtn = document.getElementById("mbbBtnText");
-      if (!mbbVal || !mbbBtn) return;
-      if (acc) {
-        var p = (opt ? opt.price : (acc.min_price || acc.price_per_night));
-        var c = (opt ? opt.currency : acc.currency);
-        mbbVal.innerHTML = (c === "USD" ? "$" + p + " <small>USD</small>" : p + " <small>MT</small>");
-        mbbBtn.textContent = (currentLang === "en" ? "Book This Stay" : "Reservar Agora");
-      } else {
-        mbbVal.innerHTML = "$45 <small>USD</small>";
-        mbbBtn.textContent = (currentLang === "en" ? "Book Now" : "Reservar Já");
-      }
-    }
-
     // Header scroll effect
     window.addEventListener('scroll', function() {
       document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
     });
   </script>
 
-  <!-- Barra Flutuante Mobile UX de Alta Conversao -->
-  <div class="mobile-bottom-bar" id="mobileBottomBar">
-    <div class="mbb-price">
-      <span class="mbb-prefix" data-i18n="from_price">A partir de</span>
-      <span class="mbb-val" id="mbbPriceVal">$45 <small>USD</small></span>
-      <span class="mbb-rating">★ 4.9 · <span data-i18n="verified_reviews">128+ avaliações</span></span>
-    </div>
-    <button type="button" class="btn btn-wa mbb-btn" id="mbbBtn" onclick="handleMobileBottomBarClick()">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      <span id="mbbBtnText" data-i18n="btn_book_now">Reservar Já</span>
-    </button>
-  </div>
   <!-- Pop-up de Consentimento de Cookies & Termos (LGPD / GDPR) -->
   <div class="cookie-consent-card" id="cookieConsentCard" role="dialog" aria-label="Consentimento de Cookies">
     <div class="cookie-header">

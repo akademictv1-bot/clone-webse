@@ -154,7 +154,7 @@
           </table>
 
           <div class="footer">
-            Enclave Accommodation · Refúgios Exclusivos em Moçambique e Zimbabwe
+            Enclave Accommodation · Retiros Exclusivos em Moçambique e Zimbabwe
           </div>
         </div>
       </body>

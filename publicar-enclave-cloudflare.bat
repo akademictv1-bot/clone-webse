@@ -20,7 +20,8 @@ if errorlevel 1 (
 :menu
 echo Escolha o que deseja fazer:
 echo.
-echo   [1] Publicar Site Oficial Enclave (sites\enclave - HTML/CSS/JS)
+echo   [1] Publicar Site Oficial Enclave (sites\enclave - CRM v2 ativo)
+echo       -> vai para PRODUCAO: enclave-accommodation.pages.dev
 echo   [2] Publicar App React / SPA (enclave-accommodation - Vite/Build)
 echo   [3] Fazer Login na Cloudflare (Abre navegador uma unica vez)
 echo   [4] Abrir o Painel Cloudflare Pages no Navegador
@@ -49,10 +50,12 @@ goto menu
 :deploy_static
 echo.
 echo ============================================================
-echo  [DEPLOY] Publicando sites\enclave no Cloudflare Pages...
+echo  [DEPLOY] Publicando o SITE OFICIAL Enclave no Cloudflare...
+echo  (sites\enclave -> projeto enclave-accommodation, branch main)
+echo  CRM v2 de confirmacao/cancelamento ativo neste projeto.
 echo ============================================================
 echo.
-call npx -y wrangler pages deploy "sites\enclave" --project-name enclave-accommodation
+call npx -y wrangler pages deploy "sites\enclave" --project-name enclave-accommodation --branch main --commit-dirty true
 echo.
 if errorlevel 1 (
   echo.
@@ -86,7 +89,7 @@ if errorlevel 1 (
 )
 echo.
 echo 2/2. Enviando para Cloudflare Pages...
-call npx -y wrangler pages deploy "dist" --project-name enclave-app
+call npx -y wrangler pages deploy "dist" --project-name enclave-accommodation
 cd /d "%~dp0"
 echo.
 echo Concluido!
