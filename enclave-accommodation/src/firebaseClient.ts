@@ -248,7 +248,7 @@ export const defaultContacts: ContactsSettings = {
   id: "contacts",
   whatsapp_number: "+26377735000",
   phone: "+26377735000",
-  email: "reservas@enclave.co.mz",
+  email: "enclaveccommodation@gmail.com",
   address: "Avenida da Independência, Chimoio, Moçambique",
   address_zw: "Fife Street, Harare, Zimbabwe",
   instagram_url: "https://instagram.com",

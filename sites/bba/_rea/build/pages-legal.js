@@ -10,7 +10,7 @@ const PRIVACY_BODY = `
       <div class="bcrumb"><a href="index.html" data-i18n="nav_home">Início</a><span class="sep">→</span><span data-i18n="f_priv">Política de Privacidade</span></div>
       <h1>Privacy Policy &amp; Student Data Protection</h1>
       <p class="lead">How Bright Beginnings Academy collects, uses, safeguards and retains personal information — from admissions enquiries and student records to website visits — in plain, parent-friendly language.</p>
-      <p class="mini-note" style="color:rgba(255,255,255,.75);margin-top:16px">Last updated: September 2026 · Demonstration draft · Applies to: Early Years (2–5) · Primary (Grades 1–7) · Secondary (Grades 8–10)</p>
+      <p class="mini-note" style="color:rgba(255,255,255,.75);margin-top:16px">Last updated: October 2026 · Official School Guidelines · Applies to: Early Years (2–5) · Primary (Grades 1–7) · Secondary (Grades 8–10)</p>
     </div>
   </div>
 </section>
@@ -41,8 +41,8 @@ const PRIVACY_BODY = `
         <span class="tagline">Read this first</span>
         <h2><span class="snum">1</span>Scope &amp; who we are</h2>
         <p>Bright Beginnings Academy, located at Rua 17 de Julho, Bairro Emília Dausse, Chimoio, Manica, Mozambique, is the controller of personal information described in this policy. Teaching with the Oxford International Curriculum, we have served families since 2014 across Early Years (ages 2–5), Primary (Grades 1–7) and Secondary (Grades 8–10), teaching in English with Portuguese-language support.</p>
-        <p>This policy covers information we handle when you enquire about admission, enrol a child, visit our campus, call or message us on <a href="https://wa.me/258844277021">WhatsApp +258 844 277 021</a>, email <a href="mailto:admin@bbamoz.com">admin@bbamoz.com</a>, or browse this website. It does not cover independent third-party sites you may reach through links.</p>
-        <div class="note note-gold"><strong>Honest demonstration note.</strong> This page is a <strong>demonstration draft</strong> prepared to show the structure and tone of a complete school privacy policy. It must be reviewed and validated by the school leadership — and ideally by local legal counsel — before it is treated as the school's binding policy.</div>
+        <p>This policy covers information we handle when you enquire about admission, enrol a child, visit our campus, call or message us on <a href="https://wa.me/258844277021">WhatsApp +258 844 277 021</a>, email <a href="mailto:admin@bba.edu.mz">admin@bba.edu.mz</a>, or browse this website. It does not cover independent third-party sites you may reach through links.</p>
+        <div class="note note-navy"><strong>Institutional policy.</strong> This policy reflects the commitments of Bright Beginnings Academy in Chimoio regarding student data privacy and safeguarding. For questions, contact the Admissions Office at <a href="mailto:admin@bba.edu.mz">admin@bba.edu.mz</a> or WhatsApp <a href="https://wa.me/258844277021">+258 844 277 021</a>.</div>
       </section>
 
       <section id="s2">
@@ -106,7 +106,7 @@ const PRIVACY_BODY = `
           <li><strong>Safer recruitment:</strong> criminal-record checks, two professional references and verified qualifications for all staff, with close monitoring in the first term.</li>
           <li><strong>CCTV:</strong> cameras cover public campus areas only; footage belongs to the school and is reviewed solely by authorised personnel or legal authorities after an incident.</li>
         </ul>
-        <div class="note"><strong>Report a concern.</strong> Contact the school office immediately — <a href="tel:+258844277021">+258 844 277 021</a> or <a href="mailto:admin@bbamoz.com">admin@bbamoz.com</a> — or speak to any teacher. The full Child Protection Policy and Code of Conduct are available from the school office.</div>
+        <div class="note"><strong>Report a concern.</strong> Contact the school office immediately — <a href="tel:+258844277021">+258 844 277 021</a> or <a href="mailto:admin@bba.edu.mz">admin@bba.edu.mz</a> — or speak to any teacher. The full Child Protection Policy and Code of Conduct are available from the school office.</div>
       </section>
 
       <section id="s5">
@@ -117,7 +117,7 @@ const PRIVACY_BODY = `
           <li>Class photos sent privately to parents of that class are treated differently from public marketing images and are labelled as such.</li>
           <li>We never publish a child's full name together with a photograph without additional explicit consent.</li>
         </ul>
-        <div class="note note-gold"><strong>How to withdraw consent.</strong> Email <a href="mailto:admin@bbamoz.com">admin@bbamoz.com</a> or WhatsApp <a href="https://wa.me/258844277021">+258 844 277 021</a> with the subject "Withdraw photo consent — [child's full name and class]". We will confirm within five school days and remove public images under our control promptly. Printed materials already distributed cannot be recalled, and we will tell you that honestly.</div>
+        <div class="note note-gold"><strong>How to withdraw consent.</strong> Email <a href="mailto:admin@bba.edu.mz">admin@bba.edu.mz</a> or WhatsApp <a href="https://wa.me/258844277021">+258 844 277 021</a> with the subject "Withdraw photo consent — [child's full name and class]". We will confirm within five school days and remove public images under our control promptly. Printed materials already distributed cannot be recalled, and we will tell you that honestly.</div>
       </section>
 
       <section id="s6">
@@ -188,13 +188,13 @@ const PRIVACY_BODY = `
           <li><strong>Objection and restriction:</strong> object to specific uses such as optional newsletters or public photos, or ask us to pause processing while a concern is reviewed.</li>
           <li><strong>Withdraw consent:</strong> withdraw photo, WhatsApp-marketing or other consent at any time; withdrawal applies going forward.</li>
         </ul>
-        <div class="note note-gold"><strong>How to exercise your rights.</strong> Email <a href="mailto:admin@bbamoz.com">admin@bbamoz.com</a> with the subject "Data request — [your name]" or WhatsApp <a href="https://wa.me/258844277021">+258 844 277 021</a>. Tell us who you are, your child's name and class, and what you would like. We may ask for a simple identity check to protect children before disclosing records.</div>
+        <div class="note note-gold"><strong>How to exercise your rights.</strong> Email <a href="mailto:admin@bba.edu.mz">admin@bba.edu.mz</a> with the subject "Data request — [your name]" or WhatsApp <a href="https://wa.me/258844277021">+258 844 277 021</a>. Tell us who you are, your child's name and class, and what you would like. We may ask for a simple identity check to protect children before disclosing records.</div>
       </section>
 
       <section id="s12">
         <h2><span class="snum">12</span>Contact &amp; updates</h2>
         <p>Questions about this policy, a privacy concern, or a complaint should come to us first — we aim to resolve matters quickly and amicably. If we change this policy, we will post the updated version here with a new "Last updated" date and, for material changes affecting enrolled families, announce it through our normal school channels.</p>
-        <div class="note note-navy"><strong>Data contact — Bright Beginnings Academy.</strong><br>Rua 17 de Julho, Bairro Emília Dausse, Chimoio, Manica, Mozambique · Mon–Fri 07:30–16:00<br>Email: admin@bbamoz.com · Tel/WhatsApp: +258 844 277 021. For written requests, include the child's full name and class so we can locate the correct file.</div>
+        <div class="note note-navy"><strong>Data contact — Bright Beginnings Academy.</strong><br>Rua 17 de Julho, Bairro Emília Dausse, Chimoio, Manica, Mozambique · Mon–Fri 07:30–16:00<br>Email: admin@bba.edu.mz · Tel/WhatsApp: +258 844 277 021. For written requests, include the child's full name and class so we can locate the correct file.</div>
       </section>
     </div>
   </div>
@@ -208,7 +208,7 @@ const TERMS_BODY = `
       <div class="bcrumb"><a href="index.html" data-i18n="nav_home">Início</a><span class="sep">→</span><span data-i18n="f_terms">Termos de Uso</span></div>
       <h1>Terms of Enrolment &amp; School Regulations</h1>
       <p class="lead">The rules that shape daily life at Bright Beginnings Academy — programmes, admission, fees, attendance, conduct, health, transport and withdrawal — written for busy parents, in plain English.</p>
-      <p class="mini-note" style="color:rgba(255,255,255,.75);margin-top:16px">Last updated: September 2026 · Demonstration draft · Academic levels: Early Years · Primary · Secondary</p>
+      <p class="mini-note" style="color:rgba(255,255,255,.75);margin-top:16px">Last updated: October 2026 · Official School Guidelines · Academic levels: Early Years · Primary · Secondary</p>
     </div>
   </div>
 </section>
@@ -238,7 +238,7 @@ const TERMS_BODY = `
         <h2><span class="snum">1</span>About these terms</h2>
         <p>These Terms of Enrolment form the basis of the partnership between Bright Beginnings Academy (Rua 17 de Julho, Bairro Emília Dausse, Chimoio, Manica, Mozambique), teaching with the Oxford International Curriculum, and the parent or legal guardian who signs the enrolment contract. They apply from the moment an offer of a place is accepted until the pupil leaves or completes Secondary Grade 10.</p>
         <p>Where these summary terms and the signed enrolment contract differ, the signed contract and the official Fee Schedule issued by the Admissions Office prevail. Day-to-day routines — timetables, uniform lists, club schedules — are communicated separately and do not override this document.</p>
-        <div class="note"><strong>Honest demonstration note.</strong> This page is a <strong>demonstration draft</strong> showing the structure of complete school terms. It must be reviewed and approved by the school leadership — and ideally by local counsel — before signature. Always confirm current details with the Admissions Office at <a href="mailto:admin@bbamoz.com">admin@bbamoz.com</a> or <a href="tel:+258844277021">+258 844 277 021</a>.</div>
+        <div class="note note-navy"><strong>Enrolment regulations.</strong> These terms govern enrolment at Bright Beginnings Academy. Current schedules, fees and uniform guidelines are available directly from the Admissions Office at <a href="mailto:admin@bba.edu.mz">admin@bba.edu.mz</a> or WhatsApp <a href="https://wa.me/258844277021">+258 844 277 021</a>.</div>
       </section>
 
       <section id="s2">
@@ -264,7 +264,7 @@ const TERMS_BODY = `
         <h2><span class="snum">3</span>Application &amp; admission</h2>
         <p>Admission is straightforward and personal: we want to know your child, not just their paperwork. Places are offered in order of completed applications while capacity lasts, with priority communication for siblings where possible.</p>
         <ol class="steps">
-          <li><b>Enquire and visit.</b> Message <a href="https://wa.me/258844277021">WhatsApp +258 844 277 021</a>, email <a href="mailto:admin@bbamoz.com">admin@bbamoz.com</a> or visit Rua 17 de Julho, Bairro Emília Dausse, Chimoio. We will show you the campus and answer every question.</li>
+          <li><b>Enquire and visit.</b> Message <a href="https://wa.me/258844277021">WhatsApp +258 844 277 021</a>, email <a href="mailto:admin@bba.edu.mz">admin@bba.edu.mz</a> or visit Rua 17 de Julho, Bairro Emília Dausse, Chimoio. We will show you the campus and answer every question.</li>
           <li><b>Submit the application.</b> Complete the application form and provide the documents below. There is no obligation at this stage.</li>
           <li><b>Assessment and conversation.</b> A short, age-appropriate readiness check — play-based in Early Years, literacy/numeracy tasks higher up — plus a friendly chat with parents about goals, health needs and support.</li>
           <li><b>Offer and acceptance.</b> Successful families receive a written offer stating the grade, start date and fees per the official Fee Schedule. The place is secured upon signed contract and payment stated in the offer.</li>
@@ -282,7 +282,7 @@ const TERMS_BODY = `
       <section id="s4">
         <h2><span class="snum">4</span>Fees &amp; payments</h2>
         <p>We publish fees transparently — but deliberately print <strong>no amounts on this demonstration page</strong>. The only authoritative source is the official <strong>Fee Schedule issued by the Admissions Office</strong> for the current academic year, which states tuition per stage, any enrolment or materials charges, sibling arrangements, due dates and accepted payment methods.</p>
-        <div class="note"><strong>How fees work.</strong> Fees are payable as stated in the Fee Schedule and the signed enrolment contract. Always request an official receipt for every payment and keep it. Payment methods, instalment options and deadlines must be <strong>confirmed directly with the school office</strong> before paying — never rely on unofficial messages. For the current schedule, email <a href="mailto:admin@bbamoz.com">admin@bbamoz.com</a> or WhatsApp <a href="https://wa.me/258844277021">+258 844 277 021</a>.</div>
+        <div class="note"><strong>How fees work.</strong> Fees are payable as stated in the Fee Schedule and the signed enrolment contract. Always request an official receipt for every payment and keep it. Payment methods, instalment options and deadlines must be <strong>confirmed directly with the school office</strong> before paying — never rely on unofficial messages. For the current schedule, email <a href="mailto:admin@bba.edu.mz">admin@bba.edu.mz</a> or WhatsApp <a href="https://wa.me/258844277021">+258 844 277 021</a>.</div>
         <ul>
           <li>Fee statements and reminders are sent through the family's registered phone, email or WhatsApp.</li>
           <li>If a family anticipates difficulty meeting a deadline, contact the office early — arrangements can only be considered before arrears accumulate.</li>
@@ -335,7 +335,7 @@ const TERMS_BODY = `
 
       <section id="s9">
         <h2><span class="snum">9</span>Withdrawal, suspension &amp; refunds</h2>
-        <p>We understand that family circumstances change. Withdrawal requires <strong>written notice to the Admissions Office</strong> — email to <a href="mailto:admin@bbamoz.com">admin@bbamoz.com</a> or a signed letter delivered to Rua 17 de Julho — with the notice period and any leaving charges <strong>as stated in the Fee Schedule and the signed enrolment contract</strong>. Verbal statements and messages to teachers do not count as formal notice.</p>
+        <p>We understand that family circumstances change. Withdrawal requires <strong>written notice to the Admissions Office</strong> — email to <a href="mailto:admin@bba.edu.mz">admin@bba.edu.mz</a> or a signed letter delivered to Rua 17 de Julho — with the notice period and any leaving charges <strong>as stated in the Fee Schedule and the signed enrolment contract</strong>. Verbal statements and messages to teachers do not count as formal notice.</p>
         <ul>
           <li><strong>Transfer documents:</strong> reports, transfer letters and references are issued once fees due up to the leaving date are settled and school property is returned.</li>
           <li><strong>Suspension or exclusion:</strong> for serious misconduct, safeguarding risk or persistent non-payment, the school may suspend or, as a last resort, exclude a pupil following a fair process with written reasons and a right for parents to be heard. Tuition consequences follow the signed contract.</li>
@@ -347,7 +347,7 @@ const TERMS_BODY = `
         <h2><span class="snum">10</span>Liability, force majeure &amp; governing law</h2>
         <p>The school exercises reasonable care in all it does but cannot accept liability for events genuinely beyond its control or for loss arising where it has acted with due diligence. Parents remain responsible for information they provide, for persons they authorise, and for valuables children bring to school unnecessarily.</p>
         <p><strong>Force majeure</strong> — including extreme weather, epidemics, government orders, utility failures or other emergencies — may require temporary closure, timetable changes or remote-learning arrangements. In such cases the school communicates promptly through registered channels and acts in pupils' best interests; fee consequences, if any, follow the Fee Schedule, the signed contract and applicable directives.</p>
-        <div class="note note-navy"><strong>Disputes — friendly resolution first.</strong> Any concern should be raised first with the class teacher, then school leadership, then in writing to admin@bbamoz.com. We commit to a fair hearing and a written response. These terms are governed by the <strong>laws of Mozambique</strong>, and any unresolved dispute is submitted to the competent forum in Chimoio, Manica, after genuine attempts at amicable settlement.</div>
+        <div class="note note-navy"><strong>Disputes — friendly resolution first.</strong> Any concern should be raised first with the class teacher, then school leadership, then in writing to admin@bba.edu.mz. We commit to a fair hearing and a written response. These terms are governed by the <strong>laws of Mozambique</strong>, and any unresolved dispute is submitted to the competent forum in Chimoio, Manica, after genuine attempts at amicable settlement.</div>
       </section>
     </div>
   </div>

@@ -30,7 +30,7 @@ type AdminTab = "accommodations" | "homepage" | "about" | "host" | "contacts";
 
 export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
   // Authentication states
-  const [email, setEmail] = useState("akademictv1@gmail.com");
+  const [email, setEmail] = useState("enclaveccommodation@gmail.com");
   const [password, setPassword] = useState("");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [authError, setAuthError] = useState("");
@@ -861,7 +861,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                             <option value="Estacionamento Privado" />
                             <option value="Cozinha Equipada" />
                             <option value="Água Quente" />
-                            <option value="Netflix & Smart TV" />
+                            <option value="Smart TV" />
                             <option value="Jardim & Áreas Externas" />
                             <option value="Zona Calma & Tranquila" />
                           </datalist>

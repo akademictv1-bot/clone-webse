@@ -8,6 +8,9 @@
       "_old/**",
       "_rea/**",
       "*-editor.html",
+      "bba.html",
+      "fotosbba/**",
+      "check-links.js",
       "**/*.md",
       "meu.js",
       "newFile.js"
@@ -16,12 +19,37 @@
     "trailingSlash": false,
     "headers": [
       {
-        "source": "**/*.html",
-        "headers": [{ "key": "Cache-Control", "value": "max-age=0, must-revalidate" }]
+        "source": "**",
+        "headers": [
+          { "key": "X-Content-Type-Options", "value": "nosniff" },
+          { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+          { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+          { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
+          { "key": "X-XSS-Protection", "value": "1; mode=block" },
+          { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" },
+          {
+            "key": "Content-Security-Policy",
+            "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://script.google.com https://script.googleusercontent.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src 'self' https://maps.google.com https://www.google.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://maps.google.com; base-uri 'self'; form-action 'self' https://wa.me;"
+          }
+        ]
       },
       {
-        "source": "**/*.@(jpg|jpeg|png|webp|gif|svg|css|js|woff|woff2|xml|txt)",
-        "headers": [{ "key": "Cache-Control", "value": "max-age=604800" }]
+        "source": "**/*.html",
+        "headers": [
+          { "key": "Cache-Control", "value": "max-age=0, must-revalidate" }
+        ]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|png|webp|gif|svg|css|js|woff|woff2)",
+        "headers": [
+          { "key": "Cache-Control", "value": "max-age=604800" }
+        ]
+      },
+      {
+        "source": "@(robots.txt|sitemap.xml)",
+        "headers": [
+          { "key": "Cache-Control", "value": "max-age=86400, must-revalidate" }
+        ]
       }
     ]
   }

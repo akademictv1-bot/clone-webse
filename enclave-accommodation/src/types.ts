@@ -1,3 +1,12 @@
+export interface RoomOption {
+  id: string;
+  name: string;
+  count?: number;
+  price?: number;
+  currency?: string;
+  is_whole?: boolean;
+}
+
 export interface Accommodation {
   id: string;
   name: string;
@@ -11,6 +20,8 @@ export interface Accommodation {
   max_guests: number;
   google_maps_link: string;
   whatsapp_number: string;
+  currency?: string;
+  room_options?: RoomOption[];
   created_at?: string;
 }
 

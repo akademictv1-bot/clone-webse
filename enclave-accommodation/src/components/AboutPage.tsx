@@ -31,7 +31,7 @@ export function AboutPage({ about, host, contacts, onClose, language = "pt" }: A
       <AboutSection about={about} host={host} language={language} />
 
       {/* Contact Section */}
-      <ContactSection contacts={contacts} />
+      <ContactSection contacts={contacts} language={language} />
     </main>
   );
 }

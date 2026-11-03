@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { Phone, Mail, MapPin, MessageSquare, ArrowRight, Check } from "lucide-react";
 import { ContactsSettings } from "../firebaseClient";
+import { descreverErro, enviarLead } from "../crm/crmClient";
 
 interface ContactSectionProps {
   contacts: ContactsSettings | null;
+  language?: "pt" | "en";
 }
 
-export function ContactSection({ contacts }: ContactSectionProps) {
+export function ContactSection({ contacts, language = "pt" }: ContactSectionProps) {
   // Contact Form States
   const [contactName, setContactName] = useState("");
   const [contactEmail, setContactEmail] = useState("");
@@ -22,39 +24,32 @@ export function ContactSection({ contacts }: ContactSectionProps) {
     setContactSuccess(null);
     setContactError("");
 
-    const formspreeId = contacts?.formspree_id || "xeedylwp";
-    const endpoint = `https://formspree.io/f/${formspreeId}`;
+    // Envia o contacto ao CRM (mesmo método do formulário de reserva)
+    const resposta = await enviarLead({
+      nome: contactName.trim(),
+      email: contactEmail.trim(),
+      telefone: contactPhone.trim(),
+      mensagem: contactMessage.trim(),
+      idioma: language,
+      origem: "site"
+    });
 
-    try {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify({
-          name: contactName,
-          email: contactEmail,
-          phone: contactPhone,
-          message: contactMessage
-        })
-      });
-
-      if (response.ok) {
-        setContactSuccess(true);
-        setContactName("");
-        setContactEmail("");
-        setContactPhone("");
-        setContactMessage("");
-      } else {
-        const data = await response.json();
-        setContactError(data.error || "Ocorreu um erro ao enviar a sua mensagem. Por favor, tente novamente mais tarde ou contacte a nossa equipa directamente.");
-      }
-    } catch (err) {
-      setContactError("Ocorreu um erro de rede. Por favor, verifique a sua ligação à internet.");
-    } finally {
+    if (resposta.ok) {
+      setContactSuccess(true);
+      setContactName("");
+      setContactEmail("");
+      setContactPhone("");
+      setContactMessage("");
       setContactIsSubmitting(false);
+      return;
     }
+
+    setContactError(
+      contactName.trim() === "" || contactEmail.trim() === ""
+        ? descreverErro("dados_invalidos", language)
+        : descreverErro(resposta.erro, language)
+    );
+    setContactIsSubmitting(false);
   };
 
   return (
@@ -84,7 +79,7 @@ export function ContactSection({ contacts }: ContactSectionProps) {
                 </div>
                 <div>
                   <span className="text-[10px] text-white/60 uppercase block font-semibold leading-none">Email Geral</span>
-                  <span className="text-white font-semibold text-sm mt-1 block">{contacts?.email || "reservas@enclave.co.mz"}</span>
+                  <span className="text-white font-semibold text-sm mt-1 block">{contacts?.email || "enclaveccommodation@gmail.com"}</span>
                 </div>
               </li>
               <li className="flex items-center gap-3">
@@ -191,7 +186,7 @@ export function ContactSection({ contacts }: ContactSectionProps) {
                   disabled={contactIsSubmitting}
                   className="w-full bg-[#023625] text-white hover:bg-[#1f4d3a] font-bold py-3.5 px-4 rounded-lg text-xs tracking-wider uppercase transition-all shadow-md active:scale-98 disabled:opacity-50 flex items-center justify-center gap-2 cursor-pointer select-none"
                 >
-                  {contactIsSubmitting ? "A enviar..." : "Enviar Mensagem por E-mail"}
+                  {contactIsSubmitting ? "A enviar..." : "Enviar Mensagem"}
                   <ArrowRight size={14} />
                 </button>
                 

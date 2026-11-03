@@ -9,11 +9,11 @@ const inscricao = {
   meta: {
     pt: {
       title: "Inscrições Abertas 2027 | Bright Beginnings Academy — Chimoio",
-      desc: "Inscrições abertas para o ano letivo 2027 na Bright Beginnings Academy, Chimoio: Early Years (2–5 anos), Primary e Secondary com Oxford International Curriculum. Fale connosco no WhatsApp e agende a sua visita.",
+      desc: "Inscrições abertas para 2027 na Bright Beginnings Academy, Chimoio: Early Years, Primary e Secondary com o Currículo Oxford. Fale connosco no WhatsApp.",
     },
     en: {
-      title: "Admissions Open 2027 | Bright Beginnings Academy — Chimoio",
-      desc: "Admissions open for the 2027 school year at Bright Beginnings Academy, Chimoio: Early Years (ages 2–5), Primary and Secondary with the Oxford International Curriculum. Contact us on WhatsApp and book your visit.",
+      title: "Admissions Open 2027 | Bright Beginnings Academy - Chimoio",
+      desc: "Admissions open for 2027 at Bright Beginnings Academy, Chimoio: Early Years, Primary and Secondary with the Oxford Curriculum. Contact us on WhatsApp.",
     },
   },
   dict: {
@@ -79,7 +79,7 @@ const inscricao = {
   },
   body: `
 <section class="banner">
-  <div class="bbg"><img src="assets/img/hero-school.jpg" alt="Alunos da Bright Beginnings Academy em Chimoio" fetchpriority="high" decoding="async"></div>
+  <div class="bbg"><img src="assets/img/alunos-comunidade-bba.jpg" alt="Alunos e professores da Bright Beginnings Academy em Chimoio" fetchpriority="high" decoding="async"></div>
   <div class="container">
     <div class="banner-in">
       <div class="bcrumb"><a href="index.html" data-i18n="nav_home">Início</a><span class="sep">→</span><span data-i18n="f_insc">Inscrições 2027</span></div>
@@ -94,7 +94,7 @@ const inscricao = {
 </section>
 
 <section class="sec sec-deco">
-  <img class="deco-flake deco-flake-right" src="assets/img/logotpoparacolocarnas pontasdumaformacortada.png" alt="" aria-hidden="true" loading="lazy">
+  <img class="deco-flake deco-flake-tr" src="assets/img/bba-emblem-watermark.png" alt="" aria-hidden="true" width="256" height="256" decoding="async">
   <div class="container">
     <div class="grid g3">
       <div class="card reveal"><div class="ic ic-red">${ICON.users}</div><h3 data-i18n="in1_t">Vagas limitadas por turma</h3><p data-i18n="in1_d">Turmas pequenas para atenção individual — quem chega primeiro escolhe o turno.</p></div>
@@ -128,7 +128,7 @@ const inscricao = {
     </div>
     <div class="pgrid">
       <article class="pcard reveal">
-        <div class="ph"><span class="tag" data-i18n="n1_age">2 – 5 anos</span><img src="assets/img/early-years.jpg" alt="Crianças do Early Years em atividade" loading="lazy"></div>
+        <div class="ph"><span class="tag" data-i18n="n1_age">2 – 5 anos</span><img src="assets/img/early-years-bba.jpg" alt="Criança do Early Years da Bright Beginnings Academy a pintar" loading="lazy"></div>
         <div class="bd">
           <h3 data-i18n="n1_t">Early Years</h3>
           <p data-i18n="n1_d">Aprender a brincar: linguagem, números e socialização numa base afetiva e segura.</p>
@@ -136,7 +136,7 @@ const inscricao = {
         </div>
       </article>
       <article class="pcard reveal">
-        <div class="ph"><span class="tag" data-i18n="n2_age">Grades 1 – 7</span><img src="assets/img/sala-primario.jpg" alt="Sala de aula do Primary na Bright Beginnings Academy" loading="lazy"></div>
+        <div class="ph"><span class="tag" data-i18n="n2_age">Grades 1 – 7</span><img src="assets/img/primary-leitura-bba.jpg" alt="Aluno do Primary na Bright Beginnings Academy a ler na biblioteca" loading="lazy"></div>
         <div class="bd">
           <h3 data-i18n="n2_t">Primary</h3>
           <p data-i18n="n2_d">Inglês, matemática e pensamento crítico com apoio bilingue e acompanhamento próximo.</p>
@@ -144,7 +144,7 @@ const inscricao = {
         </div>
       </article>
       <article class="pcard reveal">
-        <div class="ph"><span class="tag" data-i18n="n3_age">Grades 8 – 10</span><img src="assets/img/secondary.jpg" alt="Alunos do Secondary em atividade" loading="lazy"></div>
+        <div class="ph"><span class="tag" data-i18n="n3_age">Grades 8 – 10</span><img src="assets/img/secondary-turma-bba.jpg" alt="Alunos do Secondary da Bright Beginnings Academy em uniforme escolar" loading="lazy"></div>
         <div class="bd">
           <h3 data-i18n="n3_t">Secondary</h3>
           <p data-i18n="n3_d">Rigor académico, liderança e preparação para estudos superiores internacionais.</p>
@@ -264,7 +264,7 @@ const inscricao = {
           <h3 data-i18n="side_t">Secretaria de Admissões</h3>
           <div class="sline">${ICON.clock}<span data-i18n="side_h">Atendimento seg–sex, 07:30–16:00.</span></div>
           <div class="sline">${ICON.phone}<a href="tel:+258844277021">+258 844 277 021</a></div>
-          <div class="sline">${ICON.mail}<a href="mailto:admin@bbamoz.com">admin@bbamoz.com</a></div>
+          <div class="sline">${ICON.mail}<a href="mailto:admin@bba.edu.mz">admin@bba.edu.mz</a></div>
           <div class="sline">${ICON.pin}<span>Rua 17 de Julho, Bairro Emília Dausse, Chimoio</span></div>
           <a class="btn btn-outline-blue btn-sm" style="margin-top:8px" href="${WA_VISITA}" target="_blank" rel="noopener">${ICON.calendar}<span data-i18n="side_btn">Agendar visita</span></a>
         </div>
@@ -287,11 +287,11 @@ const contact = {
   meta: {
     pt: {
       title: "Contacto & Admissões | Bright Beginnings Academy — Chimoio",
-      desc: "Fale com a secretaria da Bright Beginnings Academy em Chimoio: telefone/WhatsApp +258 844 277 021, admin@bbamoz.com, Rua 17 de Julho, Bairro Emília Dausse.",
+      desc: "Fale com a secretaria da Bright Beginnings Academy em Chimoio: telefone/WhatsApp +258 844 277 021, admin@bba.edu.mz, Rua 17 de Julho, Bairro Emília Dausse.",
     },
     en: {
-      title: "Contact & Admissions | Bright Beginnings Academy — Chimoio",
-      desc: "Contact the admissions office of Bright Beginnings Academy in Chimoio, Mozambique: phone/WhatsApp +258 844 277 021, admin@bbamoz.com, Rua 17 de Julho, Bairro Emília Dausse.",
+      title: "Contact & Admissions | Bright Beginnings Academy - Chimoio",
+      desc: "Contact Bright Beginnings Academy in Chimoio, Mozambique: phone/WhatsApp +258 844 277 021, admin@bba.edu.mz, Rua 17 de Julho, Bairro Emília Dausse.",
     },
   },
   dict: {
@@ -338,11 +338,14 @@ const contact = {
     map_t: "Our campus in Chimoio",
     map_p: "Located on Rua 17 de Julho, Bairro Emília Dausse, Chimoio, Manica Province.",
     map_btn: "Open in Google Maps",
+    map_dir: "Get Directions",
+    map_hours: "Office hours: Monday to Friday · 07:30 to 16:00",
+    map_addr_title: "Campus Address",
     map_note: "Dedicated student drop-off area on site.",
   },
   body: `
 <section class="banner">
-  <div class="bbg"><img src="assets/img/hero-school.jpg" alt="Campus da Bright Beginnings Academy" fetchpriority="high" decoding="async"></div>
+  <div class="bbg"><img src="assets/img/alunos-celebracao-bba.jpg" alt="Comunidade da Bright Beginnings Academy na Rua 17 de Julho" fetchpriority="high" decoding="async"></div>
   <div class="container">
     <div class="banner-in">
       <div class="bcrumb"><a href="index.html" data-i18n="nav_home">Início</a><span class="sep">→</span><span data-i18n="nav_contact">Contacto</span></div>
@@ -357,7 +360,7 @@ const contact = {
 </section>
 
 <section class="sec sec-deco">
-  <img class="deco-flake deco-flake-right" src="assets/img/logotpoparacolocarnas pontasdumaformacortada.png" alt="" aria-hidden="true" loading="lazy">
+  <img class="deco-flake deco-flake-tr" src="assets/img/bba-emblem-watermark.png" alt="" aria-hidden="true" width="256" height="256" decoding="async">
   <div class="container">
     <div class="sec-head reveal">
       <span class="eyebrow" data-i18n="w_eyebrow">Linhas de contacto</span>
@@ -381,7 +384,7 @@ const contact = {
         <div class="ic ic-yellow">${ICON.mail}</div>
         <h3 data-i18n="w3_t">Email</h3>
         <p data-i18n="w3_d">Questões académicas, documentos e registos oficiais.</p>
-        <a class="tlink" href="mailto:admin@bbamoz.com">${ICON.arrow}<span>admin@bbamoz.com</span></a>
+        <a class="tlink" href="mailto:admin@bba.edu.mz">${ICON.arrow}<span>admin@bba.edu.mz</span></a>
       </div>
       <div class="way reveal">
         <div class="ic ic-red">${ICON.pin}</div>
@@ -426,7 +429,7 @@ const contact = {
           <textarea id="mensagem" name="mensagem"></textarea>
         </div>
         <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off">
-        <label class="consent"><input type="checkbox" required> <span data-i18n="ct_consent">Li e aceito a Política de Privacidade e autorizo o contacto sobre este pedido.</span></label>
+        <label class="consent"><input type="checkbox" required> <span data-i18n="ct_consent">Li e aceito a <a href="privacy.html">Política de Privacidade</a> e autorizo o contacto sobre este pedido.</span></label>
         <button class="btn btn-wa btn-block" type="submit">${ICON.wa}<span data-i18n="fm_btn">Enviar mensagem no WhatsApp</span></button>
         <div class="form-ok" tabindex="-1" role="status" style="margin-top:14px">
           <strong data-i18n="ok_t">Obrigado. Recebemos a sua mensagem.</strong>
@@ -463,12 +466,33 @@ const contact = {
       <h2 class="h2" data-i18n="map_t">O nosso campus em Chimoio</h2>
       <p class="lead" data-i18n="map_p">Na Rua 17 de Julho, Bairro Emília Dausse, Chimoio, província de Manica.</p>
     </div>
-    <div class="map-wrap reveal">
-      <iframe title="Mapa — Bright Beginnings Academy, Chimoio" src="https://www.google.com/maps?q=Rua%2017%20de%20Julho,%20Bairro%20Em%C3%ADlia%20Dausse,%20Chimoio,%20Mozambique&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-      <div class="map-card">
-        <strong>Bright Beginnings Academy</strong>
-        <p>Rua 17 de Julho, Bairro Emília Dausse, Chimoio, Moçambique.<br><span data-i18n="map_note">Zona de chegada e recolha de alunos no próprio recinto.</span></p>
-        <a class="btn btn-outline-blue btn-sm" href="https://maps.google.com/?q=Rua+17+de+Julho,+Bairro+Em%C3%ADlia+Dausse,+Chimoio,+Mozambique" target="_blank" rel="noopener">${ICON.pin}<span data-i18n="map_btn">Abrir no Google Maps</span></a>
+    <div class="map-grid">
+      <div class="map-info-card">
+        <div>
+          <span class="eyebrow eb-blue" style="margin-bottom:8px" data-i18n="map_addr_title">Endereço do Campus</span>
+          <h3>Bright Beginnings Academy</h3>
+          <div class="map-info-item">
+            ${ICON.pin}
+            <div>
+              <strong>Rua 17 de Julho, Bairro Emília Dausse</strong><br>
+              <span>Chimoio, Província de Manica, Moçambique</span>
+              <div class="map-info-note" data-i18n="map_note">Zona de chegada e recolha de alunos no próprio recinto.</div>
+            </div>
+          </div>
+          <div class="map-info-item">
+            ${ICON.clock}
+            <div>
+              <strong data-i18n="map_hours">Atendimento: segunda a sexta · 07:30 às 16:00</strong>
+            </div>
+          </div>
+        </div>
+        <div class="map-actions">
+          <a class="btn btn-blue" href="https://maps.google.com/?q=Bright+Beginnings+Academy,+Rua+17+de+Julho,+Bairro+Em%C3%ADlia+Dausse,+Chimoio,+Mozambique" target="_blank" rel="noopener">${ICON.pin}<span data-i18n="map_btn">Abrir no Google Maps</span></a>
+          <a class="btn btn-outline-blue" href="https://www.google.com/maps/dir/?api=1&destination=Rua+17+de+Julho,+Bairro+Em%C3%ADlia+Dausse,+Chimoio,+Mozambique" target="_blank" rel="noopener">${ICON.compass}<span data-i18n="map_dir">Como chegar (Direções)</span></a>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe title="Mapa do Campus — Bright Beginnings Academy, Chimoio" src="https://maps.google.com/maps?q=-19.1437458,33.4780059&z=15&hl=pt&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -483,11 +507,11 @@ const gallery = {
   meta: {
     pt: {
       title: "Galeria do Campus | Bright Beginnings Academy — Chimoio",
-      desc: "Explore a vida no campus da Bright Beginnings Academy: salas, laboratórios de ciências, desporto e momentos dos alunos em Chimoio. Oxford International Curriculum, dos 2 aos 16 anos.",
+      desc: "Explore a vida no campus da Bright Beginnings Academy em Chimoio: salas, laboratórios de ciências, desporto e momentos dos alunos.",
     },
     en: {
-      title: "Campus Photo Gallery | Bright Beginnings Academy — Chimoio",
-      desc: "Explore campus life at Bright Beginnings Academy: classrooms, science laboratories, sports fields and student moments in Chimoio. Oxford International Curriculum, ages 2–16.",
+      title: "Campus Photo Gallery | Bright Beginnings Academy - Chimoio",
+      desc: "Explore campus life at Bright Beginnings Academy in Chimoio: classrooms, science laboratories, sports and student moments.",
     },
   },
   dict: {
@@ -503,9 +527,11 @@ const gallery = {
     fl_rooms: "Classrooms & ICT",
     fl_sci: "Sciences & sports",
     fl_art: "Arts & creativity",
-    g_count: "12 photographs",
-    g1b: "Campus Community", g1s: "Students and teachers starting the day together.",
+    g_count: "14 photographs",
+    g1b: "Campus Community", g1s: "Students and teachers starting the day together on campus.",
     g2b: "Main School Entrance", g2s: "The real gate of our school on Rua 17 de Julho.",
+    g13b: "School Spirit & Celebration", g13s: "Celebration, enthusiasm and unity across our school community.",
+    g14b: "Pride in the BBA Uniform", g14s: "Official school uniform and community pride in Chimoio.",
     g3b: "ICT & Digital Learning", g3s: "Technology supporting everyday learning.",
     g4b: "Early Years Discovery", g4s: "Play-centred discovery for ages 2 to 5.",
     g5b: "Primary Academic Focus", g5s: "Guided literacy, mathematics and continuous assessment.",
@@ -561,12 +587,14 @@ const gallery = {
       <button class="chip" type="button" data-f="art" data-i18n="fl_art">Artes & Criatividade</button>
     </div>
     <div class="gal">
-      <button class="g-item reveal" type="button" data-cat="campus"><img src="assets/img/hero-school.jpg" alt="Assembleia matinal no campus" loading="lazy"><span class="g-cap"><b data-i18n="g1b">Comunidade do Campus</b><span data-i18n="g1s">Alunos e professores a começar o dia juntos.</span></span></button>
+      <button class="g-item reveal" type="button" data-cat="campus"><img src="assets/img/alunos-comunidade-bba.jpg" alt="Comunidade escolar da Bright Beginnings Academy" loading="lazy"><span class="g-cap"><b data-i18n="g1b">Comunidade do Campus</b><span data-i18n="g1s">Alunos e professores a começar o dia juntos.</span></span></button>
+      <button class="g-item reveal" type="button" data-cat="campus"><img src="assets/img/alunos-celebracao-bba.jpg" alt="Celebração e alegria dos alunos da Bright Beginnings Academy" loading="lazy"><span class="g-cap"><b data-i18n="g13b">Celebração & Espírito Escolar</b><span data-i18n="g13s">Alegria, união e energia positiva no campus da BBA.</span></span></button>
+      <button class="g-item reveal" type="button" data-cat="campus"><img src="assets/img/alunos-equipa-bba.jpg" alt="Alunos da Bright Beginnings Academy em uniforme escolar" loading="lazy"><span class="g-cap"><b data-i18n="g14b">Orgulho no Uniforme BBA</b><span data-i18n="g14s">Turma reunida na entrada da escola em Chimoio.</span></span></button>
       <button class="g-item reveal" type="button" data-cat="campus"><img src="assets/img/foto-real-escola.jpg" alt="Entrada principal da escola" loading="lazy"><span class="g-cap"><b data-i18n="g2b">Entrada Principal</b><span data-i18n="g2s">O portão real da escola na Rua 17 de Julho.</span></span></button>
       <button class="g-item reveal" type="button" data-cat="rooms"><img src="assets/img/sala-informatica.jpg" alt="Sala de informática da escola" loading="lazy"><span class="g-cap"><b data-i18n="g3b">Sala de Informática</b><span data-i18n="g3s">Tecnologia ao serviço da aprendizagem.</span></span></button>
       <button class="g-item reveal" type="button" data-cat="rooms"><img src="assets/img/early-years.jpg" alt="Sala do Early Years" loading="lazy"><span class="g-cap"><b data-i18n="g4b">Early Years</b><span data-i18n="g4s">Descoberta e jogo dos 2 aos 5 anos.</span></span></button>
-      <button class="g-item reveal" type="button" data-cat="rooms"><img src="assets/img/sala-primario.jpg" alt="Sala do Ensino Primário" loading="lazy"><span class="g-cap"><b data-i18n="g5b">Ensino Primário</b><span data-i18n="g5s">Leitura orientada, matemática e avaliação contínua.</span></span></button>
-      <button class="g-item reveal" type="button" data-cat="rooms"><img src="assets/img/secondary.jpg" alt="Alunos do Ensino Secundário" loading="lazy"><span class="g-cap"><b data-i18n="g6b">Ensino Secundário</b><span data-i18n="g6s">Colaboração e preparação para a universidade.</span></span></button>
+      <button class="g-item reveal" type="button" data-cat="rooms"><img src="assets/img/sala-aula-1.jpeg" alt="Aluno do Ensino Primário em estudo com livro Oxford" loading="lazy"><span class="g-cap"><b data-i18n="g5b">Ensino Primário</b><span data-i18n="g5s">Leitura orientada, matemática e avaliação contínua.</span></span></button>
+      <button class="g-item reveal" type="button" data-cat="campus"><img src="assets/img/turma-bba-escola.jpg" alt="Alunos do Ensino Secundário em uniforme escolar" loading="lazy"><span class="g-cap"><b data-i18n="g6b">Ensino Secundário</b><span data-i18n="g6s">Colaboração e preparação para a universidade.</span></span></button>
       <button class="g-item reveal" type="button" data-cat="sci"><img src="assets/img/laboratorio.jpg" alt="Laboratório de ciências" loading="lazy"><span class="g-cap"><b data-i18n="g7b">Laboratório de Ciências</b><span data-i18n="g7s">Física, química e biologia com as mãos na massa.</span></span></button>
       <button class="g-item reveal" type="button" data-cat="sci"><img src="assets/img/sports.jpg" alt="Atividades desportivas" loading="lazy"><span class="g-cap"><b data-i18n="g8b">Desporto & Atletismo</b><span data-i18n="g8s">Atletismo, futebol e trabalho de equipa.</span></span></button>
       <button class="g-item reveal" type="button" data-cat="art"><img src="assets/img/criatividade.jpeg" alt="Maquete Planeta Terra feita pelos alunos" loading="lazy"><span class="g-cap"><b data-i18n="g9b">Projeto Planeta Terra</b><span data-i18n="g9s">Maquete criada pelos alunos com criatividade.</span></span></button>
@@ -574,7 +602,7 @@ const gallery = {
       <button class="g-item reveal" type="button" data-cat="rooms"><img src="assets/img/sala-aula-1.jpeg" alt="Aluno a estudar com livro Oxford" loading="lazy"><span class="g-cap"><b data-i18n="g11b">Estudo com Livros Oxford</b><span data-i18n="g11s">Concentração com o Currículo Oxford.</span></span></button>
       <button class="g-item reveal" type="button" data-cat="art"><img src="assets/img/atividade-pintura.jpeg" alt="Aluna em atividade de pintura" loading="lazy"><span class="g-cap"><b data-i18n="g12b">Pintura & Artes</b><span data-i18n="g12s">Cor, imaginação e motricidade fina.</span></span></button>
     </div>
-    <p class="mini-note" style="margin-top:16px;text-align:center" data-i18n="g_count">12 fotografias</p>
+    <p class="mini-note" style="margin-top:16px;text-align:center" data-i18n="g_count">14 fotografias</p>
   </div>
 </section>
 
@@ -650,32 +678,32 @@ const noticia = {
   active: "",
   meta: {
     pt: {
-      title: "Notícia | Bright Beginnings Academy — Chimoio",
-      desc: "Notícias e artigos da Bright Beginnings Academy em Chimoio — acompanhe a vida da escola.",
+      title: "Notícias & Atividades | Bright Beginnings Academy — Chimoio",
+      desc: "Acompanhe as notícias, projetos e conquistas da Bright Beginnings Academy em Chimoio, Moçambique — do Early Years ao Grade 10.",
     },
     en: {
-      title: "News | Bright Beginnings Academy — Chimoio",
-      desc: "News and articles from Bright Beginnings Academy in Chimoio — follow our school life.",
+      title: "News & Activities | Bright Beginnings Academy — Chimoio",
+      desc: "Follow the news, projects and achievements of Bright Beginnings Academy in Chimoio, Mozambique — from Early Years to Grade 10.",
     },
   },
   dict: {
     ar_kicker: "School news",
-    ar_back: "Back to news",
+    ar_back: "Back to all news",
     ar_share: "Share on WhatsApp",
     ar_visit: "Book a school visit",
     ar_next: "Continue reading",
     ar_nf_t: "Article not found",
-    ar_nf_d: "The link may be incomplete. Go back to the news and choose an article.",
-    ar_nf_b: "See news",
+    ar_nf_d: "The link may be incomplete. Go back to news and choose an article.",
+    ar_nf_b: "See all news",
   },
   body: `
 <section class="banner">
-  <div class="bbg"><img src="assets/img/laboratorio.jpg" alt="" fetchpriority="high" decoding="async"></div>
+  <div class="bbg"><img src="assets/img/laboratorio.jpg" alt="Notícias e Vida Escolar na Bright Beginnings Academy" fetchpriority="high" decoding="async"></div>
   <div class="container">
     <div class="banner-in">
-      <div class="bcrumb"><a href="index.html" data-i18n="nav_home">Início</a><span class="sep">→</span><a href="index.html#news" data-i18n="n_eyebrow">Notícias</a></div>
+      <div class="bcrumb"><a href="index.html" data-i18n="nav_home">Início</a><span class="sep">→</span><span data-i18n="n_eyebrow">Notícias</span></div>
       <h1 id="art-title" data-i18n="ar_kicker">Notícias da Escola</h1>
-      <div class="art-meta">
+      <div class="art-meta" id="art-meta-header">
         <span class="ncat" id="art-cat" style="margin:0">—</span>
         <time id="art-date" class="mini-note" style="color:rgba(255,255,255,.85)"></time>
       </div>
@@ -690,17 +718,17 @@ const noticia = {
 <section class="sec" id="art-main">
   <div class="container">
     <div class="art">
-      <div class="art-meta" style="justify-content:space-between">
-        <a class="tlink" href="index.html#news">${ICON.arrow}<span data-i18n="ar_back">Voltar às notícias</span></a>
+      <div class="art-meta" id="art-meta-nav" style="justify-content:space-between">
+        <a class="tlink" href="noticia.html">${ICON.arrow}<span data-i18n="ar_back">Voltar a todas as notícias</span></a>
         <a class="btn btn-outline-blue btn-sm" id="art-share" href="#" target="_blank" rel="noopener">${ICON.wa}<span data-i18n="ar_share">Partilhar no WhatsApp</span></a>
       </div>
       <div class="prose" id="art-body"></div>
-      <div style="margin-top:36px">
+      <div id="art-cta" style="margin-top:36px">
         <a class="btn btn-wa" href="${WA_VISITA}" target="_blank" rel="noopener">${ICON.calendar}<span data-i18n="ar_visit">Agendar visita à escola</span></a>
       </div>
     </div>
-    <div style="max-width:960px;margin:clamp(44px,6vw,72px) auto 0">
-      <h2 class="h2" style="font-size:clamp(20px,2.4vw,26px);margin-bottom:20px" data-i18n="ar_next">Continuar a ler</h2>
+    <div id="art-next-wrap" style="max-width:960px;margin:clamp(44px,6vw,72px) auto 0">
+      <h2 class="h2" id="art-next-title" style="font-size:clamp(20px,2.4vw,26px);margin-bottom:20px" data-i18n="ar_next">Continuar a ler</h2>
       <div class="grid g2" id="art-next"></div>
     </div>
   </div>
@@ -711,7 +739,7 @@ const noticia = {
     <div class="ic ic-blue" style="margin-inline:auto">${ICON.note}</div>
     <h2 class="h2" data-i18n="ar_nf_t">Artigo não encontrado</h2>
     <p class="lead" style="margin:14px 0 24px" data-i18n="ar_nf_d">O link pode estar incompleto. Volte às notícias e escolha um artigo.</p>
-    <a class="btn btn-red" href="index.html#news">${ICON.arrow}<span data-i18n="ar_nf_b">Ver notícias</span></a>
+    <a class="btn btn-red" href="noticia.html">${ICON.arrow}<span data-i18n="ar_nf_b">Ver notícias</span></a>
   </div>
 </section>
 `,
@@ -738,29 +766,69 @@ const noticia = {
   function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
   function render(){
     var lang=(window.__lang==="en")?"en":"pt";
+    var main=document.getElementById("art-main"), nf=document.getElementById("art-notfound"), hw=document.getElementById("art-herowrap");
+    var metaHeader=document.getElementById("art-meta-header"), metaNav=document.getElementById("art-meta-nav");
+    var artCta=document.getElementById("art-cta"), nextWrap=document.getElementById("art-next-wrap"), nextTitle=document.getElementById("art-next-title");
+    var et=document.getElementById("art-title"), eb=document.getElementById("art-body"), next=document.getElementById("art-next");
+
+    if(!slug){
+      if(main) main.style.display="";
+      if(hw) hw.style.display="none";
+      if(nf) nf.style.display="none";
+      if(metaHeader) metaHeader.style.display="none";
+      if(metaNav) metaNav.style.display="none";
+      if(artCta) artCta.style.display="none";
+      var hubTitle = (lang==="en") ? "News & School Updates" : "Notícias & Vida Escolar";
+      document.title = hubTitle + " | Bright Beginnings Academy";
+      if(et){ et.removeAttribute("data-i18n"); et.textContent = hubTitle; }
+      if(eb){
+        eb.innerHTML = "<p style='font-size:17.5px;color:var(--ink);margin-bottom:30px'>" + 
+          (lang==="en" ? "Follow recent events, achievements, sports tournaments and educational developments at Bright Beginnings Academy in Chimoio." : "Acompanhe os acontecimentos, celebrações, torneios desportivos e novidades académicas da Bright Beginnings Academy em Chimoio.") + "</p>";
+      }
+      if(nextTitle) nextTitle.style.display="none";
+      if(nextWrap) nextWrap.style.marginTop="0";
+      if(next){
+        next.className = "grid g3";
+        var html="";
+        for(var i=0;i<NEWS.length;i++){
+          var t=(lang==="en")?NEWS[i].t_en:NEWS[i].t_pt;
+          var c=(lang==="en")?NEWS[i].cat_en:NEWS[i].cat_pt;
+          var d=(lang==="en")?NEWS[i].en[0]:NEWS[i].pt[0];
+          html+='<article class="ncard reveal in"><a class="ph" href="noticia.html?slug='+NEWS[i].slug+'"><img src="assets/'+NEWS[i].img+'" alt="'+esc(NEWS[i].alt)+'" loading="lazy"></a><div class="bd"><span class="ncat">'+esc(c)+'</span><h3><a href="noticia.html?slug='+NEWS[i].slug+'">'+esc(t)+'</a></h3><p>'+esc(d)+'</p><time>'+NEWS[i].data+'</time></div></article>';
+        }
+        next.innerHTML=html;
+      }
+      return;
+    }
+
     var item=null;
     for(var i=0;i<NEWS.length;i++){ if(NEWS[i].slug===slug){ item=NEWS[i]; break; } }
-    var main=document.getElementById("art-main"), nf=document.getElementById("art-notfound"), hw=document.getElementById("art-herowrap");
     if(!item){
       if(main) main.style.display="none";
       if(hw) hw.style.display="none";
       if(nf) nf.style.display="block";
       return;
     }
+
     if(main) main.style.display="";
     if(hw) hw.style.display="";
     if(nf) nf.style.display="none";
+    if(metaHeader) metaHeader.style.display="";
+    if(metaNav) metaNav.style.display="flex";
+    if(artCta) artCta.style.display="";
+    if(nextTitle) nextTitle.style.display="";
+    if(nextWrap) nextWrap.style.marginTop="";
+    if(next) next.className = "grid g2";
+
     var T=(lang==="en")?item.t_en:item.t_pt, C=(lang==="en")?item.cat_en:item.cat_pt, B=(lang==="en")?item.en:item.pt;
-    var et=document.getElementById("art-title"); if(et){ et.removeAttribute("data-i18n"); et.textContent=T; }
+    if(et){ et.removeAttribute("data-i18n"); et.textContent=T; }
     document.title=T+" | Bright Beginnings Academy";
     var ec=document.getElementById("art-cat"); if(ec) ec.textContent=C;
     var ed=document.getElementById("art-date"); if(ed) ed.textContent=item.data;
     var ei=document.getElementById("art-img"); if(ei){ ei.src="assets/"+item.img; ei.alt=item.alt; }
-    var eb=document.getElementById("art-body");
-    if(eb){ var html=""; for(var j=0;j<B.length;j++){ html+="<p>"+esc(B[j])+"</p>"; } eb.innerHTML=html; }
+    if(eb){ var bhtml=""; for(var j=0;j<B.length;j++){ bhtml+="<p>"+esc(B[j])+"</p>"; } eb.innerHTML=bhtml; }
     var sh=document.getElementById("art-share");
-    if(sh) sh.href="https://wa.me/?text="+encodeURIComponent(T+" — https://bba.edu.mz/noticia.html?slug="+item.slug);
-    var next=document.getElementById("art-next");
+    if(sh) sh.href="https://wa.me/?text="+encodeURIComponent(T+" - https://www.bba.edu.mz/noticia.html?slug="+item.slug);
     if(next){
       var nh="";
       for(var k=0;k<NEWS.length;k++){
@@ -768,7 +836,7 @@ const noticia = {
         var t2=(lang==="en")?NEWS[k].t_en:NEWS[k].t_pt;
         var c2=(lang==="en")?NEWS[k].cat_en:NEWS[k].cat_pt;
         var d2=(lang==="en")?NEWS[k].en[0]:NEWS[k].pt[0];
-        nh+='<article class="ncard"><div class="ph"><img src="assets/'+NEWS[k].img+'" alt="'+esc(NEWS[k].alt)+'" loading="lazy"></div><div class="bd"><span class="ncat">'+esc(c2)+'</span><h3><a href="noticia.html?slug='+NEWS[k].slug+'">'+esc(t2)+'</a></h3><p>'+esc(d2)+'</p><time>'+NEWS[k].data+'</time></div></article>';
+        nh+='<article class="ncard reveal in"><a class="ph" href="noticia.html?slug='+NEWS[k].slug+'"><img src="assets/'+NEWS[k].img+'" alt="'+esc(NEWS[k].alt)+'" loading="lazy"></a><div class="bd"><span class="ncat">'+esc(c2)+'</span><h3><a href="noticia.html?slug='+NEWS[k].slug+'">'+esc(t2)+'</a></h3><p>'+esc(d2)+'</p><time>'+NEWS[k].data+'</time></div></article>';
       }
       next.innerHTML=nh;
     }

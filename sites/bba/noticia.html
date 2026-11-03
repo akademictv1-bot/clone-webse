@@ -3,20 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Notícia | Bright Beginnings Academy — Chimoio</title>
-<meta name="description" content="Notícias e artigos da Bright Beginnings Academy em Chimoio — acompanhe a vida da escola.">
-<link rel="canonical" href="https://bba.edu.mz/noticia.html">
+<title>Notícias & Atividades | Bright Beginnings Academy — Chimoio</title>
+<meta name="description" content="Acompanhe as notícias, projetos e conquistas da Bright Beginnings Academy em Chimoio, Moçambique — do Early Years ao Grade 10.">
+<link rel="canonical" href="https://www.bba.edu.mz/noticia.html">
 <link rel="icon" type="image/jpeg" href="assets/img/favicon.jpg">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.jpg">
 <meta name="theme-color" content="#0B1B3A">
-<meta property="og:title" content="Notícia | Bright Beginnings Academy — Chimoio">
-<meta property="og:description" content="Notícias e artigos da Bright Beginnings Academy em Chimoio — acompanhe a vida da escola.">
+<meta property="og:title" content="Notícias & Atividades | Bright Beginnings Academy — Chimoio">
+<meta property="og:description" content="Acompanhe as notícias, projetos e conquistas da Bright Beginnings Academy em Chimoio, Moçambique — do Early Years ao Grade 10.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://bba.edu.mz/noticia.html">
-<meta property="og:image" content="https://bba.edu.mz/assets/img/hero-school.jpg">
+<meta property="og:url" content="https://www.bba.edu.mz/noticia.html">
+<meta property="og:image" content="https://www.bba.edu.mz/assets/img/og-bba.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Alunos da Bright Beginnings Academy em Chimoio">
 <meta property="og:site_name" content="Bright Beginnings Academy">
 <meta property="og:locale" content="pt_MZ">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Notícias & Atividades | Bright Beginnings Academy — Chimoio">
+<meta name="twitter:description" content="Acompanhe as notícias, projetos e conquistas da Bright Beginnings Academy em Chimoio, Moçambique — do Early Years ao Grade 10.">
+<meta name="twitter:image" content="https://www.bba.edu.mz/assets/img/og-bba.jpg">
+<meta name="twitter:image:alt" content="Alunos da Bright Beginnings Academy em Chimoio">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
@@ -137,9 +145,6 @@ h2.h2{font-size:clamp(27px,3.6vw,40px);font-weight:700}
 .lang{display:flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden;margin-left:8px;flex:none}
 .lang button{border:0;background:transparent;padding:6px 11px;font-size:12px;font-weight:700;color:var(--ink-2);cursor:pointer;transition:.18s;font-family:var(--font-head)}
 .lang button.on{background:var(--ink);color:#fff}
-/* Oxford badge - selo redondo na ponta direita do header */
-.hdr-ox{width:40px;height:40px;flex:none;border-radius:50%;object-fit:cover;margin-left:6px;box-shadow:0 2px 8px rgba(16,24,40,.16);background:#fff}
-@media(max-width:1219px){.hdr-ox{display:none}}
 .hdr .btn-hdr{margin-left:6px;flex:none}
 .burger{display:none;width:42px;height:42px;margin-left:auto;border-radius:11px;border:1.5px solid var(--line);background:#fff;cursor:pointer;place-items:center;color:var(--ink)}
 .burger svg{width:20px;height:20px}
@@ -287,8 +292,9 @@ h2.h2{font-size:clamp(27px,3.6vw,40px);font-weight:700}
 .split .media{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg);position:relative}
 .split .media img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3.1}
 .split .media.tall img{aspect-ratio:4/4.6}
-.split .media .m-chip{position:absolute;left:16px;bottom:16px;background:rgba(255,255,255,.96);border-radius:12px;padding:10px 14px;font-size:13px;font-weight:700;color:var(--ink);box-shadow:var(--shadow-md);display:flex;align-items:center;gap:9px}
-.split .media .m-chip svg{width:16px;height:16px;color:var(--green-deep)}
+.m-chip{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--ink);background:rgba(255,255,255,.96);padding:8px 14px;border-radius:12px;box-shadow:var(--shadow-sm)}
+.m-chip svg{width:16px;height:16px;flex-shrink:0;color:var(--green-deep)}
+.split .media .m-chip{position:absolute;left:16px;bottom:16px;box-shadow:var(--shadow-md)}
 .ticks{display:flex;flex-direction:column;gap:12px;margin:22px 0 4px}
 .ticks li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--ink-2);font-weight:500}
 .ticks li svg{width:20px;height:20px;flex:none;color:var(--green-deep);margin-top:1px}
@@ -320,8 +326,8 @@ h2.h2{font-size:clamp(27px,3.6vw,40px);font-weight:700}
 .pcard p{color:var(--ink-2);font-size:14.5px;line-height:1.65;margin-bottom:14px}
 .pcard .tlink{margin-top:auto}
 
-/* ---------- Secção Oxford (dark) ---------- */
-.sec.oxford{background:linear-gradient(135deg,#0C1E44 0%,#12295C 55%,#0E2350 100%);color:#EAF0FB;position:relative;overflow:hidden}
+/* ---------- Secção Oxford (dark com imagem de fundo e overlay prestigioso) ---------- */
+.sec.oxford{background:linear-gradient(135deg,rgba(11,27,58,.94) 0%,rgba(18,41,92,.88) 55%,rgba(10,22,48,.96) 100%),url('assets/img/campus-hero-bba.jpg') center/cover no-repeat;color:#EAF0FB;position:relative;overflow:hidden}
 .sec.oxford::before{content:'';position:absolute;right:-160px;top:-160px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(30,90,240,.5),transparent 65%)}
 .sec.oxford::after{content:'';position:absolute;left:-120px;bottom:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(245,179,1,.16),transparent 65%)}
 .sec.oxford .container{position:relative;z-index:1}
@@ -329,6 +335,30 @@ h2.h2{font-size:clamp(27px,3.6vw,40px);font-weight:700}
 .ox-badge img{width:96px;height:auto}
 .ox-badge strong{display:block;font-size:15px}
 .ox-badge span{font-size:12.5px;color:var(--muted);font-weight:600}
+
+/* ---------- Secção The Oxford Reading Tree & Well-Being (Inspirado no The Hill) ---------- */
+.sec.ox-spotlight{background:linear-gradient(135deg,rgba(7,16,36,.93) 0%,rgba(11,27,58,.89) 60%,rgba(10,20,40,.96) 100%),url('assets/img/foto-real-escola.jpg') center/cover no-repeat;color:#EAF0FB;position:relative;overflow:hidden;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+#oxford-spotlight{background-image:linear-gradient(135deg,rgba(7,16,36,.86) 0%,rgba(11,27,58,.78) 60%,rgba(10,20,40,.92) 100%),url('assets/img/biblioteca-leitura-bba.jpg');background-position:center 35%;background-size:cover;background-repeat:no-repeat}
+.sec.ox-spotlight .container{position:relative;z-index:2}
+.spotlight-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3.5vw,36px);align-items:stretch}
+.spotlight-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--r-lg);padding:clamp(24px,3vw,34px);backdrop-filter:blur(8px);display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 48px -20px rgba(0,0,0,.6);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.spotlight-card:hover{transform:translateY(-4px);border-color:rgba(245,179,1,.5);box-shadow:0 24px 60px -20px rgba(0,0,0,.7)}
+.spotlight-badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;padding:6px 14px;border-radius:999px;background:rgba(245,179,1,.22);color:var(--yellow);border:1px solid rgba(245,179,1,.4);margin-bottom:16px;width:fit-content}
+.spotlight-badge.wb{background:rgba(31,175,85,.2);color:#7FDBA1;border-color:rgba(31,175,85,.4)}
+.spotlight-card h3{font-size:clamp(21px,2.4vw,28px);font-weight:800;color:#fff;line-height:1.22;margin-bottom:14px}
+.spotlight-card p{color:#C8D6F0;font-size:15px;line-height:1.7}
+.spotlight-quote{border-left:3px solid var(--yellow);padding-left:14px;margin-top:18px;font-style:italic;color:#EAEFF9;font-size:14px;line-height:1.6}
+.spotlight-quote.wb{border-left-color:#7FDBA1}
+.spotlight-card .tlink{margin-top:20px;color:#9DB6E8}
+.spotlight-card .tlink:hover{color:#fff}
+
+/* ---------- Admissões Hero Background ---------- */
+.sec.adm-hero-bg{background:linear-gradient(135deg,rgba(10,22,46,.95) 0%,rgba(14,35,80,.91) 60%,rgba(9,19,38,.97) 100%),url('assets/img/turma-bba-entrada.jpg') center/cover no-repeat;color:#fff;position:relative;overflow:hidden}
+.sec.adm-hero-bg .eyebrow{color:#FF8A96}
+.sec.adm-hero-bg .h2{color:#fff}
+.sec.adm-hero-bg .lead{color:#D0DEF5}
+.sec.adm-hero-bg .btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+.sec.adm-hero-bg .btn-ghost:hover{background:#fff;color:var(--ink)}
 /* ---------- Passos (matrícula) ---------- */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px);counter-reset:step}
 .step{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 26px;box-shadow:var(--shadow-sm)}
@@ -441,8 +471,21 @@ textarea{min-height:110px;resize:vertical}
 .way h3{font-size:15.5px;font-weight:700;margin-bottom:7px}
 .way p{font-size:13.5px;color:var(--ink-2);line-height:1.6;margin-bottom:12px}
 .way .tlink{font-size:14px}
-.map-wrap{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-md);position:relative;background:#E8EDF6}
-.map-wrap iframe{width:100%;height:430px;border:0;display:block}
+
+/* ---------- Localização e Mapa ---------- */
+.map-grid{display:grid;grid-template-columns:minmax(300px,380px) 1fr;gap:24px;align-items:stretch}
+.map-info-card{background:#fff;border-radius:var(--r-lg);border:1px solid var(--line);box-shadow:var(--shadow-sm);padding:28px 24px;display:flex;flex-direction:column;justify-content:space-between}
+.map-info-card h3{font-size:18px;font-weight:700;margin-bottom:12px;color:var(--ink)}
+.map-info-item{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--ink-2);line-height:1.6;margin-bottom:16px}
+.map-info-item svg{width:18px;height:18px;flex-shrink:0;color:var(--blue);margin-top:3px}
+.map-info-note{font-size:12.5px;color:var(--muted);margin-top:2px}
+.map-actions{display:flex;flex-direction:column;gap:10px;margin-top:auto;padding-top:16px;border-top:1px solid var(--line)}
+.map-actions .btn{width:100%;justify-content:center}
+.map-wrap{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-md);position:relative;background:#E8EDF6;min-height:400px}
+.map-wrap iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+/* Moldura do mapa: responsiva por aspect-ratio, iframe preenchendo 100% — nunca colapsa nem vira placeholder */
+.map-frame{position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-md);background:#E8EDF6;aspect-ratio:16/11;min-height:380px}
+.map-frame iframe{position:absolute;left:0;top:0;width:100%;height:100%;border:0;display:block}
 .map-card{position:absolute;left:22px;bottom:22px;background:rgba(255,255,255,.97);border-radius:var(--r);padding:20px 22px;box-shadow:var(--shadow-lg);max-width:340px}
 .map-card strong{display:block;font-size:15.5px;margin-bottom:6px}
 .map-card p{font-size:13.5px;color:var(--ink-2);line-height:1.6;margin-bottom:12px}
@@ -469,12 +512,26 @@ dialog.lb .lb-cap button{background:rgba(255,255,255,.12);color:#fff;border:1px 
 
 /* ---------- Artigo (notícia) ---------- */
 .art-hero{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg);margin:-46px auto 0;position:relative;z-index:3;max-width:900px;background:#E8EDF6}
-.art-hero img{width:100%;aspect-ratio:16/8.4;object-fit:cover}
+.art-hero img{width:100%;aspect-ratio:16/8.4;object-fit:cover;display:block}
 .art{max-width:760px;margin-inline:auto}
 .art .prose h2{font-size:clamp(21px,2.5vw,27px);font-weight:800;margin:36px 0 14px}
 .art .prose p{color:var(--ink-2);font-size:16px;line-height:1.8;margin-bottom:18px}
 .art .prose p:first-of-type{font-size:17.5px;color:var(--ink)}
 .art-meta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:18px 0 8px}
+
+/* ---------- Cards de Notícia ---------- */
+.ncard{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;display:flex;flex-direction:column}
+.ncard:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:#D6DFEF}
+.ncard .ph{aspect-ratio:16/9;overflow:hidden;background:#E8EDF6}
+.ncard .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.ncard:hover .ph img{transform:scale(1.04)}
+.ncard .bd{padding:22px;display:flex;flex-direction:column;flex:1}
+.ncat{display:inline-block;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--blue);background:#EFF4FF;border:1px solid #D7E3FB;padding:4px 11px;border-radius:999px;margin-bottom:12px;width:fit-content}
+.ncard h3{font-size:18px;font-weight:700;line-height:1.35;margin-bottom:10px}
+.ncard h3 a{color:var(--ink);text-decoration:none}
+.ncard h3 a:hover{color:var(--blue)}
+.ncard p{color:var(--ink-2);font-size:14px;line-height:1.65;margin-bottom:14px;flex:1}
+.ncard time{font-size:12.5px;color:var(--muted);font-weight:500}
 
 /* ---------- Rodapé ---------- */
 .footer{background:var(--navy);color:#B9C6DD;font-size:14px}
@@ -541,6 +598,15 @@ dialog.lb .lb-cap button{background:rgba(255,255,255,.12);color:#fff;border:1px 
   .banner-cta .btn{width:100%}
   .map-card{position:static;max-width:none;border-radius:0;box-shadow:none;border-top:1px solid var(--line)}
   .map-wrap iframe{height:320px}
+  /* Secção de mapa em telemóvel: coluna única e moldura proporcionada */
+  .map-grid{grid-template-columns:1fr;gap:18px}
+  .map-frame{aspect-ratio:4/3;min-height:280px}
+  .spotlight-grid{grid-template-columns:1fr;gap:16px}
+  .spotlight-card{padding:20px 18px}
+  .spotlight-card h3{font-size:19px}
+  .sec.ox-spotlight{padding:clamp(44px,7vw,64px) 0}
+  .sec.oxford{padding:clamp(44px,7vw,64px) 0}
+  .sec.adm-hero-bg{padding:clamp(44px,7vw,64px) 0}
   .cookie{left:12px;right:12px;bottom:12px;max-width:none}
   .fab{right:calc(14px + env(safe-area-inset-right, 0px));bottom:calc(14px + env(safe-area-inset-bottom, 0px));width:48px;height:48px}
   .fab svg{width:24px;height:24px}
@@ -585,20 +651,23 @@ dialog.lb .lb-cap button{background:rgba(255,255,255,.12);color:#fff;border:1px 
 /* ---------- Decoração Cortada nas Bordas (Floco Oxford / Brand Motif) ---------- */
 .sec-deco{position:relative;overflow:hidden}
 .sec-deco > *{position:relative;z-index:2}
-.deco-flake{position:absolute;width:clamp(240px,26vw,380px);height:clamp(240px,26vw,380px);object-fit:contain;pointer-events:none;z-index:1;user-select:none;transition:transform .4s ease,opacity .3s ease}
-/* Cortado na borda direita (idêntico ao flyer do usuário) */
-.deco-flake-right{right:clamp(-100px,-10vw,-150px);top:50%;transform:translateY(-50%);opacity:.95}
-/* Cortado no canto superior direito */
-.deco-flake-tr{right:clamp(-90px,-9vw,-130px);top:clamp(-60px,-6vw,-90px);opacity:.95}
-/* Cortado na borda esquerda */
-.deco-flake-left{left:clamp(-100px,-10vw,-150px);top:50%;transform:translateY(-50%);opacity:.95}
-/* Cortado no canto inferior esquerdo */
-.deco-flake-bl{left:clamp(-90px,-9vw,-130px);bottom:clamp(-60px,-6vw,-90px);opacity:.95}
+.deco-flake{position:absolute;width:clamp(150px,16vw,220px);height:clamp(150px,16vw,220px);object-fit:contain;pointer-events:none;z-index:1;user-select:none}
+/* Alinhado ao canto superior direito exterior */
+.deco-flake-tr{right:-24px;top:-24px;opacity:.85}
+/* Alinhado ao canto superior esquerdo exterior */
+.deco-flake-tl{left:-24px;top:-24px;opacity:.85}
+/* Alinhado ao canto exterior direito */
+.deco-flake-right{right:-24px;top:-24px;opacity:.85}
+/* Alinhado ao canto exterior esquerdo */
+.deco-flake-left{left:-24px;top:-24px;opacity:.85}
+/* Alinhado ao canto inferior esquerdo */
+.deco-flake-bl{left:-24px;bottom:-24px;opacity:.85}
 
 @media(max-width:768px){
-  .deco-flake{width:200px;height:200px;opacity:.35}
-  .deco-flake-right,.deco-flake-tr{right:-110px}
-  .deco-flake-left,.deco-flake-bl{left:-110px}
+  .deco-flake{width:110px;height:110px;opacity:.22}
+  .deco-flake-tr,.deco-flake-right{right:-12px;top:-12px}
+  .deco-flake-tl,.deco-flake-left{left:-12px;top:-12px}
+  .deco-flake-bl{left:-12px;bottom:-12px}
 }
 
 
@@ -629,7 +698,6 @@ dialog.lb .lb-cap button{background:rgba(255,255,255,.12);color:#fff;border:1px 
       <a href="gallery.html" data-i18n="nav_gal">Galeria</a>
       <a href="contact.html" data-i18n="nav_contact">Contacto</a>
     </nav>
-    <img class="hdr-ox" src="assets/img/oxford-badge.png" alt="Selo The Oxford International Curriculum" width="40" height="40">
     <div class="lang" role="group" aria-label="Idioma">
       <button type="button" data-lang-btn="pt" class="on">PT</button>
       <button type="button" data-lang-btn="en">EN</button>
@@ -668,19 +736,19 @@ dialog.lb .lb-cap button{background:rgba(255,255,255,.12);color:#fff;border:1px 
   </div>
   <div class="d-info">
     <a href="tel:+258844277021"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+258 844 277 021</a>
-    <a href="mailto:admin@bbamoz.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>admin@bbamoz.com</a>
+    <a href="mailto:admin@bba.edu.mz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>admin@bba.edu.mz</a>
     <a href="https://maps.google.com/?q=Rua+17+de+Julho,+Bairro+Em%C3%ADlia+Dausse,+Chimoio" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Rua 17 de Julho, Chimoio</a>
   </div>
 </aside>
 <main id="main">
 
 <section class="banner">
-  <div class="bbg"><img src="assets/img/laboratorio.jpg" alt="" fetchpriority="high" decoding="async"></div>
+  <div class="bbg"><img src="assets/img/laboratorio.jpg" alt="Notícias e Vida Escolar na Bright Beginnings Academy" fetchpriority="high" decoding="async"></div>
   <div class="container">
     <div class="banner-in">
-      <div class="bcrumb"><a href="index.html" data-i18n="nav_home">Início</a><span class="sep">→</span><a href="index.html#news" data-i18n="n_eyebrow">Notícias</a></div>
+      <div class="bcrumb"><a href="index.html" data-i18n="nav_home">Início</a><span class="sep">→</span><span data-i18n="n_eyebrow">Notícias</span></div>
       <h1 id="art-title" data-i18n="ar_kicker">Notícias da Escola</h1>
-      <div class="art-meta">
+      <div class="art-meta" id="art-meta-header">
         <span class="ncat" id="art-cat" style="margin:0">—</span>
         <time id="art-date" class="mini-note" style="color:rgba(255,255,255,.85)"></time>
       </div>
@@ -695,17 +763,17 @@ dialog.lb .lb-cap button{background:rgba(255,255,255,.12);color:#fff;border:1px 
 <section class="sec" id="art-main">
   <div class="container">
     <div class="art">
-      <div class="art-meta" style="justify-content:space-between">
-        <a class="tlink" href="index.html#news"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg><span data-i18n="ar_back">Voltar às notícias</span></a>
+      <div class="art-meta" id="art-meta-nav" style="justify-content:space-between">
+        <a class="tlink" href="noticia.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg><span data-i18n="ar_back">Voltar a todas as notícias</span></a>
         <a class="btn btn-outline-blue btn-sm" id="art-share" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg><span data-i18n="ar_share">Partilhar no WhatsApp</span></a>
       </div>
       <div class="prose" id="art-body"></div>
-      <div style="margin-top:36px">
+      <div id="art-cta" style="margin-top:36px">
         <a class="btn btn-wa" href="https://wa.me/258844277021?text=Ol%C3%A1!%20Quero%20agendar%20uma%20visita%20%C3%A0%20escola." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span data-i18n="ar_visit">Agendar visita à escola</span></a>
       </div>
     </div>
-    <div style="max-width:960px;margin:clamp(44px,6vw,72px) auto 0">
-      <h2 class="h2" style="font-size:clamp(20px,2.4vw,26px);margin-bottom:20px" data-i18n="ar_next">Continuar a ler</h2>
+    <div id="art-next-wrap" style="max-width:960px;margin:clamp(44px,6vw,72px) auto 0">
+      <h2 class="h2" id="art-next-title" style="font-size:clamp(20px,2.4vw,26px);margin-bottom:20px" data-i18n="ar_next">Continuar a ler</h2>
       <div class="grid g2" id="art-next"></div>
     </div>
   </div>
@@ -716,7 +784,7 @@ dialog.lb .lb-cap button{background:rgba(255,255,255,.12);color:#fff;border:1px 
     <div class="ic ic-blue" style="margin-inline:auto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg></div>
     <h2 class="h2" data-i18n="ar_nf_t">Artigo não encontrado</h2>
     <p class="lead" style="margin:14px 0 24px" data-i18n="ar_nf_d">O link pode estar incompleto. Volte às notícias e escolha um artigo.</p>
-    <a class="btn btn-red" href="index.html#news"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg><span data-i18n="ar_nf_b">Ver notícias</span></a>
+    <a class="btn btn-red" href="noticia.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg><span data-i18n="ar_nf_b">Ver notícias</span></a>
   </div>
 </section>
 
@@ -729,7 +797,7 @@ dialog.lb .lb-cap button{background:rgba(255,255,255,.12);color:#fff;border:1px 
         <p data-i18n="f_blurb">Escola internacional em Chimoio com o Oxford International Curriculum, do Early Years ao Grade 10 — uma comunidade que conhece cada aluno pelo nome.</p>
         <p class="f-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Rua 17 de Julho, Bairro Emília Dausse, Chimoio, Moçambique</span></p>
         <p class="f-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+258844277021">+258 844 277 021</a></p>
-        <p class="f-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg><a href="mailto:admin@bbamoz.com">admin@bbamoz.com</a></p>
+        <p class="f-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg><a href="mailto:admin@bba.edu.mz">admin@bba.edu.mz</a></p>
         <p class="f-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span data-i18n="f_hours">Seg–Sex · 07:30–16:00</span></p>
         <div class="f-social">
           <a href="https://www.facebook.com/profile.php?id=61594581886025" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
@@ -770,10 +838,11 @@ dialog.lb .lb-cap button{background:rgba(255,255,255,.12);color:#fff;border:1px 
   <p><span data-i18n="cookie_t">Usamos apenas dados essenciais para responder ao seu pedido. Sem rastreadores de publicidade.</span> <a href="privacy.html" data-i18n="cookie_l">Ver Política de Privacidade</a>.</p>
   <button class="btn btn-blue btn-sm" type="button" id="cookie-ok" data-i18n="cookie_b">Aceitar</button>
 </div>
+<script src="assets/bba-config.js"></script>
 <script>
-window.__EN={"bar_annc":"Admissions Open for 2027 — Secure your child's place.","bar_cta":"Apply now →","nav_about":"About Us","nav_prog":"Programmes","nav_oxford":"Oxford Curriculum","nav_missao":"Mission & Values","nav_gal":"Gallery","nav_contact":"Contact","btn_apply":"Apply for 2027","btn_wa":"Chat on WhatsApp","ab_cta1":"Apply for 2027","f_blurb":"International school in Chimoio teaching the Oxford International Curriculum, from Early Years to Grade 10 — a community that knows every student by name.","f_hours":"Mon–Fri · 07:30–16:00","f_pages":"School","f_adm":"Admissions","f_insc":"Admissions 2027","f_priv":"Privacy Policy","f_terms":"Terms of Use","f_talk":"Talk to us","f_note":"Our office replies within 24 business hours, Monday to Friday. Campus tours by appointment.","f_love":"Learn to love to learn.","f_oxford":"Oxford International Curriculum — certified school since 2025","f_copy":"© 2026 <b>Bright Beginnings Academy</b> · Established in 2014 · Chimoio, Mozambique","cookie_t":"We use only essential data to answer your request. No advertising trackers.","cookie_l":"See Privacy Policy","cookie_b":"Accept","nav_home":"Home","ct_btn1":"Book a visit on WhatsApp","ct_btn2":"Contacts & location","t_saber":"Learn more","ct_consent":"I have read and accept the <a href=\"privacy.html\">Privacy Policy</a> and agree to be contacted about this enquiry.","side_priv":"We use your data only to answer this request. No advertising. <a href=\"privacy.html\">See Privacy Policy</a>.","ox_badge":"Oxford International certified · since 2025","lb_x":"Close ✕","side_btn":"Book a visit","n_eyebrow":"News","side_nc_t":"No obligation","side_dp_t":"Your data, protected","m1_t":"Talk to us","m1_d":"Complete the pre-enrolment form or message us on WhatsApp (+258 844 277 021). We schedule the guided visit on the day that suits your family best.","m2_t":"Visit the campus and submit your documents","m2_d":"Tour the campus, meet our leadership team and submit the document checklist. Primary applicants have a friendly placement conversation.","m3_t":"Confirm your place","m3_d":"Once your documents are validated, our office confirms the 2027 enrolment and shares the class, materials and key dates.","q1":"What language are lessons taught in?","a1":"Lessons are taught in English, with Portuguese support for beginners — the school's bilingual model since it was founded.","q2":"How can I visit the school before deciding?","a2":"Complete the pre-enrolment form or call +258 844 277 021 to schedule a guided visit: Rua 17 de Julho, Bairro Emília Dausse, Chimoio, Monday to Friday, 07:30–16:00.","q3":"Is there an entrance exam?","a3":"From Primary onwards, there is a placement conversation to get to know your child. There is no pass-or-fail exam — it simply ensures the right class placement.","q4":"Which ages do you accept at each level?","a4":"Early Years: ages 2–5. Primary: Grades 1–7. Secondary: Grades 8–10 (up to around age 16).","q5":"How do I find out the 2027 fees?","a5":"Our office will send you the updated fee schedule on WhatsApp or during your visit — no obligation, no small print.","ar_kicker":"School news","ar_back":"Back to news","ar_share":"Share on WhatsApp","ar_visit":"Book a school visit","ar_next":"Continue reading","ar_nf_t":"Article not found","ar_nf_d":"The link may be incomplete. Go back to the news and choose an article.","ar_nf_b":"See news"};
-window.__META={"pt":{"title":"Notícia | Bright Beginnings Academy — Chimoio","desc":"Notícias e artigos da Bright Beginnings Academy em Chimoio — acompanhe a vida da escola."},"en":{"title":"News | Bright Beginnings Academy — Chimoio","desc":"News and articles from Bright Beginnings Academy in Chimoio — follow our school life."}};
-window.BBA={"WHATSAPP":"258844277021","EMAIL_DESTINO":"admin@bbamoz.com","SHEET_ENDPOINT":"https://script.google.com/macros/s/AKfycbyl-zZqJV17C6B3z5GKGZI_sQJCx0ctuVxu2V7UF4rdJyus6gtGwvbLiwJvegdLCHAygQ/exec","ORIGEM_SITE":"site-bba","FORM_TOKEN":"c305567861293b7d6cdbf44f0c4c1abc"};
+window.__EN={"bar_annc":"Admissions Open for 2027 — Secure your child's place.","bar_cta":"Apply now →","nav_about":"About Us","nav_prog":"Programmes","nav_oxford":"Oxford Curriculum","nav_missao":"Mission & Values","nav_gal":"Gallery","nav_contact":"Contact","btn_apply":"Apply for 2027","btn_wa":"Chat on WhatsApp","ab_cta1":"Apply for 2027","f_blurb":"International school in Chimoio teaching the Oxford International Curriculum, from Early Years to Grade 10 — a community that knows every student by name.","f_hours":"Mon–Fri · 07:30–16:00","f_pages":"School","f_adm":"Admissions","f_insc":"Admissions 2027","f_priv":"Privacy Policy","f_terms":"Terms of Use","f_talk":"Talk to us","f_note":"Our office replies within 24 business hours, Monday to Friday. Campus tours by appointment.","f_love":"Learn to love to learn.","f_oxford":"Oxford International Curriculum — certified school since 2025","f_copy":"© 2026 <b>Bright Beginnings Academy</b> · Established in 2014 · Chimoio, Mozambique","cookie_t":"We use only essential data to answer your request. No advertising trackers.","cookie_l":"See Privacy Policy","cookie_b":"Accept","nav_home":"Home","ct_btn1":"Book a visit on WhatsApp","ct_btn2":"Contacts & location","t_saber":"Learn more","ct_consent":"I have read and accept the <a href=\"privacy.html\">Privacy Policy</a> and agree to be contacted about this enquiry.","side_priv":"We use your data only to answer this request. No advertising. <a href=\"privacy.html\">See Privacy Policy</a>.","ox_badge":"Oxford International certified · since 2025","lb_x":"Close ✕","side_btn":"Book a visit","n_eyebrow":"News","side_nc_t":"No obligation","side_dp_t":"Your data, protected","m1_t":"Talk to us","m1_d":"Complete the pre-enrolment form or message us on WhatsApp (+258 844 277 021). We schedule the guided visit on the day that suits your family best.","m2_t":"Visit the campus and submit your documents","m2_d":"Tour the campus, meet our leadership team and submit the document checklist. Primary applicants have a friendly placement conversation.","m3_t":"Confirm your place","m3_d":"Once your documents are validated, our office confirms the 2027 enrolment and shares the class, materials and key dates.","q1":"What language are lessons taught in?","a1":"Lessons are taught in English, with Portuguese support for beginners — the school's bilingual model since it was founded.","q2":"How can I visit the school before deciding?","a2":"Complete the pre-enrolment form or call +258 844 277 021 to schedule a guided visit: Rua 17 de Julho, Bairro Emília Dausse, Chimoio, Monday to Friday, 07:30–16:00.","q3":"Is there an entrance exam?","a3":"From Primary onwards, there is a placement conversation to get to know your child. There is no pass-or-fail exam — it simply ensures the right class placement.","q4":"Which ages do you accept at each level?","a4":"Early Years: ages 2–5. Primary: Grades 1–7. Secondary: Grades 8–10 (up to around age 16).","q5":"How do I find out the 2027 fees?","a5":"Our office will send you the updated fee schedule on WhatsApp or during your visit — no obligation, no small print.","map_dir":"Get Directions","map_hours":"Office hours: Monday to Friday · 07:30 to 16:00","map_addr_title":"Campus Address","ar_kicker":"School news","ar_back":"Back to all news","ar_share":"Share on WhatsApp","ar_visit":"Book a school visit","ar_next":"Continue reading","ar_nf_t":"Article not found","ar_nf_d":"The link may be incomplete. Go back to news and choose an article.","ar_nf_b":"See all news"};
+window.__META={"pt":{"title":"Notícias & Atividades | Bright Beginnings Academy — Chimoio","desc":"Acompanhe as notícias, projetos e conquistas da Bright Beginnings Academy em Chimoio, Moçambique — do Early Years ao Grade 10."},"en":{"title":"News & Activities | Bright Beginnings Academy — Chimoio","desc":"Follow the news, projects and achievements of Bright Beginnings Academy in Chimoio, Mozambique — from Early Years to Grade 10."}};
+window.BBA=Object.assign({"WHATSAPP":"258844277021","EMAIL_DESTINO":"admin@bba.edu.mz","SHEET_ENDPOINT":"https://script.google.com/macros/s/AKfycbx-5jlH7qch1etjyvCRhjafTBb_gbY_Lu-5ESeYBor9YiQrPvFcHk351FJ4kkb1Drz4/exec","ORIGEM_SITE":"site-bba","FORM_TOKEN":"c305567861293b7d6cdbf44f0c4c1abc"}, window.BBA_CONFIG || {});
 
 (function(){
 "use strict";
@@ -841,9 +910,11 @@ if(ck){
 document.querySelectorAll("form[data-wa]").forEach(function(f){
   f.addEventListener("submit", function(e){
     e.preventDefault();
+    var btn=f.querySelector('button[type="submit"]');
+    if(btn && btn.disabled) return;
     var hp=f.querySelector('input[name="website"]'); if(hp && hp.value) return;
-    var d={}; f.querySelectorAll("input,select,textarea").forEach(function(el){ if(el.name && el.name!=="website") d[el.name]=el.value; });
-    var conf=window.BBA||{};
+    var d={}; f.querySelectorAll("input,select,textarea").forEach(function(el){ if(el.name && el.name!=="website") d[el.name]=(el.value||"").trim(); });
+    var conf=window.BBA_CONFIG||window.BBA||{};
     var linhas=[f.getAttribute("data-wa")||"Olá! Vim pelo site."];
     if(d.nome) linhas.push("Nome: "+d.nome);
     if(d.aluno) linhas.push("Aluno(a): "+d.aluno);
@@ -851,13 +922,14 @@ document.querySelectorAll("form[data-wa]").forEach(function(f){
     if(d.telefone) linhas.push("Telefone/WhatsApp: "+d.telefone);
     if(d.email) linhas.push("Email: "+d.email);
     if(d.mensagem) linhas.push("Mensagem: "+d.mensagem);
+    if(btn){ btn.disabled=true; var origText=btn.innerHTML; btn.innerHTML="<span>A enviar...</span>"; }
     try{
       if(conf.SHEET_ENDPOINT){
         fetch(conf.SHEET_ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({token:conf.FORM_TOKEN,origem:conf.ORIGEM_SITE,pagina:location.pathname,quando:new Date().toISOString(),dados:d})});
       }
     }catch(err){}
     var wa=conf.WHATSAPP||"258844277021";
-    window.open("https://wa.me/"+wa+"?text="+encodeURIComponent(linhas.join("\n")),"_blank","noopener");
+    window.open("https://wa.me/"+wa+"?text="+encodeURIComponent(linhas.join("\n")),"_blank","noopener,noreferrer");
     var okbox=f.querySelector(".form-ok");
     if(okbox){ f.style.display="none"; var sc=okbox.querySelector(".ok-extra"); if(sc) sc.style.display="block"; okbox.style.display="block"; okbox.focus(); }
   });
@@ -887,29 +959,69 @@ document.querySelectorAll("form[data-wa]").forEach(function(f){
   function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
   function render(){
     var lang=(window.__lang==="en")?"en":"pt";
+    var main=document.getElementById("art-main"), nf=document.getElementById("art-notfound"), hw=document.getElementById("art-herowrap");
+    var metaHeader=document.getElementById("art-meta-header"), metaNav=document.getElementById("art-meta-nav");
+    var artCta=document.getElementById("art-cta"), nextWrap=document.getElementById("art-next-wrap"), nextTitle=document.getElementById("art-next-title");
+    var et=document.getElementById("art-title"), eb=document.getElementById("art-body"), next=document.getElementById("art-next");
+
+    if(!slug){
+      if(main) main.style.display="";
+      if(hw) hw.style.display="none";
+      if(nf) nf.style.display="none";
+      if(metaHeader) metaHeader.style.display="none";
+      if(metaNav) metaNav.style.display="none";
+      if(artCta) artCta.style.display="none";
+      var hubTitle = (lang==="en") ? "News & School Updates" : "Notícias & Vida Escolar";
+      document.title = hubTitle + " | Bright Beginnings Academy";
+      if(et){ et.removeAttribute("data-i18n"); et.textContent = hubTitle; }
+      if(eb){
+        eb.innerHTML = "<p style='font-size:17.5px;color:var(--ink);margin-bottom:30px'>" + 
+          (lang==="en" ? "Follow recent events, achievements, sports tournaments and educational developments at Bright Beginnings Academy in Chimoio." : "Acompanhe os acontecimentos, celebrações, torneios desportivos e novidades académicas da Bright Beginnings Academy em Chimoio.") + "</p>";
+      }
+      if(nextTitle) nextTitle.style.display="none";
+      if(nextWrap) nextWrap.style.marginTop="0";
+      if(next){
+        next.className = "grid g3";
+        var html="";
+        for(var i=0;i<NEWS.length;i++){
+          var t=(lang==="en")?NEWS[i].t_en:NEWS[i].t_pt;
+          var c=(lang==="en")?NEWS[i].cat_en:NEWS[i].cat_pt;
+          var d=(lang==="en")?NEWS[i].en[0]:NEWS[i].pt[0];
+          html+='<article class="ncard reveal in"><a class="ph" href="noticia.html?slug='+NEWS[i].slug+'"><img src="assets/'+NEWS[i].img+'" alt="'+esc(NEWS[i].alt)+'" loading="lazy"></a><div class="bd"><span class="ncat">'+esc(c)+'</span><h3><a href="noticia.html?slug='+NEWS[i].slug+'">'+esc(t)+'</a></h3><p>'+esc(d)+'</p><time>'+NEWS[i].data+'</time></div></article>';
+        }
+        next.innerHTML=html;
+      }
+      return;
+    }
+
     var item=null;
     for(var i=0;i<NEWS.length;i++){ if(NEWS[i].slug===slug){ item=NEWS[i]; break; } }
-    var main=document.getElementById("art-main"), nf=document.getElementById("art-notfound"), hw=document.getElementById("art-herowrap");
     if(!item){
       if(main) main.style.display="none";
       if(hw) hw.style.display="none";
       if(nf) nf.style.display="block";
       return;
     }
+
     if(main) main.style.display="";
     if(hw) hw.style.display="";
     if(nf) nf.style.display="none";
+    if(metaHeader) metaHeader.style.display="";
+    if(metaNav) metaNav.style.display="flex";
+    if(artCta) artCta.style.display="";
+    if(nextTitle) nextTitle.style.display="";
+    if(nextWrap) nextWrap.style.marginTop="";
+    if(next) next.className = "grid g2";
+
     var T=(lang==="en")?item.t_en:item.t_pt, C=(lang==="en")?item.cat_en:item.cat_pt, B=(lang==="en")?item.en:item.pt;
-    var et=document.getElementById("art-title"); if(et){ et.removeAttribute("data-i18n"); et.textContent=T; }
+    if(et){ et.removeAttribute("data-i18n"); et.textContent=T; }
     document.title=T+" | Bright Beginnings Academy";
     var ec=document.getElementById("art-cat"); if(ec) ec.textContent=C;
     var ed=document.getElementById("art-date"); if(ed) ed.textContent=item.data;
     var ei=document.getElementById("art-img"); if(ei){ ei.src="assets/"+item.img; ei.alt=item.alt; }
-    var eb=document.getElementById("art-body");
-    if(eb){ var html=""; for(var j=0;j<B.length;j++){ html+="<p>"+esc(B[j])+"</p>"; } eb.innerHTML=html; }
+    if(eb){ var bhtml=""; for(var j=0;j<B.length;j++){ bhtml+="<p>"+esc(B[j])+"</p>"; } eb.innerHTML=bhtml; }
     var sh=document.getElementById("art-share");
-    if(sh) sh.href="https://wa.me/?text="+encodeURIComponent(T+" — https://bba.edu.mz/noticia.html?slug="+item.slug);
-    var next=document.getElementById("art-next");
+    if(sh) sh.href="https://wa.me/?text="+encodeURIComponent(T+" - https://www.bba.edu.mz/noticia.html?slug="+item.slug);
     if(next){
       var nh="";
       for(var k=0;k<NEWS.length;k++){
@@ -917,7 +1029,7 @@ document.querySelectorAll("form[data-wa]").forEach(function(f){
         var t2=(lang==="en")?NEWS[k].t_en:NEWS[k].t_pt;
         var c2=(lang==="en")?NEWS[k].cat_en:NEWS[k].cat_pt;
         var d2=(lang==="en")?NEWS[k].en[0]:NEWS[k].pt[0];
-        nh+='<article class="ncard"><div class="ph"><img src="assets/'+NEWS[k].img+'" alt="'+esc(NEWS[k].alt)+'" loading="lazy"></div><div class="bd"><span class="ncat">'+esc(c2)+'</span><h3><a href="noticia.html?slug='+NEWS[k].slug+'">'+esc(t2)+'</a></h3><p>'+esc(d2)+'</p><time>'+NEWS[k].data+'</time></div></article>';
+        nh+='<article class="ncard reveal in"><a class="ph" href="noticia.html?slug='+NEWS[k].slug+'"><img src="assets/'+NEWS[k].img+'" alt="'+esc(NEWS[k].alt)+'" loading="lazy"></a><div class="bd"><span class="ncat">'+esc(c2)+'</span><h3><a href="noticia.html?slug='+NEWS[k].slug+'">'+esc(t2)+'</a></h3><p>'+esc(d2)+'</p><time>'+NEWS[k].data+'</time></div></article>';
       }
       next.innerHTML=nh;
     }

@@ -66,8 +66,8 @@ const WA_VISITA = "https://wa.me/258844277021?text=" + encodeURIComponent("Olá!
 // ---------- Head ----------
 function head(p) {
   const t = p.meta.pt;
-  const canonical = "https://bba.edu.mz/" + (p.file === "index.html" ? "" : p.file);
-  const ogimg = "https://bba.edu.mz/assets/img/hero-school.jpg";
+  const canonical = "https://www.bba.edu.mz/" + (p.file === "index.html" ? "" : p.file);
+  const ogimg = "https://www.bba.edu.mz/assets/img/og-bba.jpg";
   return `<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>${t.title}</title>
@@ -81,9 +81,17 @@ function head(p) {
 <meta property="og:type" content="website">
 <meta property="og:url" content="${canonical}">
 <meta property="og:image" content="${ogimg}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Alunos da Bright Beginnings Academy em Chimoio">
 <meta property="og:site_name" content="Bright Beginnings Academy">
 <meta property="og:locale" content="pt_MZ">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${t.title}">
+<meta name="twitter:description" content="${t.desc}">
+<meta name="twitter:image" content="${ogimg}">
+<meta name="twitter:image:alt" content="Alunos da Bright Beginnings Academy em Chimoio">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
@@ -145,7 +153,7 @@ function header(active) {
   </div>
   <div class="d-info">
     <a href="tel:+258844277021">${ICON.phone}+258 844 277 021</a>
-    <a href="mailto:admin@bbamoz.com">${ICON.mail}admin@bbamoz.com</a>
+    <a href="mailto:admin@bba.edu.mz">${ICON.mail}admin@bba.edu.mz</a>
     <a href="https://maps.google.com/?q=Rua+17+de+Julho,+Bairro+Em%C3%ADlia+Dausse,+Chimoio" target="_blank" rel="noopener">${ICON.pin}Rua 17 de Julho, Chimoio</a>
   </div>
 </aside>`;
@@ -160,7 +168,7 @@ function footer() {
         <p data-i18n="f_blurb">Escola internacional em Chimoio com o Oxford International Curriculum, do Early Years ao Grade 10 — uma comunidade que conhece cada aluno pelo nome.</p>
         <p class="f-line">${ICON.pin}<span>Rua 17 de Julho, Bairro Emília Dausse, Chimoio, Moçambique</span></p>
         <p class="f-line">${ICON.phone}<a href="tel:+258844277021">+258 844 277 021</a></p>
-        <p class="f-line">${ICON.mail}<a href="mailto:admin@bbamoz.com">admin@bbamoz.com</a></p>
+        <p class="f-line">${ICON.mail}<a href="mailto:admin@bba.edu.mz">admin@bba.edu.mz</a></p>
         <p class="f-line">${ICON.clock}<span data-i18n="f_hours">Seg–Sex · 07:30–16:00</span></p>
         <div class="f-social">
           <a href="https://www.facebook.com/profile.php?id=61594581886025" target="_blank" rel="noopener" aria-label="Facebook">${ICON.fb}</a>
@@ -271,9 +279,11 @@ if(ck){
 document.querySelectorAll("form[data-wa]").forEach(function(f){
   f.addEventListener("submit", function(e){
     e.preventDefault();
+    var btn=f.querySelector('button[type="submit"]');
+    if(btn && btn.disabled) return;
     var hp=f.querySelector('input[name="website"]'); if(hp && hp.value) return;
-    var d={}; f.querySelectorAll("input,select,textarea").forEach(function(el){ if(el.name && el.name!=="website") d[el.name]=el.value; });
-    var conf=window.BBA||{};
+    var d={}; f.querySelectorAll("input,select,textarea").forEach(function(el){ if(el.name && el.name!=="website") d[el.name]=(el.value||"").trim(); });
+    var conf=window.BBA_CONFIG||window.BBA||{};
     var linhas=[f.getAttribute("data-wa")||"Olá! Vim pelo site."];
     if(d.nome) linhas.push("Nome: "+d.nome);
     if(d.aluno) linhas.push("Aluno(a): "+d.aluno);
@@ -281,13 +291,14 @@ document.querySelectorAll("form[data-wa]").forEach(function(f){
     if(d.telefone) linhas.push("Telefone/WhatsApp: "+d.telefone);
     if(d.email) linhas.push("Email: "+d.email);
     if(d.mensagem) linhas.push("Mensagem: "+d.mensagem);
+    if(btn){ btn.disabled=true; var origText=btn.innerHTML; btn.innerHTML="<span>A enviar...</span>"; }
     try{
       if(conf.SHEET_ENDPOINT){
         fetch(conf.SHEET_ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({token:conf.FORM_TOKEN,origem:conf.ORIGEM_SITE,pagina:location.pathname,quando:new Date().toISOString(),dados:d})});
       }
     }catch(err){}
     var wa=conf.WHATSAPP||"258844277021";
-    window.open("https://wa.me/"+wa+"?text="+encodeURIComponent(linhas.join("\\n")),"_blank","noopener");
+    window.open("https://wa.me/"+wa+"?text="+encodeURIComponent(linhas.join("\\n")),"_blank","noopener,noreferrer");
     var okbox=f.querySelector(".form-ok");
     if(okbox){ f.style.display="none"; var sc=okbox.querySelector(".ok-extra"); if(sc) sc.style.display="block"; okbox.style.display="block"; okbox.focus(); }
   });
@@ -351,6 +362,9 @@ const COMMON_EN = {
   a4: "Early Years: ages 2–5. Primary: Grades 1–7. Secondary: Grades 8–10 (up to around age 16).",
   q5: "How do I find out the 2027 fees?",
   a5: "Our office will send you the updated fee schedule on WhatsApp or during your visit — no obligation, no small print.",
+  map_dir: "Get Directions",
+  map_hours: "Office hours: Monday to Friday · 07:30 to 16:00",
+  map_addr_title: "Campus Address",
 };
 
 // ---------- Montagem da página ----------
@@ -371,16 +385,17 @@ ${header(p.active || "")}
 ${body}
 </main>
 ${footer()}
+<script src="assets/bba-config.js"></script>
 <script>
 window.__EN=${JSON.stringify(Object.assign({}, COMMON_EN, p.dict || {}))};
 window.__META=${JSON.stringify(p.meta)};
-window.BBA=${JSON.stringify({
+window.BBA=Object.assign(${JSON.stringify({
     WHATSAPP: "258844277021",
-    EMAIL_DESTINO: "admin@bbamoz.com",
-    SHEET_ENDPOINT: "https://script.google.com/macros/s/AKfycbyl-zZqJV17C6B3z5GKGZI_sQJCx0ctuVxu2V7UF4rdJyus6gtGwvbLiwJvegdLCHAygQ/exec",
+    EMAIL_DESTINO: "admin@bba.edu.mz",
+    SHEET_ENDPOINT: "https://script.google.com/macros/s/AKfycbx-5jlH7qch1etjyvCRhjafTBb_gbY_Lu-5ESeYBor9YiQrPvFcHk351FJ4kkb1Drz4/exec",
     ORIGEM_SITE: "site-bba",
     FORM_TOKEN: "c305567861293b7d6cdbf44f0c4c1abc"
-  })};
+  })}, window.BBA_CONFIG || {});
 ${COMMON_JS}
 ${p.extraJs || ""}
 </script>

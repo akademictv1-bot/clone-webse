@@ -28,6 +28,7 @@ import { AboutPage } from "./components/AboutPage";
 import { AboutSection } from "./components/AboutSection";
 import { MapSection } from "./components/MapSection";
 import { FormularioReserva } from "./components/FormularioReserva";
+import { identificarPropriedade } from "./crm/crmClient";
 
 type Language = "pt" | "en";
 
@@ -315,6 +316,11 @@ export default function App() {
                     accommodationName={selectedAcc.name}
                     accommodationLocation={`${selectedAcc.city}, ${countryName(selectedAcc.country)}`}
                     pricePerNight={selectedAcc.price_per_night}
+                    propriedadeId={identificarPropriedade(selectedAcc)}
+                    cidade={selectedAcc.city}
+                    pais={selectedAcc.country}
+                    roomOptions={selectedAcc.room_options}
+                    moeda={selectedAcc.currency}
                     destinationWhatsapp={selectedAcc.whatsapp_number || contacts?.whatsapp_number || "+26377735000"}
                     language={language}
                   />

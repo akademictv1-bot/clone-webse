@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /*-editor.html
+Disallow: /bba.html
 
-Sitemap: https://bba.edu.mz/sitemap.xml
+Sitemap: https://www.bba.edu.mz/sitemap.xml

@@ -9,11 +9,11 @@ const about = {
   meta: {
     pt: {
       title: "Sobre Nós | Bright Beginnings Academy — Chimoio",
-      desc: "A história da Bright Beginnings Academy em Chimoio desde 2014: uma comunidade de aprendizagem do Early Years ao Grade 10, com o Oxford International Curriculum como parceiro curricular.",
+      desc: "A história da Bright Beginnings Academy em Chimoio desde 2014: uma comunidade de aprendizagem do Early Years ao Grade 10, com o Currículo Oxford.",
     },
     en: {
-      title: "About Us | Bright Beginnings Academy — Chimoio",
-      desc: "The story of Bright Beginnings Academy in Chimoio since 2014: a learning community from Early Years to Grade 10, with the Oxford International Curriculum as curricular partner.",
+      title: "About Us | Bright Beginnings Academy - Chimoio",
+      desc: "The story of Bright Beginnings Academy in Chimoio since 2014: a learning community from Early Years to Grade 10, with the Oxford Curriculum.",
     },
   },
   dict: {
@@ -75,7 +75,7 @@ const about = {
 </section>
 
 <section class="sec sec-deco">
-  <img class="deco-flake deco-flake-right" src="assets/img/logotpoparacolocarnas pontasdumaformacortada.png" alt="" aria-hidden="true" loading="lazy">
+  <img class="deco-flake deco-flake-tr" src="assets/img/bba-emblem-watermark.png" alt="" aria-hidden="true" width="256" height="256" decoding="async">
   <div class="container">
     <div class="split">
       <div class="reveal">
@@ -86,7 +86,7 @@ const about = {
         <p class="lead" style="margin-top:12px" data-i18n="st_p3">Ensinamos com o Oxford International Curriculum, nosso parceiro curricular: uma base de padrão britânico que desenvolve pensamento crítico, criatividade e o gosto de aprender para a vida.</p>
       </div>
       <div class="media reveal">
-        <img src="assets/img/hero-school.jpg" alt="Alunos da Bright Beginnings Academy em Chimoio" loading="lazy">
+        <img src="assets/img/alunos-comunidade-bba.jpg" alt="Alunos e professores da Bright Beginnings Academy em Chimoio" loading="lazy">
       </div>
     </div>
     <div class="stats" style="margin-top:clamp(34px,4.5vw,56px)">
@@ -114,7 +114,7 @@ const about = {
 </section>
 
 <section class="sec sec-deco" id="equipa">
-  <img class="deco-flake deco-flake-left" src="assets/img/logotpoparacolocarnas pontasdumaformacortada.png" alt="" aria-hidden="true" loading="lazy">
+  <img class="deco-flake deco-flake-tl" src="assets/img/bba-emblem-watermark.png" alt="" aria-hidden="true" width="256" height="256" loading="lazy" decoding="async">
   <div class="container">
     <div class="sec-head center reveal">
       <span class="eyebrow eb-green" data-i18n="stf_eyebrow">Corpo Docente & Equipa</span>
@@ -150,7 +150,7 @@ const about = {
   <div class="container">
     <div class="split rev">
       <div class="media reveal" style="order:2">
-        <img src="assets/img/secondary.jpg" alt="Alunos do Ensino Secundário em atividade" loading="lazy">
+        <img src="assets/img/turma-bba-escola.jpg" alt="Alunos da Bright Beginnings Academy em uniforme escolar" loading="lazy">
       </div>
       <div class="reveal" style="order:1">
         <span class="eyebrow eb-purple" data-i18n="vl_eyebrow">O que nos guia</span>
@@ -233,7 +233,7 @@ const programmes = {
   },
   body: `
 <section class="banner">
-  <div class="bbg"><img src="assets/img/sala-primario.jpg" alt="Sala de aula do Ensino Primário na Bright Beginnings Academy" fetchpriority="high" decoding="async"></div>
+  <div class="bbg"><img src="assets/img/campus-hero-bba.jpg" alt="Campus da Bright Beginnings Academy em Chimoio" fetchpriority="high" decoding="async"></div>
   <div class="container">
     <div class="banner-in">
       <div class="bcrumb"><a href="index.html" data-i18n="nav_home">Início</a><span class="sep">→</span><span data-i18n="nav_prog">Programas</span></div>
@@ -264,7 +264,7 @@ const programmes = {
         </div>
       </div>
       <div class="media reveal">
-        <img src="assets/img/early-years.jpg" alt="Crianças do Early Years em atividade na Bright Beginnings Academy" loading="lazy">
+        <img src="assets/img/early-years-bba.jpg" alt="Criança do Early Years da Bright Beginnings Academy a pintar" loading="lazy">
       </div>
     </div>
   </div>
@@ -274,7 +274,7 @@ const programmes = {
   <div class="container">
     <div class="split">
       <div class="media reveal">
-        <img src="assets/img/sala-primario.jpg" alt="Sala de aula do Ensino Primário na Bright Beginnings Academy" loading="lazy">
+        <img src="assets/img/primary-leitura-bba.jpg" alt="Aluno do Ensino Primário da Bright Beginnings Academy a ler na biblioteca" loading="lazy">
       </div>
       <div class="reveal">
         <span class="eyebrow" data-i18n="pr1_eyebrow">Grades 1–7 · Primary</span>
@@ -310,7 +310,7 @@ const programmes = {
         </div>
       </div>
       <div class="media reveal">
-        <img src="assets/img/secondary.jpg" alt="Alunos do Ensino Secundário em atividade" loading="lazy">
+        <img src="assets/img/secondary-turma-bba.jpg" alt="Alunos do Ensino Secundário da Bright Beginnings Academy em uniforme escolar" loading="lazy">
       </div>
     </div>
   </div>
@@ -338,7 +338,7 @@ const programmes = {
 </section>
 
 <section class="cta-band">
-  <div class="bgimg"><img src="assets/img/hero-school.jpg" alt="" loading="lazy"></div>
+  <div class="bgimg"><img src="assets/img/alunos-celebracao-bba.jpg" alt="" loading="lazy"></div>
   <div class="container">
     <div class="cta-in reveal">
       <span class="eyebrow" data-i18n="cq_eyebrow">Dúvidas sobre o nível?</span>
@@ -361,11 +361,11 @@ const oxford = {
   meta: {
     pt: {
       title: "Currículo Oxford | Bright Beginnings Academy — Chimoio",
-      desc: "O Oxford International Curriculum na Bright Beginnings Academy: escola certificada desde 2025, currículo de padrão britânico do Early Years ao Grade 10, ensinado em Chimoio.",
+      desc: "O Currículo Oxford na Bright Beginnings Academy: escola certificada desde 2025, currículo de padrão britânico do Early Years ao Grade 10 em Chimoio.",
     },
     en: {
-      title: "Oxford Curriculum | Bright Beginnings Academy — Chimoio",
-      desc: "The Oxford International Curriculum at Bright Beginnings Academy in Chimoio: certified since 2025, a British-standard curriculum from Early Years to Grade 10.",
+      title: "Oxford Curriculum | Bright Beginnings Academy - Chimoio",
+      desc: "The Oxford Curriculum at Bright Beginnings Academy in Chimoio: certified since 2025, a British-standard curriculum from Early Years to Grade 10.",
     },
   },
   dict: {
@@ -386,6 +386,17 @@ const oxford = {
     ob_k4: "Direct access to British exams and certifications",
     ob_k5: "The only school in Chimoio with this curriculum",
     ob_b2: "See programmes",
+    ort_eyebrow: "Oxford Curriculum Highlights",
+    ort_head: "Structured reading and wellbeing at the heart of learning.",
+    ort_lead_main: "At Bright Beginnings Academy, we share the same pedagogical excellence as top international Oxford schools: a true passion for reading and whole-child emotional development.",
+    ort_tag: "The Oxford Reading Tree",
+    ort_t: "Inspiring a love of reading in every child",
+    ort_d: "Underpinned by Oxford Reading Levels, our approach nurtures confident, independent readers. Engaging stories, step-by-step progression and rich global vocabulary form the foundation for success across all subjects.",
+    ort_quote: "“Reading with pleasure and fluency unlocks lifelong learning.”",
+    wb_tag: "Well-Being in Education",
+    wb_t: "Continuous wellbeing and emotional development",
+    wb_d: "The Oxford International Curriculum places wellbeing as a core pillar of academic achievement. We build resilience, emotional intelligence and active mindfulness, ensuring students grow confident and equipped for modern life.",
+    wb_quote: "“Confident, emotionally secure minds learn with greater depth and enthusiasm.”",
     pg_eyebrow: "Progression",
     pg_t: "One continuous pathway",
     pgo1_t: "Early Years", pgo1_d: "Ages 2–5: play, language and discovery.",
@@ -417,7 +428,7 @@ const oxford = {
 </section>
 
 <section class="sec sec-deco">
-  <img class="deco-flake deco-flake-right" src="assets/img/logotpoparacolocarnas pontasdumaformacortada.png" alt="" aria-hidden="true" loading="lazy">
+  <img class="deco-flake deco-flake-tr" src="assets/img/bba-emblem-watermark.png" alt="" aria-hidden="true" width="256" height="256" loading="lazy" decoding="async">
   <div class="container">
     <div class="split">
       <div class="reveal">
@@ -464,6 +475,31 @@ const oxford = {
   </div>
 </section>
 
+<section class="sec ox-spotlight sec-deco">
+  <img class="deco-flake deco-flake-tr" src="assets/img/bba-emblem-watermark.png" alt="" aria-hidden="true" width="256" height="256" loading="lazy" decoding="async">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="spotlight-badge" data-i18n="ort_eyebrow">Destaques Curriculares Oxford</span>
+      <h2 class="h2" style="color:#FFFFFF" data-i18n="ort_head">Leitura estruturada e bem-estar no coração da aprendizagem.</h2>
+      <p class="lead" style="color:rgba(255,255,255,0.85);max-width:780px;margin-left:auto;margin-right:auto" data-i18n="ort_lead_main">Na Bright Beginnings Academy partilhamos a mesma visão pedagógica de excelência das principais escolas Oxford internacionais: paixão pela leitura e formação emocional completa.</p>
+    </div>
+    <div class="spotlight-grid">
+      <div class="spotlight-card reveal">
+        <span class="spotlight-badge" data-i18n="ort_tag">The Oxford Reading Tree</span>
+        <h3 data-i18n="ort_t">Inspirar o amor pela leitura em cada criança</h3>
+        <p data-i18n="ort_d">Apoiada pelos prestigiados Oxford Reading Levels, a nossa abordagem desenvolve leitores confiantes e independentes. Histórias ricas, progressão passo a passo e vocabulário internacional criam o alicerce essencial para o sucesso em todas as disciplinas.</p>
+        <div class="spotlight-quote" data-i18n="ort_quote">“Ler com prazer e fluência abre portas para todo o conhecimento futuro.”</div>
+      </div>
+      <div class="spotlight-card reveal">
+        <span class="spotlight-badge" data-i18n="wb_tag">Well-Being in Education</span>
+        <h3 data-i18n="wb_t">Bem-estar e desenvolvimento emocional contínuo</h3>
+        <p data-i18n="wb_d">O currículo Oxford integra o bem-estar como pilar fundamental da educação. Ensinamos resiliência, inteligência emocional e mindfulness ativo, assegurando que os alunos crescem confiantes, saudáveis e preparados para os desafios do mundo contemporâneo.</p>
+        <div class="spotlight-quote" data-i18n="wb_quote">“Mentes tranquilas e seguras aprendem com mais entusiasmo e profundidade.”</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="sec tint">
   <div class="container">
     <div class="sec-head center reveal">
@@ -503,11 +539,11 @@ const missao = {
   meta: {
     pt: {
       title: "Missão, Visão e Valores | Bright Beginnings Academy — Chimoio",
-      desc: "Missão, visão e os 4 valores da Bright Beginnings Academy em Chimoio: bondade, respeito, contributo único, integridade e excelência. Lema: Learn to love to learn.",
+      desc: "Missão, visão e os 4 valores da Bright Beginnings Academy em Chimoio: bondade, respeito, contributo único, integridade e excelência.",
     },
     en: {
-      title: "Vision, Mission & Values | Bright Beginnings Academy — Chimoio",
-      desc: "Vision, mission and the 4 values of Bright Beginnings Academy in Chimoio: kindness, respect, unique contribution, integrity and excellence. Motto: Learn to love to learn.",
+      title: "Vision, Mission & Values | Bright Beginnings Academy - Chimoio",
+      desc: "Vision, mission and the 4 values of Bright Beginnings Academy in Chimoio: kindness, respect, unique contribution, integrity and excellence.",
     },
   },
   dict: {
@@ -560,7 +596,7 @@ const missao = {
 </section>
 
 <section class="sec sec-deco">
-  <img class="deco-flake deco-flake-tr" src="assets/img/logotpoparacolocarnas pontasdumaformacortada.png" alt="" aria-hidden="true" loading="lazy">
+  <img class="deco-flake deco-flake-tr" src="assets/img/bba-emblem-watermark.png" alt="" aria-hidden="true" width="256" height="256" decoding="async">
   <div class="container">
     <div class="sec-head center reveal">
       <span class="eyebrow" data-i18n="vs_eyebrow">O que nos guia</span>
@@ -622,7 +658,7 @@ const missao = {
 </section>
 
 <section class="cta-band">
-  <div class="bgimg"><img src="assets/img/hero-school.jpg" alt="" loading="lazy"></div>
+  <div class="bgimg"><img src="assets/img/alunos-comunidade-bba.jpg" alt="" loading="lazy"></div>
   <div class="container">
     <div class="cta-in reveal">
       <span class="eyebrow" data-i18n="vq_eyebrow">Venha conhecer</span>

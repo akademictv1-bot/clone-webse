@@ -11,7 +11,7 @@ export const initialSettings: Settings = {
   id: "settings-1",
   company_name: "Enclave Accommodation",
   whatsapp_number: "+26377735000",
-  email: "reservas@enclave.co.mz",
+  email: "enclaveccommodation@gmail.com",
   about_text: "A Enclave Accommodation nasceu da paixão por transformar estadias em experiências memoráveis. Com sede estratégica em Chimoio e expansão para Mutare e Nyanga, oferecemos mais do que um quarto; entregamos um santuário curado, pautado na sofisticação, no minimalismo estético e no profissionalismo absoluto."
 };
 
@@ -21,7 +21,7 @@ export const initialAccommodations: Accommodation[] = [
     name: "Residência Vale dos Sonhos",
     city: "Chimoio",
     country: "Moçambique",
-    description: "Uma casa espaçosa numa zona residencial calma e tranquila de Chimoio, com jardim, quintal privativo e muito sossego. Ideal para famílias ou grupos que procuram descansar em paz, com quartos confortáveis, luz natural e boa ventilação. Tem Wi-Fi na casa — em Chimoio, a conexão é modesta; nenhuma das nossas casas tem piscina: o nosso foco é o conforto, o descanso e a atenção pessoal.",
+    description: "Uma casa espaçosa numa zona residencial calma e tranquila de Chimoio, com quintal privativo e muito sossego. Ideal para famílias ou grupos que procuram descansar em paz, com quartos confortáveis, luz natural e boa ventilação. Tem Wi-Fi na casa — em Chimoio, a conexão é modesta.",
     price_per_night: 8500,
     bedrooms: 4,
     beds: 6,
@@ -32,10 +32,10 @@ export const initialAccommodations: Accommodation[] = [
   },
   {
     id: "acc-2",
-    name: "Villa Chimoio Central",
+    name: "Enclave Chimoio Trangapasso",
     city: "Chimoio",
     country: "Moçambique",
-    description: "Villa completa no bairro Trangapasso, numa zona calma e tranquila de Chimoio, com pouco trânsito e muito sossego. Oferece quartos confortáveis, jardim e espaços ao ar livre, com Wi-Fi na casa — em Chimoio a conexão é modesta; para internet turbo, veja as nossas casas com Starlink em Mutare e Nyanga. Nenhuma das nossas casas tem piscina: o nosso foco é o conforto, o descanso e a atenção pessoal.",
+    description: "Um lugar bonito e acolhedor no bairro Trangapasso, numa zona calma e tranquila de Chimoio, perto do aeroporto, com pouco trânsito e muito sossego. Oferece quartos confortáveis, suítes privativas, ampla sala de estar e áreas ao ar livre para descanso.",
     price_per_night: 8500,
     bedrooms: 3,
     beds: 5,
@@ -97,7 +97,7 @@ export const initialImages: AccommodationImage[] = [
     image_url: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=85"
   },
 
-  // Villa Chimoio Central
+  // Enclave Chimoio Trangapasso
   {
     id: "img-2-1",
     accommodation_id: "acc-2",
@@ -140,15 +140,14 @@ export const initialAmenities: Amenity[] = [
   { id: "am-1-2", accommodation_id: "acc-1", amenity_name: "Estacionamento Grátis" },
   { id: "am-1-3", accommodation_id: "acc-1", amenity_name: "Cozinha Equipada" },
   { id: "am-1-4", accommodation_id: "acc-1", amenity_name: "Água Quente" },
-  { id: "am-1-5", accommodation_id: "acc-1", amenity_name: "Netflix & Smart TV" },
   { id: "am-1-6", accommodation_id: "acc-1", amenity_name: "Quintal Privado" },
   { id: "am-1-7", accommodation_id: "acc-1", amenity_name: "Zona Calma & Tranquila" },
   { id: "am-1-8", accommodation_id: "acc-1", amenity_name: "Máquina de Lavar" },
 
-  // Villa Chimoio Central
-  { id: "am-2-1", accommodation_id: "acc-2", amenity_name: "Wi-Fi na Casa" },
+  // Enclave Chimoio Trangapasso
+  { id: "am-2-1", accommodation_id: "acc-2", amenity_name: "Zona Calma & Tranquila" },
   { id: "am-2-2", accommodation_id: "acc-2", amenity_name: "Ar Condicionado" },
-  { id: "am-2-3", accommodation_id: "acc-2", amenity_name: "Jardim & Áreas Externas" },
+  { id: "am-2-3", accommodation_id: "acc-2", amenity_name: "Áreas Externas" },
   { id: "am-2-4", accommodation_id: "acc-2", amenity_name: "Estacionamento Privado" },
 
   // Nyanga Peak Lodge
@@ -161,5 +160,5 @@ export const initialAmenities: Amenity[] = [
   { id: "am-4-1", accommodation_id: "acc-4", amenity_name: "Wi-Fi Starlink" },
   { id: "am-4-2", accommodation_id: "acc-4", amenity_name: "Serviço de Quarto" },
   { id: "am-4-3", accommodation_id: "acc-4", amenity_name: "Cozinha Equipada" },
-  { id: "am-4-4", accommodation_id: "acc-4", amenity_name: "Netflix & Smart TV" }
+  { id: "am-4-4", accommodation_id: "acc-4", amenity_name: "Smart TV" }
 ];

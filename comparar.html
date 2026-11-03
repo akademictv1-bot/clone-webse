@@ -45,10 +45,7 @@
 </div>
 <p class="hint">Dica: para editar uma página, abra o arquivo <b>[cliente]-editor.html</b> na pasta sites/[cliente]/.</p>
 <script>
-var CLIENTES=[
-  {"nome":"Bright Beginnings Academy","slug":"bba","old":"https://bba.edu.mz/","novo":"sites/bba/index.html"},
-  {"nome":"Enclave Accommodation","slug":"enclave","old":null,"motivo":"Site deles fora do ar: o domínio enclaveaccommodation.com não responde mais e não existe cópia no Wayback. O conteúdo deles só existia no Firebase, com fotos amadoras.","novo":"sites/enclave/index.html"}
-];
+var CLIENTES=[{"nome":"Bright Beginnings Academy","slug":"bba","old":"https://bba.edu.mz/","novo":"sites/bba/index.html"}];
 var tabs=document.getElementById('tabs');
 CLIENTES.forEach(function(c,i){
   var b=document.createElement('button');b.className='tab'+(i===0?' on':'');b.textContent=c.nome;

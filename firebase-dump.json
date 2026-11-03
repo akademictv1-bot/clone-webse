@@ -3,8 +3,8 @@
     {
       "_docId": "acc-2",
       "id": "acc-2",
-      "name": "Enclave Chimoio (Villa Central)",
-      "description": "Villa completa no bairro Trangapasso, numa zona calma e tranquila de Chimoio, com pouco trânsito e muito sossego. A casa oferece 2 quartos standard, 2 quartos superiores com banheiro privativo (ensuite) e 1 suíte master principal, além de jardim exuberante e espaços ao ar livre. Nenhuma das nossas casas tem piscina: o nosso foco é o conforto, o descanso e a atenção pessoal. Tem Wi-Fi na casa — em Chimoio a conexão é modesta; para internet turbo, veja as nossas casas com Starlink em Mutare e Nyanga. Reserve quartos individuais a partir de $27 USD ou a casa inteira com exclusividade total.",
+      "name": "Enclave Chimoio (Trangapasso)",
+      "description": "Um lugar bonito e acolhedor no bairro Trangapasso, numa zona calma e tranquila de Chimoio, com pouco trânsito e muito sossego, perto do aeroporto. A casa oferece 2 quartos standard, 2 quartos superiores com banheiro privativo (ensuite) e 1 suíte master principal, além de sala de estar e áreas ao ar livre para descansar e conviver. Reserve quartos individuais a partir de $27 USD ou a casa inteira com exclusividade total.",
       "city": "Chimoio",
       "country": "Moçambique",
       "currency": "USD",
@@ -58,7 +58,7 @@
       "_docId": "acc-4",
       "id": "acc-4",
       "name": "Greenside Enclave (Main House)",
-      "description": "Residência contemporânea de prestígio no bairro de Greenside, em Mutare, numa zona residencial tranquila. Dispõe de 2 quartos standard e 1 suíte elegante, ampla sala de estar e cozinha completa, com energia solar e rede ZESA, além de internet Starlink de alta velocidade. Nenhuma das nossas casas tem piscina: o nosso foco é o conforto, o descanso e a atenção personalizada.",
+      "description": "Residência contemporânea de prestígio no bairro de Greenside, em Mutare, numa zona residencial tranquila. Dispõe de 2 quartos standard e 1 suíte elegante, ampla sala de estar e cozinha completa, com energia solar e rede ZESA, além de internet Starlink de alta velocidade e atendimento personalizado.",
       "city": "Mutare",
       "country": "Zimbabwe",
       "currency": "USD",
@@ -322,7 +322,7 @@
   "amenities": [
     {
       "_docId": "am-2-1",
-      "amenity_name": "Wi-Fi na Casa",
+      "amenity_name": "Zona Calma & Tranquila",
       "id": "am-2-1",
       "accommodation_id": "acc-2"
     },
@@ -388,7 +388,7 @@
     },
     {
       "_docId": "am-4-4",
-      "amenity_name": "Netflix & Smart TV",
+      "amenity_name": "Smart TV",
       "id": "am-4-4",
       "accommodation_id": "acc-4"
     },
@@ -405,12 +405,6 @@
       "amenity_name": "Wi-Fi & Starlink"
     },
     {
-      "_docId": "am-iwnnni3ut",
-      "id": "am-iwnnni3ut",
-      "amenity_name": "Netflix & Smart TV",
-      "accommodation_id": "acc-2"
-    },
-    {
       "_docId": "am-jprf8id9a",
       "accommodation_id": "acc-4",
       "amenity_name": "Estacionamento Grátis",
@@ -421,12 +415,6 @@
       "accommodation_id": "acc-gb3ewzgus",
       "amenity_name": "Estacionamento Grátis",
       "id": "am-m67hahevd"
-    },
-    {
-      "_docId": "am-r09pv0nfo",
-      "id": "am-r09pv0nfo",
-      "amenity_name": "Netflix & Smart TV",
-      "accommodation_id": "acc-gb3ewzgus"
     },
     {
       "_docId": "am-u4dltyw61",
