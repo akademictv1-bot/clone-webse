@@ -24,3 +24,6 @@ npm-debug.log*
 !.dev.vars.example
 .env*
 !.env.example
+
+# Cache local do Firebase CLI (pastas geradas pelo deploy)
+.firebase/
