@@ -1,0 +1,27 @@
+{
+  "source": "https://proclinicaamericana.com.br/",
+  "cloned_at": "2026-11-03T00:00:00Z",
+  "files": [
+    {
+      "file": "wp-content/uploads/2025/10/logo_novo.svg",
+      "source": "https://proclinicaamericana.com.br/wp-content/uploads/2025/10/logo_novo.svg",
+      "bytes": 173597
+    }
+  ],
+  "observations": {
+    "cms": "WordPress + Elementor",
+    "pages_detected": [
+      "home",
+      "sobre",
+      "especialidades-medicas",
+      "especialidades-odontologicas",
+      "exames",
+      "contato"
+    ]
+  },
+  "local_tree": [
+    "index.html",
+    "_orig/index.original.html",
+    "assets/"
+  ]
+}
