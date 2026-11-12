@@ -9,6 +9,7 @@
       "_rea/**",
       "*-editor.html",
       "bba.html",
+      "bba/**",
       "fotosbba/**",
       "check-links.js",
       "**/*.md",
@@ -29,7 +30,7 @@
           { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" },
           {
             "key": "Content-Security-Policy",
-            "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://script.google.com https://script.googleusercontent.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src 'self' https://maps.google.com https://www.google.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://maps.google.com; base-uri 'self'; form-action 'self' https://wa.me;"
+            "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://script.google.com https://script.googleusercontent.com https://*.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src 'self' https://maps.google.com https://www.google.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://maps.google.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; base-uri 'self'; form-action 'self' https://wa.me;"
           }
         ]
       },

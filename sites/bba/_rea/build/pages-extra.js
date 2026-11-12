@@ -527,7 +527,7 @@ const gallery = {
     fl_rooms: "Classrooms & ICT",
     fl_sci: "Sciences & sports",
     fl_art: "Arts & creativity",
-    g_count: "14 photographs",
+    g_count: "18 photographs",
     g1b: "Campus Community", g1s: "Students and teachers starting the day together on campus.",
     g2b: "Main School Entrance", g2s: "The real gate of our school on Rua 17 de Julho.",
     g13b: "School Spirit & Celebration", g13s: "Celebration, enthusiasm and unity across our school community.",
@@ -542,6 +542,10 @@ const gallery = {
     g10b: "In the Classroom", g10s: "Real learning moments in Chimoio.",
     g11b: "Studying with Oxford Books", g11s: "Focused work with the Oxford Curriculum.",
     g12b: "Painting Activity", g12s: "Colour, imagination and fine motor skills.",
+    g15b: "Friendship on Campus", g15s: "Primary students together in their school uniform.",
+    g16b: "Primary Smiles", g16s: "Joy and confidence from a Primary student.",
+    g17b: "Pride in the School Badge", g17s: "A Primary student showing the BBA badge on her uniform.",
+    g18b: "Confidence in Uniform", g18s: "Portrait of a Primary student wearing the BBA uniform.",
     rh_eyebrow: "Daily rhythm",
     rh_t: "A day at Bright Beginnings",
     rh_lead: "A school day paced for deep learning, balanced rest and intellectual curiosity.",
@@ -591,6 +595,10 @@ const gallery = {
       <button class="g-item reveal" type="button" data-cat="campus"><img src="assets/img/alunos-celebracao-bba.jpg" alt="Celebração e alegria dos alunos da Bright Beginnings Academy" loading="lazy"><span class="g-cap"><b data-i18n="g13b">Celebração & Espírito Escolar</b><span data-i18n="g13s">Alegria, união e energia positiva no campus da BBA.</span></span></button>
       <button class="g-item reveal" type="button" data-cat="campus"><img src="assets/img/alunos-equipa-bba.jpg" alt="Alunos da Bright Beginnings Academy em uniforme escolar" loading="lazy"><span class="g-cap"><b data-i18n="g14b">Orgulho no Uniforme BBA</b><span data-i18n="g14s">Turma reunida na entrada da escola em Chimoio.</span></span></button>
       <button class="g-item reveal" type="button" data-cat="campus"><img src="assets/img/foto-real-escola.jpg" alt="Entrada principal da escola" loading="lazy"><span class="g-cap"><b data-i18n="g2b">Entrada Principal</b><span data-i18n="g2s">O portão real da escola na Rua 17 de Julho.</span></span></button>
+      <button class="g-item reveal" type="button" data-cat="campus"><img src="assets/img/alunas-primary-bba.jpg" alt="Alunas do Ensino Primário da Bright Beginnings Academy em uniforme escolar" loading="lazy" decoding="async"><span class="g-cap"><b data-i18n="g15b">Amizade no Campus</b><span data-i18n="g15s">Alunas do Ensino Primário juntas, com o uniforme da escola.</span></span></button>
+      <button class="g-item reveal" type="button" data-cat="campus"><img src="assets/img/aluna-primary-bba-1.jpg" alt="Aluna do Ensino Primário da Bright Beginnings Academy a fazer um sinal de paz" loading="lazy" decoding="async"><span class="g-cap"><b data-i18n="g16b">Sorriso do Primary</b><span data-i18n="g16s">Alegria e confiança de uma aluna do Ensino Primário.</span></span></button>
+      <button class="g-item reveal" type="button" data-cat="campus"><img src="assets/img/aluna-primary-bba-2.jpg" alt="Aluna do Ensino Primário da Bright Beginnings Academy a mostrar o emblema da escola" loading="lazy" decoding="async"><span class="g-cap"><b data-i18n="g17b">Orgulho no Emblema</b><span data-i18n="g17s">Aluna do Primary a mostrar o emblema da BBA no uniforme.</span></span></button>
+      <button class="g-item reveal" type="button" data-cat="campus"><img src="assets/img/aluna-primary-bba-3.jpg" alt="Aluna do Ensino Primário da Bright Beginnings Academy em uniforme escolar" loading="lazy" decoding="async"><span class="g-cap"><b data-i18n="g18b">Confiança no Uniforme</b><span data-i18n="g18s">Retrato de uma aluna do Ensino Primário em uniforme BBA.</span></span></button>
       <button class="g-item reveal" type="button" data-cat="rooms"><img src="assets/img/sala-informatica.jpg" alt="Sala de informática da escola" loading="lazy"><span class="g-cap"><b data-i18n="g3b">Sala de Informática</b><span data-i18n="g3s">Tecnologia ao serviço da aprendizagem.</span></span></button>
       <button class="g-item reveal" type="button" data-cat="rooms"><img src="assets/img/early-years.jpg" alt="Sala do Early Years" loading="lazy"><span class="g-cap"><b data-i18n="g4b">Early Years</b><span data-i18n="g4s">Descoberta e jogo dos 2 aos 5 anos.</span></span></button>
       <button class="g-item reveal" type="button" data-cat="rooms"><img src="assets/img/sala-aula-1.jpeg" alt="Aluno do Ensino Primário em estudo com livro Oxford" loading="lazy"><span class="g-cap"><b data-i18n="g5b">Ensino Primário</b><span data-i18n="g5s">Leitura orientada, matemática e avaliação contínua.</span></span></button>
@@ -602,7 +610,7 @@ const gallery = {
       <button class="g-item reveal" type="button" data-cat="rooms"><img src="assets/img/sala-aula-1.jpeg" alt="Aluno a estudar com livro Oxford" loading="lazy"><span class="g-cap"><b data-i18n="g11b">Estudo com Livros Oxford</b><span data-i18n="g11s">Concentração com o Currículo Oxford.</span></span></button>
       <button class="g-item reveal" type="button" data-cat="art"><img src="assets/img/atividade-pintura.jpeg" alt="Aluna em atividade de pintura" loading="lazy"><span class="g-cap"><b data-i18n="g12b">Pintura & Artes</b><span data-i18n="g12s">Cor, imaginação e motricidade fina.</span></span></button>
     </div>
-    <p class="mini-note" style="margin-top:16px;text-align:center" data-i18n="g_count">14 fotografias</p>
+    <p class="mini-note" style="margin-top:16px;text-align:center" data-i18n="g_count">18 fotografias</p>
   </div>
 </section>
 

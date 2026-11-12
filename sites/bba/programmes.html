@@ -2,6 +2,14 @@
 <html lang="pt-MZ">
 <head>
 <meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0FX6RZ6NRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0FX6RZ6NRV');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Programas Académicos | Bright Beginnings Academy — Chimoio</title>
 <meta name="description" content="Do Early Years (2–5 anos) ao Primary e Secondary (até ao Grade 10): conheça os três níveis de ensino da Bright Beginnings Academy em Chimoio.">
@@ -670,6 +678,19 @@ dialog.lb .lb-cap button{background:rgba(255,255,255,.12);color:#fff;border:1px 
   .deco-flake-bl{left:-12px;bottom:-12px}
 }
 
+/* ---------- Mosaico do Ensino Primário (novas fotos) ---------- */
+.split .media.media-collage{background:transparent;box-shadow:none;overflow:visible;display:grid;gap:14px}
+.split .media.media-collage figure{margin:0;overflow:hidden;border-radius:var(--r-lg)}
+.split .media.media-collage .mc-main{aspect-ratio:16/7.56;box-shadow:var(--shadow-lg)}
+.split .media.media-collage .mc-main img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:center 42%}
+.split .media.media-collage .mc-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.split .media.media-collage .mc-row figure{aspect-ratio:3/4;box-shadow:var(--shadow-md)}
+.split .media.media-collage .mc-row img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:center 14%}
+@media(max-width:719px){
+  .split .media.media-collage .mc-row{gap:10px}
+  .split .media.media-collage .mc-main{aspect-ratio:16/9}
+}
+
 
 </style>
 </head>
@@ -783,8 +804,18 @@ dialog.lb .lb-cap button{background:rgba(255,255,255,.12);color:#fff;border:1px 
 <section class="sec tint" id="primary">
   <div class="container">
     <div class="split">
-      <div class="media reveal">
-        <img src="assets/img/primary-leitura-bba.jpg" alt="Aluno do Ensino Primário da Bright Beginnings Academy a ler na biblioteca" loading="lazy">
+      <div class="media reveal media-collage">
+        <figure class="mc-main">
+          <img src="assets/img/primary-leitura-bba.jpg" alt="Aluno do Ensino Primário da Bright Beginnings Academy a ler na biblioteca" loading="lazy">
+        </figure>
+        <div class="mc-row">
+          <figure>
+            <img src="assets/img/aluna-primary-bba-1.jpg" alt="Aluna do Ensino Primário da Bright Beginnings Academy a fazer um sinal de paz" width="720" height="1524" loading="lazy" decoding="async">
+          </figure>
+          <figure>
+            <img src="assets/img/aluna-primary-bba-2.jpg" alt="Aluna do Ensino Primário da Bright Beginnings Academy em uniforme escolar" width="720" height="1521" loading="lazy" decoding="async">
+          </figure>
+        </div>
       </div>
       <div class="reveal">
         <span class="eyebrow" data-i18n="pr1_eyebrow">Grades 1–7 · Primary</span>

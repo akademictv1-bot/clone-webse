@@ -2,6 +2,14 @@
 <html lang="pt-MZ">
 <head>
 <meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0FX6RZ6NRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0FX6RZ6NRV');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Sobre Nós | Bright Beginnings Academy — Chimoio</title>
 <meta name="description" content="A história da Bright Beginnings Academy em Chimoio desde 2014: uma comunidade de aprendizagem do Early Years ao Grade 10, com o Currículo Oxford.">
@@ -670,6 +678,16 @@ dialog.lb .lb-cap button{background:rgba(255,255,255,.12);color:#fff;border:1px 
   .deco-flake-bl{left:-12px;bottom:-12px}
 }
 
+/* ---------- Retrato sobreposto junto ao texto (novas fotos) ---------- */
+.split .media.has-inset{overflow:visible}
+.split .media.has-inset .portrait-card{position:absolute;right:-16px;bottom:-22px;width:42%;max-width:220px;margin:0;border-radius:16px;overflow:hidden;border:5px solid #fff;background:#fff;box-shadow:0 24px 54px -20px rgba(16,24,40,.38);z-index:3}
+.split .media.has-inset .portrait-card img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 16%}
+@media(max-width:719px){
+  .split .media.has-inset{display:flex;flex-direction:column;gap:12px;overflow:hidden}
+  .split .media.has-inset .portrait-card{position:static;order:-1;width:100%;max-width:none;border:0;border-radius:14px;box-shadow:var(--shadow-md)}
+  .split .media.has-inset .portrait-card img{aspect-ratio:4/3;object-position:center 20%}
+}
+
 
 </style>
 </head>
@@ -768,8 +786,11 @@ dialog.lb .lb-cap button{background:rgba(255,255,255,.12);color:#fff;border:1px 
         <p class="lead" style="margin-top:12px" data-i18n="st_p2">Desde 2014, crescemos passo a passo — do Early Years ao Ensino Primário e, depois, ao Secundário — até nos tornarmos uma instituição de ensino internacional de referência em Moçambique.</p>
         <p class="lead" style="margin-top:12px" data-i18n="st_p3">Ensinamos com o Oxford International Curriculum, nosso parceiro curricular: uma base de padrão britânico que desenvolve pensamento crítico, criatividade e o gosto de aprender para a vida.</p>
       </div>
-      <div class="media reveal">
+      <div class="media reveal has-inset">
         <img src="assets/img/alunos-comunidade-bba.jpg" alt="Alunos e professores da Bright Beginnings Academy em Chimoio" loading="lazy">
+        <figure class="portrait-card">
+          <img src="assets/img/aluna-primary-bba-2.jpg" alt="Aluna do Ensino Primário da Bright Beginnings Academy em uniforme escolar" width="720" height="1521" loading="lazy" decoding="async">
+        </figure>
       </div>
     </div>
     <div class="stats" style="margin-top:clamp(34px,4.5vw,56px)">

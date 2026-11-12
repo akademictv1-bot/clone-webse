@@ -69,6 +69,14 @@ function head(p) {
   const canonical = "https://www.bba.edu.mz/" + (p.file === "index.html" ? "" : p.file);
   const ogimg = "https://www.bba.edu.mz/assets/img/og-bba.jpg";
   return `<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0FX6RZ6NRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0FX6RZ6NRV');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>${t.title}</title>
 <meta name="description" content="${t.desc}">

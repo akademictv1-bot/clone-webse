@@ -27,3 +27,6 @@ npm-debug.log*
 
 # Cache local do Firebase CLI (pastas geradas pelo deploy)
 .firebase/
+
+# Biblioteca de fotos original + catálogo Lightroom (não faz parte do site publicado)
+sites/bba/bba/

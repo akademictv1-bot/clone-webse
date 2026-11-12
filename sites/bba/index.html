@@ -2,6 +2,14 @@
 <html lang="pt-MZ">
 <head>
 <meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0FX6RZ6NRV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0FX6RZ6NRV');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Bright Beginnings Academy | Currículo Oxford em Chimoio</title>
 <meta name="description" content="Escola internacional em Chimoio com Currículo Oxford, do Early Years ao Grade 10. Educação de padrão britânico, valores e excelência desde 2014.">
@@ -671,6 +679,16 @@ dialog.lb .lb-cap button{background:rgba(255,255,255,.12);color:#fff;border:1px 
   .deco-flake-bl{left:-12px;bottom:-12px}
 }
 
+/* ---------- Retrato sobreposto junto ao texto (novas fotos) ---------- */
+.split .media.has-inset{overflow:visible}
+.split .media.has-inset .portrait-card{position:absolute;right:-16px;bottom:-22px;width:42%;max-width:220px;margin:0;border-radius:16px;overflow:hidden;border:5px solid #fff;background:#fff;box-shadow:0 24px 54px -20px rgba(16,24,40,.38);z-index:3}
+.split .media.has-inset .portrait-card img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 16%}
+@media(max-width:719px){
+  .split .media.has-inset{display:flex;flex-direction:column;gap:12px;overflow:hidden}
+  .split .media.has-inset .portrait-card{position:static;order:-1;width:100%;max-width:none;border:0;border-radius:14px;box-shadow:var(--shadow-md)}
+  .split .media.has-inset .portrait-card img{aspect-ratio:4/3;object-position:center 20%}
+}
+
 
 </style>
 </head>
@@ -746,13 +764,14 @@ dialog.lb .lb-cap button{background:rgba(255,255,255,.12);color:#fff;border:1px 
 <section class="hero">
   <div class="hero-slider" role="region" aria-label="Fotos da escola">
     <div class="hero-slide active"><img src="assets/img/alunos-comunidade-bba.jpg" alt="Alunos e professores da Bright Beginnings Academy em Chimoio" fetchpriority="high" decoding="async"></div>
-    <div class="hero-slide" aria-hidden="true"><img src="assets/img/alunos-celebracao-bba.jpg" alt="Celebração e entusiasmo dos alunos da Bright Beginnings Academy" loading="lazy" decoding="async"></div>
-    <div class="hero-slide" aria-hidden="true"><img src="assets/img/alunos-equipa-bba.jpg" alt="Turma de alunos da Bright Beginnings Academy no portão da escola" loading="lazy" decoding="async"></div>
-    <div class="hero-slide" aria-hidden="true"><img src="assets/img/sala-aula.jpeg" alt="Aluno da Bright Beginnings Academy em sala de aula" loading="lazy" decoding="async"></div>
-    <div class="hero-slide" aria-hidden="true"><img src="assets/img/sala-aula-1.jpeg" alt="Aluno a estudar com livro Oxford" loading="lazy" decoding="async"></div>
-    <div class="hero-slide" aria-hidden="true"><img src="assets/img/foto-real-escola.jpg" alt="Entrada da Bright Beginnings Academy na Rua 17 de Julho" loading="lazy" decoding="async"></div>
-    <div class="hero-slide" aria-hidden="true"><img src="assets/img/turma-bba-escola.jpg" alt="Turma de alunos da Bright Beginnings Academy em uniforme escolar" loading="lazy" decoding="async"></div>
-    <div class="hero-slide" aria-hidden="true"><img src="assets/img/professor-alunos-bba.jpg" alt="Professores e alunos da Bright Beginnings Academy em ambiente escolar" loading="lazy" decoding="async"></div>
+    <div class="hero-slide" aria-hidden="true"><img data-src="assets/img/alunos-celebracao-bba.jpg" alt="Celebração e entusiasmo dos alunos da Bright Beginnings Academy" decoding="async"></div>
+    <div class="hero-slide" aria-hidden="true"><img data-src="assets/img/alunos-equipa-bba.jpg" alt="Turma de alunos da Bright Beginnings Academy no portão da escola" decoding="async"></div>
+    <div class="hero-slide" aria-hidden="true"><img data-src="assets/img/sala-aula.jpeg" alt="Aluno da Bright Beginnings Academy em sala de aula" decoding="async"></div>
+    <div class="hero-slide" aria-hidden="true"><img data-src="assets/img/sala-aula-1.jpeg" alt="Aluno a estudar com livro Oxford" decoding="async"></div>
+    <div class="hero-slide" aria-hidden="true"><img data-src="assets/img/foto-real-escola.jpg" alt="Entrada da Bright Beginnings Academy na Rua 17 de Julho" decoding="async"></div>
+    <div class="hero-slide" aria-hidden="true"><img data-src="assets/img/turma-bba-escola.jpg" alt="Turma de alunos da Bright Beginnings Academy em uniforme escolar" decoding="async"></div>
+    <div class="hero-slide" aria-hidden="true"><img data-src="assets/img/professor-alunos-bba.jpg" alt="Professores e alunos da Bright Beginnings Academy em ambiente escolar" decoding="async"></div>
+    <div class="hero-slide" aria-hidden="true"><img data-src="assets/img/alunas-primary-bba.jpg" alt="Alunas do Ensino Primário da Bright Beginnings Academy em uniforme escolar" decoding="async"></div>
   </div>
   <div class="container">
     <div class="hero-inner">
@@ -784,6 +803,7 @@ dialog.lb .lb-cap button{background:rgba(255,255,255,.12);color:#fff;border:1px 
     <button class="hdot" type="button" aria-label="Foto 6"></button>
     <button class="hdot" type="button" aria-label="Foto 7"></button>
     <button class="hdot" type="button" aria-label="Foto 8"></button>
+    <button class="hdot" type="button" aria-label="Foto 9"></button>
   </div>
 </section>
 
@@ -800,9 +820,12 @@ dialog.lb .lb-cap button{background:rgba(255,255,255,.12);color:#fff;border:1px 
           <a class="btn btn-ghost" href="missao.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16.24 7.76l-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></svg><span data-i18n="ab_cta2">Missão e Valores</span></a>
         </div>
       </div>
-      <div class="media reveal">
+      <div class="media reveal has-inset">
         <img src="assets/img/alunos-comunidade-bba.jpg" alt="Alunos e professores da Bright Beginnings Academy na Rua 17 de Julho, Chimoio" loading="lazy">
         <div class="m-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="s_chip">Rua 17 de Julho · Chimoio</span></div>
+        <figure class="portrait-card">
+          <img src="assets/img/aluna-primary-bba-3.jpg" alt="Aluna da Bright Beginnings Academy em ambiente de sala de aula" width="720" height="1524" loading="lazy" decoding="async">
+        </figure>
       </div>
     </div>
   </div>
@@ -858,7 +881,7 @@ dialog.lb .lb-cap button{background:rgba(255,255,255,.12);color:#fff;border:1px 
         </div>
       </article>
       <article class="pcard reveal">
-        <div class="ph"><span class="tag" data-i18n="p2_tag">Grades 1–7 · Primary</span><img src="assets/img/primary-leitura-bba.jpg" alt="Aluno do Ensino Primário da Bright Beginnings Academy a ler na biblioteca" loading="lazy"></div>
+        <div class="ph"><span class="tag" data-i18n="p2_tag">Grades 1–7 · Primary</span><img src="assets/img/alunas-primary-bba.jpg" alt="Alunas do Ensino Primário da Bright Beginnings Academy em uniforme escolar" loading="lazy" decoding="async"></div>
         <div class="bd">
           <h3 data-i18n="p2_t">Primary: a curiosidade torna-se saber</h3>
           <p data-i18n="p2_d">Bases sólidas em inglês, matemática e raciocínio crítico, com leitura diária, desporto, artes e avaliação contínua de padrão britânico.</p>
@@ -1136,7 +1159,8 @@ if("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: red
 var slider=document.querySelector(".hero-slider");
 if(slider){
   var slides=slider.querySelectorAll(".hero-slide"), dots=document.querySelectorAll(".hdot"), i=0, t=null;
-  function go(n){ slides[i].classList.remove("active"); if(dots[i]) dots[i].classList.remove("on"); i=(n+slides.length)%slides.length; slides[i].classList.add("active"); if(dots[i]) dots[i].classList.add("on"); }
+  function loadSlide(s){ var im=s.querySelector("img[data-src]"); if(im){ im.src=im.getAttribute("data-src"); im.removeAttribute("data-src"); } }
+  function go(n){ slides[i].classList.remove("active"); if(dots[i]) dots[i].classList.remove("on"); i=(n+slides.length)%slides.length; loadSlide(slides[i]); var nx=slides[(i+1)%slides.length]; loadSlide(nx); slides[i].classList.add("active"); if(dots[i]) dots[i].classList.add("on"); }
   function auto(){ if(t) clearInterval(t); if(!matchMedia("(prefers-reduced-motion: reduce)").matches) t=setInterval(function(){ go(i+1); }, 6000); }
   dots.forEach(function(d, n){ d.addEventListener("click", function(){ go(n); auto(); }); });
   slider.addEventListener("mouseenter", function(){ if(t) clearInterval(t); });
